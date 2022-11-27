@@ -1,0 +1,2602 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+	
+	<!-- title -->
+	
+	<title>
+	
+		Java内存管理 | 
+	 
+	Home
+	</title>
+	
+	<!-- keywords,description -->
+	 
+
+	<!-- favicon -->
+	
+	<link rel="shortcut icon" href="/favicon.ico">
+	
+
+
+	<!-- search -->
+	<script>
+		var searchEngine = "https://www.sogo.com/web?query=";
+		if(typeof searchEngine == "undefined" || searchEngine == null || searchEngine == ""){
+			searchEngine = "https://www.google.com/search?q=";
+		}
+		var homeHost = "sremc.github.io";
+		if(typeof homeHost == "undefined" || homeHost == null || homeHost == ""){
+			homeHost = window.location.host;
+		}
+	</script>
+
+
+	
+<link rel="stylesheet" href="/css/main.css">
+
+	
+<link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.17.1/build/styles/darcula.min.css">
+
+	
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
+
+
+	
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+
+	
+<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+
+	
+<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.17.1/build/highlight.min.js"></script>
+
+	
+<script src="https://cdn.jsdelivr.net/npm/jquery-pjax@2.0.1/jquery.pjax.min.js"></script>
+
+	
+<script src="/js/main.js"></script>
+
+	
+		
+<script src="https://cdn.jsdelivr.net/npm/leancloud-storage/dist/av-min.js"></script>
+
+		
+<script src="https://cdn.jsdelivr.net/npm/valine@v1.4.14/dist/Valine.min.js"></script>
+
+	
+	
+		<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+	
+<meta name="generator" content="Hexo 6.2.0"></head>
+
+<body>
+	<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?3efe99c287df5a1d6f0d02d187e403c1";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+<header id="header">
+    <a id="title" href="/" class="logo">Home</a>
+
+	<ul id="menu">
+		<li class="menu-item">
+			<a href="/about" class="menu-item-link">About</a>
+		</li>
+	
+		<li class="menu-item">
+			<a href="/tags" class="menu-item-link">Tags</a>
+		</li>
+	
+
+	
+		<li class="menu-item">
+			<a href="/categories" class="menu-item-link">Categories</a>
+		</li>
+	
+
+		<li class="menu-item">
+			<a href="https://github.com/sremc" class="menu-item-link" target="_blank">
+				<i class="fa fa-github fa-2x"></i>
+			</a>
+		</li>
+	</ul>
+</header>
+
+	
+<div id="sidebar">
+	<button id="sidebar-toggle" class="toggle" ><i class="fa fa-arrow-right " aria-hidden="true"></i></button>
+	
+	<div id="site-toc">
+		<input id="search-input" class="search-input" type="search" placeholder="按回车全站搜索">
+		<div id="tree">
+			
+
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										DNS
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/05/23/DNS/DNSmasq/">
+                     
+										    DNSmasq
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/12/02/DNS/DNS%E5%8F%8D%E8%A7%A3%E9%85%8D%E7%BD%AE/">
+                     
+										    DNS反解配置
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2019/10/12/DNS/DNS%E6%A6%82%E5%BF%B5/">
+                     
+										    DNS概念
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										Go
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/09/05/Go/Golang-beego/">
+                     
+										    Golang-beego
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/08/20/Go/Golang-json%E8%A7%A3%E6%9E%90/">
+                     
+										    Golang-json解析
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/01/21/Go/Golang-sync%E5%8C%85/">
+                     
+										    Golang-sync包
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/09/07/Go/Golang-%E5%8D%8F%E7%A8%8Bgoroutine/">
+                     
+										    Golang-协程goroutine
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2017/09/23/Go/Golang-%E5%9F%BA%E6%9C%AC%E5%B8%B8%E7%94%A8%E6%B1%87%E6%80%BB/">
+                     
+										    Golang-基本常用汇总
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2018/10/23/Go/Golang-%E5%9F%BA%E6%9C%AC%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/">
+                     
+										    Golang-基本数据类型
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/06/21/Go/Golang-%E5%B9%B6%E5%8F%91%E6%8E%A7%E5%88%B6/">
+                     
+										    Golang-并发控制
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/09/07/Go/Golang%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C/">
+                     
+										    Golang文件操作
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/09/05/Go/golang-gorm%E6%A1%86%E6%9E%B6/">
+                     
+										    golang-gorm框架
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										HTTP
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2021/09/07/HTTP/1RBAC-%E5%9F%BA%E4%BA%8E%E8%A7%92%E8%89%B2%E7%9A%84%E6%9D%83%E9%99%90%E8%AE%BF%E9%97%AE%E6%8E%A7%E5%88%B6/">
+                     
+										    1RBAC-基于角色的权限访问控制
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2015/12/21/HTTP/3%E7%A7%8Dweb%E4%BC%9A%E8%AF%9D%E7%AE%A1%E7%90%86%E7%9A%84%E6%96%B9%E5%BC%8F/">
+                     
+										    3种web会话管理的方式
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2019/07/06/HTTP/%E4%B8%80%E4%BA%9B%E5%AE%89%E5%85%A8%E7%9B%B8%E5%85%B3%E7%9A%84HTTP%E5%93%8D%E5%BA%94%E5%A4%B4/">
+                     
+										    一些安全相关的HTTP响应头
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2017/10/07/HTTP/%E4%B8%BA%E4%BB%80%E4%B9%88%E6%88%91%E4%BB%AC%E5%BA%94%E8%AF%A5%E5%B0%BD%E5%BF%AB%E5%8D%87%E7%BA%A7%E5%88%B0HTTPS%EF%BC%9F/">
+                     
+										    为什么我们应该尽快升级到HTTPS？
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2017/04/07/HTTP/%E4%BB%8ENginx%E9%BB%98%E8%AE%A4%E4%B8%8D%E5%8E%8B%E7%BC%A9HTTP-1.0%E8%AF%B4%E8%B5%B7/">
+                     
+										    从Nginx默认不压缩HTTP-1.0说起
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2018/05/02/HTTP/%E7%90%86%E8%A7%A3HTTP%E5%B9%82%E7%AD%89%E6%80%A7/">
+                     
+										    理解HTTP幂等性
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										Java
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2017/11/09/Java/JAVA_Tips/">
+                     
+										    JAVA_Tips
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2017/10/12/Java/JavaScript_Tips/">
+                     
+										    JavaScript_Tips
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2017/04/07/Java/JavaScript%E8%B7%A8%E5%9F%9F%E8%AE%BF%E9%97%AE%E9%97%AE%E9%A2%98/">
+                     
+										    JavaScript跨域访问问题
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file active">
+									<a href="/2019/09/28/Java/Java%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86/">
+                     
+										    Java内存管理
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2018/12/04/Java/Java%E5%A4%9A%E7%BA%BF%E7%A8%8B/">
+                     
+										    Java多线程
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/03/25/Java/java%E8%BF%9B%E7%A8%8B%E5%B7%A5%E5%85%B7/">
+                     
+										    java进程工具
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2017/09/01/Java/tomcat-servlet-demo/">
+                     
+										    tomcat-servlet-demo
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										K8S
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2022/01/26/K8S/CMD%E4%B8%8EENTRYPOINT%E4%B8%BB%E8%A6%81%E5%8C%BA%E5%88%AB/">
+                     
+										    CMD与ENTRYPOINT主要区别
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2019/02/24/K8S/Harbor%E9%95%9C%E5%83%8F%E4%BB%93%E5%BA%93%E9%9B%86%E7%BE%A4%E9%83%A8%E7%BD%B2%E6%96%87%E6%A1%A3/">
+                     
+										    Harbor镜像仓库集群部署文档
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2019/10/24/K8S/K8S-%E9%83%A8%E7%BD%B2/">
+                     
+										    K8S-部署
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2019/11/05/K8S/K8S-%E9%85%8D%E7%BD%AE/">
+                     
+										    K8S-配置
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2017/05/25/K8S/docker%E7%9B%B8%E5%85%B3/">
+                     
+										    docker相关
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2019/11/01/K8S/k8s-pause%E5%AE%B9%E5%99%A8/">
+                     
+										    k8s-pause容器
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2019/11/01/K8S/k8s-%E6%8E%92%E9%94%99/">
+                     
+										    k8s-排错
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2019/10/28/K8S/mankubectl/">
+                     
+										    mankubectl
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										Linux
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2018/12/27/Linux/CentOSYUM/">
+                     
+										    CentOSYUM
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2018/09/29/Linux/CentOS%E9%99%90%E5%88%B6%E7%94%A8%E6%88%B7%E7%9A%84%E8%B5%84%E6%BA%90%E4%BD%BF%E7%94%A8/">
+                     
+										    CentOS限制用户的资源使用
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2018/01/17/Linux/LinuxLVM%E5%9F%BA%E7%A1%80%E6%93%8D%E4%BD%9C/">
+                     
+										    LinuxLVM基础操作
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2018/12/26/Linux/Linux%E4%B8%8B%E6%9F%A5%E7%9C%8B%E8%BF%9B%E7%A8%8B%E7%9A%84%E5%B8%A6%E5%AE%BD%E4%BD%BF%E7%94%A8%E6%83%85%E5%86%B5/">
+                     
+										    Linux下查看进程的带宽使用情况
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2017/05/10/Linux/Linux%E5%86%85%E5%AD%98%E7%9B%B8%E5%85%B3%E7%AC%94%E8%AE%B0/">
+                     
+										    Linux内存相关笔记
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2019/05/08/Linux/Linux%E5%88%9D%E5%A7%8B%E5%8C%96/">
+                     
+										    Linux初始化
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2019/03/25/Linux/Linux%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/">
+                     
+										    Linux正则表达式
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2018/01/06/Linux/Linux%E7%9A%84inode%E7%9A%84%E7%90%86%E8%A7%A3/">
+                     
+										    Linux的inode的理解
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2019/05/09/Linux/NUMA%E6%9E%B6%E6%9E%84/">
+                     
+										    NUMA架构
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2016/03/21/Linux/disk_io.py%E2%80%93%E7%A3%81%E7%9B%98IO%E7%BB%9F%E8%AE%A1/">
+                     
+										    disk_io.py–磁盘IO统计
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2019/09/22/Linux/strace%E5%91%BD%E4%BB%A4/">
+                     
+										    strace命令
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2017/01/21/Linux/%E5%85%B3%E4%BA%8ELinux%E8%BF%9E%E6%8E%A5%E8%B7%9F%E8%B8%AA%E6%A8%A1%E5%9D%97/">
+                     
+										    关于Linux连接跟踪模块
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2016/07/22/Linux/%E6%B5%85%E8%B0%88Linux%E5%AE%B9%E5%99%A8%E6%8A%80%E6%9C%AFLXC%E4%B9%8Bnamespace/">
+                     
+										    浅谈Linux容器技术LXC之namespace
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2016/07/03/Linux/%E6%B5%85%E8%B0%88Linux%E8%BD%BB%E9%87%8F%E8%99%9A%E6%8B%9F%E5%8C%96%E6%8A%80%E6%9C%AFLXC%E4%B9%8Bcgroup/">
+                     
+										    浅谈Linux轻量虚拟化技术LXC之cgroup
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2018/02/01/Linux/%E8%A2%AB%E9%BB%91%E4%B9%8B%E5%90%8E%E6%89%BE%E5%87%BA%E9%9A%90%E8%97%8F%E7%9A%84%E8%BF%9B%E7%A8%8B/">
+                     
+										    被黑之后找出隐藏的进程
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2017/02/20/Linux/%E8%A7%A3%E5%86%B3Linux%E7%BB%88%E7%AB%AF%E4%BA%A4%E4%BA%92%E6%A8%A1%E5%BC%8F%E4%B8%8B%E6%96%B9%E5%90%91%E9%94%AE%E3%80%81%E9%80%80%E6%A0%BC%E9%94%AE%E7%AD%89%E5%87%BA%E7%8E%B0%E4%B9%B1%E7%A0%81%E7%9A%84%E9%97%AE%E9%A2%98/">
+                     
+										    解决Linux终端交互模式下方向键、退格键等出现乱码的问题
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2017/10/02/Linux/%E9%80%9A%E8%BF%87-proc-pid%E4%BA%86%E8%A7%A3%E4%B8%80%E4%B8%AA%E8%BF%9B%E7%A8%8B/">
+                     
+										    通过-proc-pid了解一个进程
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										MacOS
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/03/14/MacOS/MacBookPro%E5%A4%96%E6%8E%A5%E6%98%BE%E7%A4%BA%E5%99%A8%E5%BC%80%E5%90%AFhidpi/">
+                     
+										    MacBookPro外接显示器开启hidpi
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2017/10/14/MacOS/macOS%E5%B8%B8%E7%94%A8%E6%8A%80%E5%B7%A7%E5%90%88%E9%9B%86/">
+                     
+										    macOS常用技巧合集
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2016/03/21/MacOS/zsh%E2%80%93oh-my-zsh/">
+                     
+										    zsh–oh-my-zsh
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										Nginx
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2019/11/30/Nginx/IO%E5%A4%9A%E8%B7%AF%E5%A4%8D%E7%94%A8/">
+                     
+										    IO多路复用
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/02/28/Nginx/LVS-NGINX/">
+                     
+										    LVS-NGINX
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2017/03/19/Nginx/Nginx%E5%8A%A8%E6%80%81%E6%91%98%E9%99%A4/">
+                     
+										    Nginx动态摘除
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2019/04/18/Nginx/Nginx%E5%B8%B8%E7%94%A8%E9%85%8D%E7%BD%AE/">
+                     
+										    Nginx常用配置
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										Python
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2019/06/17/Python/Django-models/">
+                     
+										    Django-models
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2017/07/25/Python/PYTHON_Tips/">
+                     
+										    PYTHON_Tips
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2017/02/22/Python/Python-%E5%88%9D%E8%AF%86%E5%A4%9A%E7%BA%BF%E7%A8%8B/">
+                     
+										    Python-初识多线程
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/05/13/Python/Pythontipsfrom2021/">
+                     
+										    Pythontipsfrom2021
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/23/Python/Python%E5%A4%9A%E8%BF%9B%E7%A8%8B%E5%A4%9A%E7%BA%BF%E7%A8%8B%E6%B7%B7%E5%90%88/">
+                     
+										    Python多进程多线程混合
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2017/03/02/Python/Python%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86/">
+                     
+										    Python异常处理
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/02/23/Python/Python%E6%80%A7%E8%83%BD%E7%9B%B8%E5%85%B3/">
+                     
+										    Python性能相关
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/08/23/Python/Python%E6%8E%92%E5%BA%8F%E6%B1%87%E6%80%BB/">
+                     
+										    Python排序汇总
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/07/09/Python/celery/">
+                     
+										    celery
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/08/30/Python/django%E6%9E%B6%E6%9E%84%E5%9B%BE/">
+                     
+										    django架构图
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2019/09/22/Python/python-pip/">
+                     
+										    python-pip
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2019/09/10/Python/python-with%E8%AF%AD%E5%8F%A5/">
+                     
+										    python-with语句
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2019/09/15/Python/python%E5%A4%9A%E7%BA%BF%E7%A8%8B/">
+                     
+										    python多线程
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/01/30/Python/python%E6%A0%B8%E5%BF%83%E6%A6%82%E5%BF%B5/">
+                     
+										    python核心概念
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2019/09/30/Python/python%E8%B5%8B%E5%80%BC%E3%80%81%E6%B5%85%E6%8B%B7%E8%B4%9D%E5%92%8C%E6%B7%B1%E6%8B%B7%E8%B4%9D/">
+                     
+										    python赋值、浅拷贝和深拷贝
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2019/09/28/Python/python%E8%BF%9B%E7%A8%8B-%E7%BA%BF%E7%A8%8B-%E5%8D%8F%E7%A8%8B/">
+                     
+										    python进程-线程-协程
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2017/03/26/Python/%E4%BD%BF%E7%94%A8pyenv%E7%AE%A1%E7%90%86Python%E7%89%88%E6%9C%AC/">
+                     
+										    使用pyenv管理Python版本
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										Shell
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2017/07/10/Shell/SHELL_Tips/">
+                     
+										    SHELL_Tips
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2017/09/22/Shell/Shellfork%E7%82%B8%E5%BC%B9/">
+                     
+										    Shellfork炸弹
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2017/04/01/Shell/shell%E5%A4%9A%E8%BF%9B%E7%A8%8B%E5%92%8C%E4%BF%A1%E5%8F%B7%E6%8D%95%E6%8D%89/">
+                     
+										    shell多进程和信号捕捉
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										TCP
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2016/05/10/TCP/TCP%E4%B8%89%E6%AC%A1%E6%8F%A1%E6%89%8B/">
+                     
+										    TCP三次握手
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2016/11/11/TCP/TCP%E5%BB%BA%E8%BF%9E%E7%9A%84%E9%87%8D%E8%AF%95%E6%9C%BA%E5%88%B6/">
+                     
+										    TCP建连的重试机制
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2017/07/02/TCP/TCP%E7%9A%84%E5%8D%8A%E8%BF%9E%E6%8E%A5%E5%92%8C%E5%85%A8%E8%BF%9E%E6%8E%A5%E9%98%9F%E5%88%97/">
+                     
+										    TCP的半连接和全连接队列
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2017/08/16/TCP/tcpcopy/">
+                     
+										    tcpcopy
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2017/04/25/TCP/tcpdump/">
+                     
+										    tcpdump
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2019/09/11/TCP/tcpping/">
+                     
+										    tcpping
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										VPN
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2017/12/18/VPN/OpenVPN%E6%9C%8D%E5%8A%A1%E6%90%AD%E5%BB%BA/">
+                     
+										    OpenVPN服务搭建
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2017/09/26/VPN/squid-authentication-by-NCSA-style/">
+                     
+										    squid-authentication-by-NCSA-style
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2017/09/26/VPN/%E4%BD%BF%E7%94%A8stunnel%E5%8A%A0%E5%AF%86%E9%80%9A%E4%BF%A1/">
+                     
+										    使用stunnel加密通信
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										其他语言
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2018/12/02/%E5%85%B6%E4%BB%96%E8%AF%AD%E8%A8%80/GentelellaAlela/">
+                     
+										    GentelellaAlela
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2017/04/01/%E5%85%B6%E4%BB%96%E8%AF%AD%E8%A8%80/JS%E7%9A%84%E5%A4%A7%E6%8B%AC%E5%8F%B7%E5%92%8C%E4%B8%AD%E6%8B%AC%E5%8F%B7/">
+                     
+										    JS的大括号和中括号
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/05/24/%E5%85%B6%E4%BB%96%E8%AF%AD%E8%A8%80/LUA%E7%AC%94%E8%AE%B0/">
+                     
+										    LUA笔记
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2017/02/15/%E5%85%B6%E4%BB%96%E8%AF%AD%E8%A8%80/Node.JS%E4%B9%8Bexpress%E5%85%A5%E9%97%A8/">
+                     
+										    Node.JS之express入门
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2017/04/07/%E5%85%B6%E4%BB%96%E8%AF%AD%E8%A8%80/NodeJS_Tips/">
+                     
+										    NodeJS_Tips
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2017/04/07/%E5%85%B6%E4%BB%96%E8%AF%AD%E8%A8%80/PHP_Tips/">
+                     
+										    PHP_Tips
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2017/10/22/%E5%85%B6%E4%BB%96%E8%AF%AD%E8%A8%80/PHP%E7%8E%AF%E5%A2%83%E7%9B%B8%E5%85%B3%E6%93%8D%E4%BD%9C/">
+                     
+										    PHP环境相关操作
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2016/01/22/%E5%85%B6%E4%BB%96%E8%AF%AD%E8%A8%80/%E7%94%A8%E4%BA%8E%E6%93%8D%E4%BD%9Copenldap%E7%9A%84PHP%E7%B1%BB/">
+                     
+										    用于操作openldap的PHP类
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										回收站
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/01/28/%E5%9B%9E%E6%94%B6%E7%AB%99/%E8%BD%AC%E8%BD%BD-%E8%81%8C%E5%9C%BA%E7%A4%BC%E4%BB%AAA/">
+                     
+										    转载-职场礼仪A
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/01/28/%E5%9B%9E%E6%94%B6%E7%AB%99/%E8%BD%AC%E8%BD%BD-%E8%81%8C%E5%9C%BA%E7%A4%BC%E4%BB%AAB/">
+                     
+										    转载-职场礼仪B
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/01/28/%E5%9B%9E%E6%94%B6%E7%AB%99/%E8%BD%AC%E8%BD%BD-%E8%81%8C%E5%9C%BA%E7%A4%BC%E4%BB%AAC/">
+                     
+										    转载-职场礼仪C
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										大数据
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2018/05/11/%E5%A4%A7%E6%95%B0%E6%8D%AE/apache-flume/">
+                     
+										    apache-flume
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2018/05/08/%E5%A4%A7%E6%95%B0%E6%8D%AE/apache-kafka/">
+                     
+										    apache-kafka
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2018/05/04/%E5%A4%A7%E6%95%B0%E6%8D%AE/apache-maven/">
+                     
+										    apache-maven
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2018/04/11/%E5%A4%A7%E6%95%B0%E6%8D%AE/apache-storm/">
+                     
+										    apache-storm
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2019/10/10/%E5%A4%A7%E6%95%B0%E6%8D%AE/cloudera/">
+                     
+										    cloudera
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										存储
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2017/12/26/%E5%AD%98%E5%82%A8/CephFS%E5%88%86%E5%B8%83%E5%BC%8F%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F/">
+                     
+										    CephFS分布式文件系统
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2019/08/20/%E5%AD%98%E5%82%A8/ElasticSearch%E7%AC%94%E8%AE%B0/">
+                     
+										    ElasticSearch笔记
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2016/04/27/%E5%AD%98%E5%82%A8/ownCloud%E6%9E%B6%E8%AE%BE%E4%BA%91%E7%9B%98/">
+                     
+										    ownCloud架设云盘
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/03/30/%E5%AD%98%E5%82%A8/owncloud%E5%8D%87%E7%BA%A7/">
+                     
+										    owncloud升级
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2016/09/15/%E5%AD%98%E5%82%A8/%E4%BD%BF%E7%94%A8cgroup%E9%99%90%E5%88%B6%E7%A3%81%E7%9B%98IO%E9%80%9F%E7%8E%87/">
+                     
+										    使用cgroup限制磁盘IO速率
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2017/07/03/%E5%AD%98%E5%82%A8/%E7%A3%81%E7%9B%98%E6%80%A7%E8%83%BD%E7%9B%B8%E5%85%B3%E7%9A%84%E6%8C%87%E6%A0%87/">
+                     
+										    磁盘性能相关的指标
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										工作笔记
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2019/03/17/%E5%B7%A5%E4%BD%9C%E7%AC%94%E8%AE%B0/%E4%BA%92%E8%81%94%E7%BD%91%E6%9E%B6%E6%9E%84%EF%BC%8C%E7%A9%B6%E7%AB%9F%E4%B8%BA%E5%95%A5%E8%A6%81%E5%81%9A%E6%9C%8D%E5%8A%A1%E5%8C%96%EF%BC%9F/">
+                     
+										    互联网架构，究竟为啥要做服务化？
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/10/29/%E5%B7%A5%E4%BD%9C%E7%AC%94%E8%AE%B0/%E5%BA%94%E5%B1%8A%E7%94%9F%E9%9D%A2%E8%AF%95/">
+                     
+										    应届生面试
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2019/10/07/%E5%B7%A5%E4%BD%9C%E7%AC%94%E8%AE%B0/%E6%96%B0%E4%B9%B0%E7%9A%84%E7%94%B5%E8%84%91/">
+                     
+										    新买的电脑
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2017/10/21/%E5%B7%A5%E4%BD%9C%E7%AC%94%E8%AE%B0/%E7%AE%80%E5%8D%95%E7%9A%84SLA%E6%9C%8D%E5%8A%A1%E4%BC%98%E5%8C%96%E6%8C%87%E6%A0%87/">
+                     
+										    简单的SLA服务优化指标
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2017/01/13/%E5%B7%A5%E4%BD%9C%E7%AC%94%E8%AE%B0/%E9%83%A8%E7%BD%B2%E5%9F%BA%E4%BA%8EDocker%E7%9A%84graphite/">
+                     
+										    部署基于Docker的graphite
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2017/09/23/%E5%B7%A5%E4%BD%9C%E7%AC%94%E8%AE%B0/%E9%97%AE%E9%A2%98%E6%B1%87%E6%80%BB/">
+                     
+										    问题汇总
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2019/02/03/%E5%B7%A5%E4%BD%9C%E7%AC%94%E8%AE%B0/%E9%A2%98%E7%9B%AE201903/">
+                     
+										    题目201903
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										开发工具
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2019/04/08/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/git-flow%E5%88%86%E6%94%AF%E7%AE%A1%E7%90%86%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5/">
+                     
+										    git-flow分支管理最佳实践
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/11/27/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/%E5%88%A0%E9%99%A4github%E6%8F%90%E4%BA%A4%E8%AE%B0%E5%BD%95/">
+                     
+										    删除github提交记录
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2017/09/25/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/%E5%91%BD%E4%BB%A4%E8%A1%8C%E4%B8%8Bgit%E5%B8%B8%E7%94%A8%E6%93%8D%E4%BD%9C%E5%90%88%E9%9B%86/">
+                     
+										    命令行下git常用操作合集
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										数据库
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2019/05/08/%E6%95%B0%E6%8D%AE%E5%BA%93/MongoDB/">
+                     
+										    MongoDB
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2019/05/09/%E6%95%B0%E6%8D%AE%E5%BA%93/MySQL_Tips/">
+                     
+										    MySQL_Tips
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2018/06/19/%E6%95%B0%E6%8D%AE%E5%BA%93/REDIS/">
+                     
+										    REDIS
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2017/10/02/%E6%95%B0%E6%8D%AE%E5%BA%93/SQL%E9%9A%8F%E7%AC%94/">
+                     
+										    SQL随笔
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										编辑器
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2019/02/26/%E7%BC%96%E8%BE%91%E5%99%A8/Markdown%E8%BD%ACPDF/">
+                     
+										    Markdown转PDF
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/05/13/%E7%BC%96%E8%BE%91%E5%99%A8/PyCharm%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/">
+                     
+										    PyCharm开发环境
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2016/10/02/%E7%BC%96%E8%BE%91%E5%99%A8/SublimeText%E5%B8%B8%E7%94%A8%E5%8A%9F%E8%83%BD/">
+                     
+										    SublimeText常用功能
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2017/04/05/%E7%BC%96%E8%BE%91%E5%99%A8/vim%E7%9B%AE%E5%BD%95%E6%B5%8F%E8%A7%88%E6%8F%92%E4%BB%B6NERDTree/">
+                     
+										    vim目录浏览插件NERDTree
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2018/01/14/%E7%BC%96%E8%BE%91%E5%99%A8/vim%E8%87%AA%E5%8A%A8%E8%A1%A5%E5%85%A8%E6%8F%92%E4%BB%B6YouCompleteMe/">
+                     
+										    vim自动补全插件YouCompleteMe
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2016/01/19/%E7%BC%96%E8%BE%91%E5%99%A8/vim%E8%A7%86%E5%9B%BE%E6%A8%A1%E5%BC%8F/">
+                     
+										    vim视图模式
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2017/04/01/%E7%BC%96%E8%BE%91%E5%99%A8/%E5%BC%80%E6%BA%90%E7%AC%94%E8%AE%B0leanote%E5%AE%89%E8%A3%85/">
+                     
+										    开源笔记leanote安装
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										网络
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2017/02/19/%E7%BD%91%E7%BB%9C/%E5%8D%8F%E8%AE%AE%E6%9D%82%E8%B0%88/">
+                     
+										    协议杂谈
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2016/01/27/%E7%BD%91%E7%BB%9C/%E5%9C%B0%E5%9D%80%E6%A0%8FURL%E5%9B%9E%E8%BD%A6%E5%90%8E%E7%9A%84%E6%8A%80%E6%9C%AF/">
+                     
+										    地址栏URL回车后的技术
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2019/08/20/%E7%BD%91%E7%BB%9C/%E5%A4%9A%E9%98%9F%E5%88%97%E7%BD%91%E5%8D%A1/">
+                     
+										    多队列网卡
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2019/10/21/%E7%BD%91%E7%BB%9C/%E7%BD%91%E5%8D%A1bond/">
+                     
+										    网卡bond
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2017/04/26/%E7%BD%91%E7%BB%9C/%E8%80%97%E6%97%B6%E7%AA%81%E5%A2%9E%E9%97%AE%E9%A2%98%E6%8E%92%E6%9F%A5/">
+                     
+										    耗时突增问题排查
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2019/10/08/%E7%BD%91%E7%BB%9C/%E8%B7%AF%E7%94%B1%E5%92%8C%E4%BA%A4%E6%8D%A2/">
+                     
+										    路由和交换
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										读书笔记
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2021/06/29/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E3%80%8A%E7%BA%A2%E6%A5%BC%E6%A2%A6%E3%80%8B12%E6%94%AF%E6%9B%B2%E5%8F%8A%E8%B5%8F%E6%9E%90/">
+                     
+										    《红楼梦》12支曲及赏析
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2017/02/23/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E4%B8%80%E4%B9%9D%E5%9B%9B%E4%B9%9D%E5%92%8C%E7%BD%91%E7%BB%9C%E6%97%B6%E4%BB%A3%E7%9A%84%E6%84%8F%E8%AF%86%E5%BD%A2%E6%80%81/">
+                     
+										    一九四九和网络时代的意识形态
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2017/02/24/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E5%83%B5%E5%9B%BA%E5%9E%8B%E5%BF%83%E6%99%BA%E8%AD%A6%E7%A4%BA%E6%B8%85%E5%8D%95/">
+                     
+										    僵固型心智警示清单
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2018/04/08/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E5%91%BD%E7%90%86%E5%92%8C%E9%A3%8E%E6%B0%B4/">
+                     
+										    命理和风水
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/02/22/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E5%A4%A7%E6%98%8E%E7%8E%8B%E6%9C%9D1566%E8%AF%84%E4%BB%B7/">
+                     
+										    大明王朝1566评价
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2019/07/15/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E6%84%88%E6%BC%94%E6%84%88%E7%83%88%E7%9A%84%E9%98%B6%E5%B1%82%E5%88%86%E5%8C%96/">
+                     
+										    愈演愈烈的阶层分化
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2017/02/23/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E6%8A%80%E6%9C%AF%E8%B7%AF%E7%BA%BFor%E7%AE%A1%E7%90%86%E8%B7%AF%E7%BA%BF/">
+                     
+										    技术路线or管理路线
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2017/02/14/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E6%91%87%E5%8F%B7%E8%B4%AD%E8%BD%A6%E4%B8%AD%E7%9A%84%E5%B9%B3%E7%AD%89%E6%9D%83%E9%97%AE%E9%A2%98/">
+                     
+										    摇号购车中的平等权问题
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2017/06/18/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E6%9C%80%E6%B2%A1%E7%94%A8%E7%9A%84%E4%B8%9C%E8%A5%BF/">
+                     
+										    最没用的东西
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2016/02/22/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E6%AE%B5%E5%AD%90%E4%B8%8E%E5%90%AF%E5%8F%91/">
+                     
+										    段子与启发
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2018/06/11/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E7%A7%AF%E5%96%84%E4%B9%8B%E5%AE%B6%EF%BC%8C%E5%BF%85%E6%9C%89%E4%BD%99%E5%BA%86/">
+                     
+										    积善之家，必有余庆
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2018/05/14/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E8%82%A1%E7%A5%A8%E5%B8%B8%E8%AF%86/">
+                     
+										    股票常识
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/09/02/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E8%8A%82%E9%80%89%E3%80%8A%E6%B4%BB%E7%9D%80%E3%80%8B/">
+                     
+										    节选《活着》
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/08/27/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E8%8A%82%E9%80%89%E3%80%8A%E9%BB%84%E9%87%91%E6%97%B6%E4%BB%A3%E3%80%8B/">
+                     
+										    节选《黄金时代》
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2017/07/08/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/">
+                     
+										    读书笔记
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/09/05/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E8%BD%AC%E4%BA%BA%E7%94%9F%E5%AE%9E%E8%B7%B5%E4%B8%AD%E7%9A%8411%E4%B8%AA%E5%BF%85%E6%9D%80%E6%8A%80/">
+                     
+										    转人生实践中的11个必杀技
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2018/08/01/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E9%AB%98%E5%96%84%E6%96%87%E5%B1%B1%E8%A5%BF%E8%AF%81%E5%88%B830%E5%91%A8%E5%B9%B4%E6%BC%94%E8%AE%B2/">
+                     
+										    高善文山西证券30周年演讲
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										运维
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2017/12/18/%E8%BF%90%E7%BB%B4/ANSIBLE_Tips/">
+                     
+										    ANSIBLE_Tips
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2019/02/24/%E8%BF%90%E7%BB%B4/Jenkins%E9%9B%86%E7%BE%A4%E9%83%A8%E7%BD%B2%E6%96%87%E6%A1%A3/">
+                     
+										    Jenkins集群部署文档
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2017/10/22/%E8%BF%90%E7%BB%B4/OPS_Tips/">
+                     
+										    OPS_Tips
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2019/02/24/%E8%BF%90%E7%BB%B4/Rancher%E9%9B%86%E7%BE%A4%E9%83%A8%E7%BD%B2%E6%96%87%E6%A1%A3/">
+                     
+										    Rancher集群部署文档
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2018/12/26/%E8%BF%90%E7%BB%B4/SaltStack/">
+                     
+										    SaltStack
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2019/03/11/%E8%BF%90%E7%BB%B4/daemontools%E5%AE%88%E6%8A%A4%E8%BF%9B%E7%A8%8B/">
+                     
+										    daemontools守护进程
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/11/10/%E8%BF%90%E7%BB%B4/rsyslog%E5%8F%91%E9%80%81%E6%97%A5%E5%BF%97/">
+                     
+										    rsyslog发送日志
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2019/03/23/%E8%BF%90%E7%BB%B4/telegraf-influxdb-grafana/">
+                     
+										    telegraf-influxdb-grafana
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/02/08/%E8%BF%90%E7%BB%B4/%E5%85%A8%E5%B1%80limit%E5%8F%82%E6%95%B0%E5%92%8Csystemd%E8%BF%9B%E7%A8%8B%E7%9A%84%E4%B8%8D%E4%B8%80%E8%87%B4/">
+                     
+										    全局limit参数和systemd进程的不一致
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2016/08/21/%E8%BF%90%E7%BB%B4/%E5%87%A0%E7%A7%8D%E6%97%A5%E5%BF%97%E5%88%86%E6%9E%90%E5%9C%BA%E6%99%AF/">
+                     
+										    几种日志分析场景
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2017/10/11/%E8%BF%90%E7%BB%B4/%E5%88%97%E5%87%BA%E5%8D%A0%E7%94%A8swap%E7%9A%84%E8%BF%9B%E7%A8%8B/">
+                     
+										    列出占用swap的进程
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2015/10/06/%E8%BF%90%E7%BB%B4/%E5%88%A9%E7%94%A8%E5%BE%AE%E4%BF%A1%E4%BC%81%E4%B8%9A%E5%8F%B7%E5%AE%9E%E7%8E%B0%E6%8A%A5%E8%AD%A6/">
+                     
+										    利用微信企业号实现报警
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2016/07/23/%E8%BF%90%E7%BB%B4/%E7%A6%81%E7%94%A8iptables%E9%93%BE%E6%8E%A5%E8%B7%9F%E8%B8%AA%E8%A1%A8%E6%98%AF%E5%90%A6%E5%AE%89%E5%85%A8/">
+                     
+										    禁用iptables链接跟踪表是否安全
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2017/09/01/%E8%BF%90%E7%BB%B4/%E8%BF%90%E7%BB%B4%E7%AC%94%E8%AE%B001/">
+                     
+										    运维笔记01
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2017/03/29/%E8%BF%90%E7%BB%B4/%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6/">
+                     
+										    配置文件
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										随笔
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2016/10/12/%E9%9A%8F%E7%AC%94/Hexo/">
+                     
+										    Hexo
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/09/11/%E9%9A%8F%E7%AC%94/%E4%B8%AD%E7%A7%8B%E8%8A%82%E5%BF%AB%E4%B9%90/">
+                     
+										    中秋节快乐
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2019/03/29/%E9%9A%8F%E7%AC%94/%E4%BF%8F%E7%9A%AE%E8%AF%9D/">
+                     
+										    俏皮话
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2017/10/26/%E9%9A%8F%E7%AC%94/%E5%AE%9A%E5%9C%BA%E8%AF%97/">
+                     
+										    定场诗
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/08/07/%E9%9A%8F%E7%AC%94/%E6%96%B0%E7%9A%84%E5%BC%80%E5%A7%8B/">
+                     
+										    新的开始
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+		</div>
+	</div>
+</div>
+
+	<!-- 引入正文 -->
+	<div id="content">
+		<h1 id="article-title">
+	Java内存管理
+</h1>
+<div class="article-meta">
+	
+	<span>MC</span>
+	<span>2019-09-28 16:09:11</span>
+		<div id="article-categories">
+    
+		<span>Categories：</span>
+            
+                
+                    <span>
+                        <i class="fa fa-folder" aria-hidden="true">
+                        <a href="/categories/开发/">开发</a>
+                        </i>
+                      
+                    </span>
+                
+            
+    
+
+    
+		<span>Tags：</span>
+            
+                
+                    <span>
+                        <i class="fa fa-tag" aria-hidden="true">
+                        <a href="/tags/java/">java</a>
+                        </i>
+                    </span>
+                
+            
+    
+		</div>
+
+</div>
+
+<div id="article-content">
+	<h2 id="堆内存和栈内存的区别"><a href="#堆内存和栈内存的区别" class="headerlink" title="堆内存和栈内存的区别"></a>堆内存和栈内存的区别</h2><h3 id="数据结构中的堆和栈"><a href="#数据结构中的堆和栈" class="headerlink" title="数据结构中的堆和栈"></a>数据结构中的堆和栈</h3><p>堆和栈， 当堆和栈两个放在一起说的时候，当然指的是C语言中那个特殊的堆和特殊的栈，而不是数据结构中的那个栈。</p>
+<p>数据结构中的堆和栈</p>
+<ul>
+<li>栈： 先进后出，也就是说后存放的先取，先存放的后取。</li>
+<li>堆： 堆是一种经过排序的树形数据结构，每个结点都有一个值。通常我们所说的堆的数据结构，是指二叉堆。堆的存取是随意</li>
+</ul>
+<h3 id="内存中的堆和栈"><a href="#内存中的堆和栈" class="headerlink" title="内存中的堆和栈"></a>内存中的堆和栈</h3><h4 id="基本数据类型和引用数据类型"><a href="#基本数据类型和引用数据类型" class="headerlink" title="基本数据类型和引用数据类型"></a>基本数据类型和引用数据类型</h4><blockquote>
+<ul>
+<li>基本数据类型：编译期可知的各种基本数据类型（boolean、byte、char、short、int、float、long、double）</li>
+<li>引用数据类型：对象引用（reference 类型，它不等同于对象本身，根据不同的虚拟机实现，它可能是一个指向对象起始地址的引用指针）</li>
+</ul>
+</blockquote>
+<h4 id="堆内存和栈内存的不同之处"><a href="#堆内存和栈内存的不同之处" class="headerlink" title="堆内存和栈内存的不同之处"></a>堆内存和栈内存的不同之处</h4><table>
+<thead>
+<tr>
+<th>类别</th>
+<th>堆内存</th>
+<th>栈内存</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>存储内容</td>
+<td>所有对象实例和数组都在堆内存分配；</td>
+<td>引用数据类型的变量名在栈内存（值在堆内存）；局部变量在栈内存(方法体内创建的变量)；基本数据类型分配在栈内存</td>
+</tr>
+<tr>
+<td>内存共享</td>
+<td>所有线程共享整个堆内存，堆内存在启动时分配；</td>
+<td>栈内存属于单个线程，每个线程都有自己的栈内存；</td>
+</tr>
+<tr>
+<td>空间不足</td>
+<td>如果是堆内存没有可用的空间存储生成的对象，JVM会抛出java.lang.OutOfMemoryError</td>
+<td>如果栈内存没有可用的空间存储方法调用和局部变量，JVM会抛出java.lang.StackOverFlowError</td>
+</tr>
+<tr>
+<td>内存回收</td>
+<td>存活周期长，通过垃圾回收机制不定期回收(如果不回收，程序结束之后OS自动回收)</td>
+<td>存活周期短，生命周期结束后被自动释放</td>
+</tr>
+<tr>
+<td>创建时间</td>
+<td>进程启动的时候</td>
+<td>实时动态分配</td>
+</tr>
+<tr>
+<td>内存空间</td>
+<td>不连续的内存区域（链表存储空闲内存）</td>
+<td>连续的内存区域</td>
+</tr>
+<tr>
+<td>申请效率</td>
+<td>程序员自己申请和释放，速度慢，有碎片</td>
+<td>系统自动分配和释放，速度快，程序员无法控制</td>
+</tr>
+<tr>
+<td>设置大小</td>
+<td>使用-Xms和-Xmx JVM选项定义初始堆内存和最大堆内存</td>
+<td>使用-Xss定义栈的大小</td>
+</tr>
+</tbody></table>
+<p>栈的内存要远远小于堆内存，如果你使用递归的话，那么你的栈很快就会充满。如果递归没有及时跳出，很可能发生StackOverFlowError问题;</p>
+<p>堆和栈的区别可以用如下的比喻来看出：<br>使用栈就象我们去饭馆里吃饭，只管点菜（发出申请）、付钱、和吃（使用），吃饱了就走，不必理会切菜、洗菜等准备工作和洗碗、刷锅等扫尾工作，他的好处是快捷，但是自 由度小。<br>使用堆就象是自己动手做喜欢吃的菜肴，比较麻烦，但是比较符合自己的口味，而且自由 度大。 (经典！) </p>
+<h3 id="申请堆内存时系统的响应"><a href="#申请堆内存时系统的响应" class="headerlink" title="申请堆内存时系统的响应"></a>申请堆内存时系统的响应</h3><p>操作系统有一个记录空闲内存地址的链表，当系统收到程序的申请时，会遍历该链表，寻找第一个空间大于所申请空间的堆结点，然后将该结点从空闲结点链表中删除，并将该结点的空间分配给程序，另外，对于大多数系统，会在这块内存空间中的首地址处记录本次分配的大小，这样，代码中的delete语句才能正确的释放本内存空间。另外，由于找到的堆结点的大小不一定正好等于申请的大小，系统会自动的将多余的那部分重新放入空闲链表中。 </p>
+<h2 id="jvm内存分代"><a href="#jvm内存分代" class="headerlink" title="jvm内存分代"></a>jvm内存分代</h2><p>垃圾回收器主要回收的是堆区中未使用的内存区域，并对相应的区域进行整理。在堆区中，又根据对象内存的存活时间或者对象大小，分为“年轻代”和“年老代”。“年轻代”中的对象是不稳定的易产生垃圾，而“年老代”中的对象比较稳定，不易产生垃圾。之所以将其分开，是分而治之，根据不同区域的内存块的特点，采取不同的内存回收算法，从而提高堆区的垃圾回收的效率。</p>
+<p>现在收集器基本都是采用的分代收集算法。</p>
+<p>jdk1.7以及之前的版本<br><img src="/images/5vt1btyuam8_2111.png"></p>
+<p>jdk1.8以及之后的版本<br><img src="/images/25b1qalun2h_2111.png"></p>
+<h3 id="基于分代的假设"><a href="#基于分代的假设" class="headerlink" title="基于分代的假设"></a>基于分代的假设</h3><p>由于对象的存活时间有长有短，所以对于存活时间长的对象，减少被gc的次数可以避免不必要的开销。这样我们就把内存分成新生代和老年代，新生代存放刚创建的和存活时间比较短的对象，老年代存放存活时间比较长的对象。这样每次仅仅清理年轻代，老年代仅在必要时时再做清理可以极大的提高GC效率，节省GC时间。</p>
+<h3 id="年轻代-young-generation"><a href="#年轻代-young-generation" class="headerlink" title="年轻代(young generation)"></a>年轻代(young generation)</h3><p>年轻代再次划分为伊甸园(Eden)、幸存1(Survivor1)和幸存2(Survivor1)。</p>
+<p>Eden区 —— 新对象或者生命周期很短的对象会存储在这个区域中，这个区的大小可以通过<code>-XX:NewSize</code>和<code>-XX:MaxNewSize</code>参数来调整。<br>Survivor区 —— 那些历经了Eden区的垃圾回收仍能存活下来的依旧存在引用的对象会待在这个区域。这个区的大小可以由JVM参数<code>-XX:SurvivorRatio</code>来进行调节。</p>
+<h3 id="老年代-old-generation"><a href="#老年代-old-generation" class="headerlink" title="老年代(old generation)"></a>老年代(old generation)</h3><p>Old Generation老年代 —— 那些在历经了Eden区和Survivor区的多次GC后仍然存活下来的对象会存储在这个区里。这个区会由一个特殊的垃圾回收器来负责。年老代中的对象的回收是由老年代的GC（major GC）来进行的。</p>
+<h3 id="永生代-amp-元空间"><a href="#永生代-amp-元空间" class="headerlink" title="永生代&amp;元空间"></a>永生代&amp;元空间</h3><p>在jdk1.7及之前版本叫<code>永生代(Permanent Generation for VM Matedata)</code>； jdk1.8及之后叫<code>元内存空间(Metaspace)</code><br>永生代 —— 存放着对象的方法、变量等元数据信息。如果永生代内存不够，我们就会得到例如以下错误：java.lang.OutOfMemoryError: PermGen<br>元空间作用同上，如果内存不够报错：java.lang.OutOfMemoryError: Metadata space</p>
+<p>Java8中把存放元数据中的永生代内存从堆内存中移到了本地内存(native memory)中，这样永生代内存就不再占用堆内存。它能够通过自己主动增长来避免JDK7以及前期版本号中常见的永生代内存错误(java.lang.OutOfMemoryError: PermGen)。</p>
+<p>类的元数据信息转移到Metaspace的原因：</p>
+<ol>
+<li>是PermGen很难调整，PermGen中类的元数据信息在每次FullGC的时候可能会被收集。</li>
+<li>应该为PermGen分配多大的空间很难确定，因为PermSize的大小依赖于很多因素，比如JVM加载的class的总数，常量池的大小，方法的大小等。</li>
+</ol>
+<p>当然Java8也提供了一个新的设置Matespace内存大小的參数。通过这个參数能够设置Matespace内存大小：<br><code>-XX:MaxMetaspaceSize=128m</code>设置最大的元内存空间128m。</p>
+<h3 id="对象的年龄和晋升"><a href="#对象的年龄和晋升" class="headerlink" title="对象的年龄和晋升"></a>对象的年龄和晋升</h3><p>虚拟机给每个对象定义了一个对象年龄（Age）计数器。如果对象在 Eden 出生并经过第一次 Minor GC 后仍然存活，并且能被 Survivor 容纳的话，将被移动到 Survivor 空间中，并将对象年龄设为 1。对象在 Survivor 区中每熬过一次 Minor GC，年龄就增加 1 岁，当它的年龄增加到一定程度（默认为 15 岁）时，就会被晋升到老年代中。对象晋升老年代的年龄阈值，可以通过参数 -XX:MaxTenuringThreshold (阈值)来设置。</p>
+<h2 id="jvm垃圾回收"><a href="#jvm垃圾回收" class="headerlink" title="jvm垃圾回收"></a>jvm垃圾回收</h2><p>jvm内存回收只发生在堆内存。</p>
+<p>参考：<br><a target="_blank" rel="noopener" href="https://www.cnblogs.com/heyonggang/p/11718170.html">https://www.cnblogs.com/heyonggang/p/11718170.html</a><br><a target="_blank" rel="noopener" href="https://blog.csdn.net/czh500/article/details/103160133">https://blog.csdn.net/czh500/article/details/103160133</a></p>
+<h3 id="垃圾回收算法"><a href="#垃圾回收算法" class="headerlink" title="垃圾回收算法"></a>垃圾回收算法</h3><h4 id="1-标记-复制"><a href="#1-标记-复制" class="headerlink" title="1.标记-复制"></a>1.标记-复制</h4><p>它将可用内存容量划分为大小相等的两块，每次只使用其中的一块。当这一块用完之后，就将还存活的对象复制到另外一块上面，然后在把已使用过的内存空间一次理掉。它的优点是实现简单，效率高，不会存在内存碎片。缺点就是需要2倍的内存来管理。</p>
+<h4 id="2-标记-清理"><a href="#2-标记-清理" class="headerlink" title="2.标记-清理"></a>2.标记-清理</h4><p>标记清除算法分为“标记”和“清除”两个阶段：首先标记出需要回收的对象，标记完成之后统一清除对象。它的优点是效率高，缺点是容易产生内存碎片。</p>
+<h4 id="3-标记-整理"><a href="#3-标记-整理" class="headerlink" title="3.标记-整理"></a>3.标记-整理</h4><p>标记操作和“标记-清理”算法一致，后续操作不只是直接清理对象，而是在清理无用对象完成后让所有 存活的对象都向一端移动，并更新引用其对象的指针。因为要移动对象，所以它的效率要比“标记-清理”效率低，但是不会产生内存碎片。</p>
+<h3 id="对象的回收过程"><a href="#对象的回收过程" class="headerlink" title="对象的回收过程"></a>对象的回收过程</h3><ol>
+<li>新产生的对象默认放在Eden区（亚当和夏娃偷吃苹果的伊甸园是第一个人诞生的地方）；</li>
+<li>不断的产生对象，导致Eden满，触发younggc：清除无用对象，把有用的对象放到S1；</li>
+<li>Eden再次满了之后，再次触发younggc：情况无用对象，把在使用的对象和S1的对象一起挪到S2，清空Eden和S1；</li>
+<li>Eden再次满了之后， 把Eden和S2中有用的对象放入S1；</li>
+<li>如此，Eden、S1和S2中的有用的对象来回倒腾；</li>
+<li>经过一定次数的gc，如果对象一直在使用，将放入年老代；（默认次数是15）</li>
+<li>年老代满了之后，触发FullGC；</li>
+<li>产生的对象过大，超过Eden区上限，将直接进入老年代；</li>
+</ol>
+<h3 id="垃圾回收器的演变"><a href="#垃圾回收器的演变" class="headerlink" title="垃圾回收器的演变"></a>垃圾回收器的演变</h3><h4 id="第一阶段，Serial（串行）收集器"><a href="#第一阶段，Serial（串行）收集器" class="headerlink" title="第一阶段，Serial（串行）收集器"></a>第一阶段，Serial（串行）收集器</h4><p>在jdk1.3.1之前，java虚拟机仅仅能使用Serial收集器。 Serial收集器是一个单线程的收集器，但它的“单线程”的意义并不仅仅是说明它只会使用一个CPU或一条收集线程去完成垃圾收集工作，更重要的是在它进行垃圾收集时，必须暂停其他所有的工作线程，直到它收集结束。</p>
+<p>开启Serial收集器的方式</p>
+<pre><code>-XX:+UseSerialGC
+</code></pre>
+<h4 id="第二阶段，Parallel（并行）收集器"><a href="#第二阶段，Parallel（并行）收集器" class="headerlink" title="第二阶段，Parallel（并行）收集器"></a>第二阶段，Parallel（并行）收集器</h4><p>Parallel收集器也称吞吐量收集器，相比Serial收集器，Parallel最主要的优势在于使用多线程去完成垃圾清理工作，这样可以充分利用多核的特性，大幅降低gc时间。</p>
+<p>开启Parallel收集器的方式</p>
+<pre><code>-XX:+UseParallelGC -XX:+UseParallelOldGC
+</code></pre>
+<h4 id="第三阶段，CMS（并发）收集器"><a href="#第三阶段，CMS（并发）收集器" class="headerlink" title="第三阶段，CMS（并发）收集器"></a>第三阶段，CMS（并发）收集器</h4><p>CMS收集器在Minor GC时会暂停所有的应用线程，并以多线程的方式进行垃圾回收。在Full GC时不再暂停应用线程，而是使用若干个后台线程定期的对老年代空间进行扫描，及时回收其中不再使用的对象。</p>
+<p>开启CMS收集器的方式</p>
+<pre><code>-XX:+UseParNewGC -XX:+UseConcMarkSweepGC
+</code></pre>
+<h4 id="第四阶段，G1（并发）收集器"><a href="#第四阶段，G1（并发）收集器" class="headerlink" title="第四阶段，G1（并发）收集器"></a>第四阶段，G1（并发）收集器</h4><p>G1收集器（或者垃圾优先收集器）的设计初衷是为了尽量缩短处理超大堆（大于4GB）时产生的停顿。相对于CMS的优势而言是内存碎片的产生率大大降低。</p>
+<p>开启G1收集器的方式</p>
+<pre><code>-XX:+UseG1GC
+</code></pre>
+<h3 id="年轻代回收器ParNew"><a href="#年轻代回收器ParNew" class="headerlink" title="年轻代回收器ParNew"></a>年轻代回收器ParNew</h3><p>ParNew 收集器 是年轻代常用的垃圾收集器，它采用的是<code>复制算法</code>，youngGC 时一个典型的日志信息如下所示：</p>
+<pre><code>-04-12T13:48:26.134+0800: 15578.050: [GC2018-04-12T13:48:26.135+0800: 15578.050: [ParNew: 3412467K-&gt;59681K(3774912K), 0.0971990 secs] 9702786K-&gt;6354533K(24746432K), 0.0974940 secs] [Times: user=0.95 sys=0.00, real=0.09 secs]
+</code></pre>
+<p>依次分析一下上面日志信息的含义：</p>
+<ul>
+<li>2018-04-12T13:48:26.134+0800 ：Mirror GC 发生的时间；</li>
+<li>15578.050 ：GC 开始时，相对 JVM 启动的相对时间，单位时秒，这里是4h+；</li>
+<li>ParNew ：收集器名称，这里是 ParNew 收集器，它使用的是并行的 mark-copy 算法，GC 过程也会 Stop the World；</li>
+<li>3412467K-&gt;59681K ：收集前后年轻代的使用情况，这里是 3.25G-&gt;58.28M；</li>
+<li>3774912K ：整个年轻代的容量，这里是 3.6G；</li>
+<li>0.0971990 secs ：Duration for the collection w&#x2F;o final cleanup.</li>
+<li>9702786K-&gt;6354533K ：收集前后整个堆的使用情况，这里是 9.25G-&gt;6.06G;</li>
+<li>24746432K ：整个堆的容量，这里是 23.6G；</li>
+<li>0.0974940 secs ：ParNew 收集器标记和复制年轻代活着的对象所花费的时间（包括和老年代通信的开销、对象晋升到老年代开销、垃圾收集周期结束一些最后的清理对象等的花销）；</li>
+</ul>
+<h3 id="年老代回收器CMS"><a href="#年老代回收器CMS" class="headerlink" title="年老代回收器CMS"></a>年老代回收器CMS</h3><p>CMS: Concurrent Mark Sweep：并发标记清除</p>
+<p>CMS收集器运行过程分为起个阶段，所有名字带有「concurrent」的都是和应用程序并行执行</p>
+<ul>
+<li>CMS Initial Mark</li>
+<li>CMS-concurrent-mark-start</li>
+<li>CMS-concurrent-preclean-start</li>
+<li>CMS-concurrent-abortable-preclean-start</li>
+<li>CMS Final Remark</li>
+<li>CMS-concurrent-sweep-start</li>
+<li>CMS-concurrent-reset-start</li>
+</ul>
+<p>CMS 收集器 是老年代经常使用的收集器，它采用的是<code>标记-清除</code>算法，应用程序在发生一次 Full GC 时，典型的 GC 日志信息如下：</p>
+<pre><code>-04-12T13:48:26.233+0800: 15578.148: [GC [1 CMS-initial-mark: 6294851K(20971520K)] 6354687K(24746432K), 0.0466580 secs] [Times: user=0.04 sys=0.00, real=0.04 secs]
+-04-12T13:48:26.280+0800: 15578.195: [CMS-concurrent-mark-start]
+-04-12T13:48:26.418+0800: 15578.333: [CMS-concurrent-mark: 0.138/0.138 secs] [Times: user=1.01 sys=0.21, real=0.14 secs]
+-04-12T13:48:26.418+0800: 15578.334: [CMS-concurrent-preclean-start]
+-04-12T13:48:26.476+0800: 15578.391: [CMS-concurrent-preclean: 0.056/0.057 secs] [Times: user=0.20 sys=0.12, real=0.06 secs]
+-04-12T13:48:26.476+0800: 15578.391: [CMS-concurrent-abortable-preclean-start]
+-04-12T13:48:29.989+0800: 15581.905: [CMS-concurrent-abortable-preclean: 3.506/3.514 secs] [Times: user=11.93 sys=6.77, real=3.51 secs]
+-04-12T13:48:29.991+0800: 15581.906: [GC[YG occupancy: 1805641 K (3774912 K)]2018-04-12T13:48:29.991+0800: 15581.906: [GC2018-04-12T13:48:29.991+0800: 15581.906: [ParNew: 1805641K-&gt;48395K(3774912K), 0.0826620 secs] 8100493K-&gt;6348225K(24746432K), 0.0829480 secs] [Times: user=0.81 sys=0.00, real=0.09 ............s] [1 CMS-remark: 6299829K(20971520K)] 6348225K(24746432K), 0.1365130 secs] [Times: user=1.24 sys=0.00, real=0.14 secs]
+-04-12T13:48:30.128+0800: 15582.043: [CMS-concurrent-sweep-start]
+-04-12T13:48:36.638+0800: 15588.553: [GC2018-04-12T13:48:36.638+0800: 15588.554: [ParNew: 3403915K-&gt;52142K(3774912K), 0.0874610 secs] 4836483K-&gt;1489601K(24746432K), 0.0877490 secs] [Times: user=0.84 sys=0.00, real=0.09 secs]
+-04-12T13:48:38.412+0800: 15590.327: [CMS-concurrent-sweep: 8.193/8.284 secs] [Times: user=30.34 sys=16.44, real=8.28 secs]
+-04-12T13:48:38.419+0800: 15590.334: [CMS-concurrent-reset-start]
+-04-12T13:48:38.462+0800: 15590.377: [CMS-concurrent-reset: 0.044/0.044 secs] [Times: user=0.15 sys=0.10, real=0.04 secs]
+</code></pre>
+<h4 id="优点"><a href="#优点" class="headerlink" title="优点"></a>优点</h4><p>CMS 通过将大量工作分散到并发处理阶段来在减少 STW 时间。低停顿。</p>
+<h4 id="缺点"><a href="#缺点" class="headerlink" title="缺点"></a>缺点</h4><ul>
+<li>需要更多的CPU资源。为了减少停顿，cms线程跟应用进程会并发运行。</li>
+<li>需要更大的堆空间。因为CMS标记阶段应用程序的线程还是在执行的，那么就会有堆空间继续分配的情况，为了保证在CMS回 收完堆之前还有空间分配给正在运行的应用程序，必须预留一部分空间。也就是说，CMS不会在老年代满的时候才开始收集。相反，它会尝试更早的开始收集，已 避免上面提到的情况：在回收完成之前，堆没有足够空间分配！默认当老年代使用68%的时候，CMS就开始行动了。 <code>– XX:CMSInitiatingOccupancyFraction =n</code> 来设置这个阀值。 </li>
+<li>存在浮动垃圾。容易触发FullGC。由于采用的是标记-清除算法，那么就会产生大量的碎片。往往会出现老年代还有很大的空间剩余，但是无法找到足够大的连续空间来分配当前对象，不得不提前触发一次full GC。 降低了堆空间的使用率</li>
+</ul>
+<h3 id="垃圾回收器G1"><a href="#垃圾回收器G1" class="headerlink" title="垃圾回收器G1"></a>垃圾回收器G1</h3><p>CMS 的一些缺陷也是 G1 收集器兴起的原因。</p>
+<p>G1将新生代，老年代的物理空间划分取消了。取而代之的是，G1算法将堆划分为若干个区域（Region），它仍然属于分代收集器。G1提供了两种GC模式，Young GC和Mixed GC，两种都是Stop The World(STW)的。</p>
+<h4 id="G1-Young-GC"><a href="#G1-Young-GC" class="headerlink" title="G1 Young GC"></a>G1 Young GC</h4><p>Young GC主要是对Eden区进行GC，它在Eden空间耗尽时会被触发。在这种情况下，Eden空间的数据移动到Survivor空间中，如果Survivor空间不够，Eden空间的部分数据会直接晋升到年老代空间。</p>
+<h4 id="G1-Mix-GC"><a href="#G1-Mix-GC" class="headerlink" title="G1 Mix GC"></a>G1 Mix GC</h4><p>Mix GC不仅进行正常的新生代垃圾收集，同时也回收部分后台扫描线程标记的老年代分区。<br>它的GC步骤分2步：</p>
+<ol>
+<li>全局并发标记（global concurrent marking）</li>
+<li>拷贝存活对象（evacuation）</li>
+</ol>
+<h4 id="G1垃圾回收过程"><a href="#G1垃圾回收过程" class="headerlink" title="G1垃圾回收过程"></a>G1垃圾回收过程</h4><ul>
+<li>年轻代回收（young gc）过程</li>
+<li>老年代并发标记（concurrent marking）过程</li>
+<li>混合回收过程（mixed gc）。</li>
+</ul>
+<p>应用程序分配内存，当年轻代的Eden区用尽时开始年轻代回收过程；当堆内存使用达到一定值（默认45%）时，开始老年代并发标记过程；标记完成马上开始混合回收过程。</p>
+<blockquote>
+<p>举个例子：我曾经工作的一个Web服务器，Java进程最大堆内存为4G，每分钟响应1500个请求，每45秒钟会新分配大约2G的内存。G1会每45秒钟进行一次年轻代回收，每31个小时整个堆的使用率会达到45%，会开始老年代并发标记过程，标记完成后开始四到五次的混合回收。</p>
+</blockquote>
+<h4 id="调优实践：MaxGCPauseMillis调优"><a href="#调优实践：MaxGCPauseMillis调优" class="headerlink" title="调优实践：MaxGCPauseMillis调优"></a>调优实践：MaxGCPauseMillis调优</h4><p>前面介绍过使用GC的最基本的参数：</p>
+<pre><code>-XX:+UseG1GC -Xmx32g -XX:MaxGCPauseMillis=200
+</code></pre>
+<p>前面2个参数都好理解，后面这个MaxGCPauseMillis参数该怎么配置呢？这个参数从字面的意思上看，就是允许的GC最大的暂停时间。G1尽量确保每次GC暂停的时间都在设置的MaxGCPauseMillis范围内。 那G1是如何做到最大暂停时间的呢？这涉及到另一个概念，CSet(collection set)。它的意思是在一次垃圾收集器中被收集的区域集合。</p>
+<ul>
+<li>Young GC：选定所有新生代里的region。通过控制新生代的region个数来控制young GC的开销。</li>
+<li>Mixed GC：选定所有新生代里的region，外加根据global concurrent marking统计得出收集收益高的若干老年代region。在用户指定的开销目标范围内尽可能选择收益高的老年代region。</li>
+</ul>
+<p>在理解了这些后，我们再设置最大暂停时间就好办了。 首先，我们能容忍的最大暂停时间是有一个限度的，我们需要在这个限度范围内设置。但是应该设置的值是多少呢？我们需要在吞吐量跟MaxGCPauseMillis之间做一个平衡。如果MaxGCPauseMillis设置的过小，那么GC就会频繁，吞吐量就会下降。如果MaxGCPauseMillis设置的过大，应用程序暂停时间就会变长。G1的默认暂停时间是200毫秒，我们可以从这里入手，调整合适的时间。</p>
+<hr>
+<p>G1具备如下特点：</p>
+<ul>
+<li>并行与并发：G1能充分利用多CPU、多核环境下的硬件优势，使用多个CPU来缩短Stop-the-world停顿的时间，部分其他收集器原来需要停顿Java线程执行的GC操作，G1收集器仍然可以通过并发的方式让Java程序继续运行。</li>
+<li>分代收集</li>
+<li>空间整合：与CMS的标记-清除算法不同，G1从整体来看是基于标记-整理算法实现的收集器，从局部（两个Region之间）上来看是基于“复制”算法实现的。但无论如何，这两种算法都意味着G1运作期间不会产生内存空间碎片，收集后能提供规整的可用内存。这种特性有利于程序长时间运行，分配大对象时不会因为无法找到连续内存空间而提前触发下一次GC。</li>
+<li>可预测的停顿：这是G1相对于CMS的一个优势，降低停顿时间是G1和CMS共同的关注点。</li>
+</ul>
+<p>G1收集器将整个Java堆划分为多个大小相等的独立区域（Region），虽然还保留有新生代和老年代的概念，但新生代和老年代不再是物理隔离的了，它们都是一部分Region（不需要连续）的集合。</p>
+<p>G1的缺点:<br>region 大小和大对象很难保证一致，这会导致空间的浪费；特别大的对象是可能占用超过一个 region 的。并且，region 太小不合适，会令你在分配大对象时更难找到连续空间，这是一个长久存在的情况。</p>
+<h3 id="GC类型"><a href="#GC类型" class="headerlink" title="GC类型"></a>GC类型</h3><h4 id="Minor-GC-清理年轻代"><a href="#Minor-GC-清理年轻代" class="headerlink" title="Minor GC 清理年轻代"></a>Minor GC 清理年轻代</h4><p>发生在年轻代的垃圾回收动作，因为java对象大多数都是频繁的创建和销毁，所以MinorGC非常的频繁，速度也很快；</p>
+<p>触发机制：当年轻代满（新创建的对象大小 &gt; Eden所剩空间）时就会触发Minor GC，这里的年轻代满指的是Eden代满，Survivor满不会引发GC</p>
+<h4 id="Major-GC-清理老年代"><a href="#Major-GC-清理老年代" class="headerlink" title="Major GC 清理老年代"></a>Major GC 清理老年代</h4><p>指发生在老年代的 GC，出现了 Major GC，经常会伴随至少一次的 Minor GC（但非绝对的）。MajorGC 的速度一般会比 Minor GC 慢10倍以上。</p>
+<p>触发机制：当年老代满时会引发Major GC，Major GC将会同时回收年轻代、年老代。（Major和Full通常是等价的）</p>
+<h4 id="Full-GC-清理整个堆空间"><a href="#Full-GC-清理整个堆空间" class="headerlink" title="Full GC 清理整个堆空间"></a>Full GC 清理整个堆空间</h4><p>包括年轻代、老年代和元空间。</p>
+<h4 id="监控Minor和Major发生的次数"><a href="#监控Minor和Major发生的次数" class="headerlink" title="监控Minor和Major发生的次数"></a>监控Minor和Major发生的次数</h4><h2 id="如何避免FullGC"><a href="#如何避免FullGC" class="headerlink" title="如何避免FullGC"></a>如何避免FullGC</h2><p>用Java无法做出类似Redis这样的产品。java的内存回收机制使我们在编写代码时不需要关注对象的回收，同时加大了内存回收的消耗，<strong>标记复制需要做内存拷贝，标记清除算法则需要stop the world。</strong> 所以我们在使用缓存的时候，量稍微大一些就需要借助类似Redis这样的中间件帮我们处理了。作为Javaer，我们享受了自动内存回收的安逸，同时也需要多了解下内存优化的方法。</p>
+<h3 id="什么情况下会gc"><a href="#什么情况下会gc" class="headerlink" title="什么情况下会gc"></a>什么情况下会gc</h3><p>在jvm层面，<strong>当我们new一个对象的时候，jvm会先在堆区分配对象需要的内存，这个时候如果内存不够的话，就需要gc了，gc的返回结果就是对象的空间地址。jvm会先进行ygc，也就是我们通常说的标记复制，如果ygc之后依然申请不到空间，就会进行fgc了。同理，如果fgc之后依然没有足够的空间，就会循环的进行fgc，直到申请到足够的空间。</strong></p>
+<h3 id="导致不停的fgc的原因"><a href="#导致不停的fgc的原因" class="headerlink" title="导致不停的fgc的原因"></a>导致不停的fgc的原因</h3><p>如上文所讲，fgc有可能发生在你的每一行代码。<strong>如果fgc之后依然没有足够的空间，就会不停的fgc，直到申请到足够的空间。</strong>同时JVM会限制在抛出OutOfMemory错误之前在GC中花费的VM时间的比例。系统频繁FGC大致有五种情况：</p>
+<ul>
+<li>内存泄漏</li>
+<li>请求处理变慢导致同时申请内存的线程太多</li>
+<li>metaspace 耗尽</li>
+<li>常量池将堆区占满</li>
+<li>堆外内存耗尽</li>
+</ul>
+<h3 id="防止FullGC"><a href="#防止FullGC" class="headerlink" title="防止FullGC"></a>防止FullGC</h3><h4 id="1-杜绝内存泄漏"><a href="#1-杜绝内存泄漏" class="headerlink" title="1. 杜绝内存泄漏"></a>1. 杜绝内存泄漏</h4><p>内存泄漏造成系统瘫痪的频率很高，有些系统定时从数据库拉取配置信息缓存到集合中，但是set不小心写成了list，最终在新增元素的时候内存溢出了。养成良好的编程习惯，多关注些细节，就能避免很多未知的问题。</p>
+<h4 id="2-防止长尾请求拖垮系统"><a href="#2-防止长尾请求拖垮系统" class="headerlink" title="2. 防止长尾请求拖垮系统"></a>2. 防止长尾请求拖垮系统</h4><p>我们盯系统监控的时候通常会关注99分位的数据，但如果设置了合理的限流，系统依然被流量打挂，就要从那百分之一的长尾数据入手了。有些长尾数据对系统的影响会非常大。想象如果一个put请求传过来几十兆的数据，对java是极为不友好的，很有可能产生fgc，让请求变慢，导致一系列问题。</p>
+<p><a target="_blank" rel="noopener" href="https://developer.aliyun.com/article/728280?utm_content=g_1000090027">https://developer.aliyun.com/article/728280?utm_content=g_1000090027</a></p>
+<h3 id="GC优化案例"><a href="#GC优化案例" class="headerlink" title="GC优化案例"></a>GC优化案例</h3><p><a target="_blank" rel="noopener" href="https://cloud.tencent.com/developer/article/1117445">https://cloud.tencent.com/developer/article/1117445</a></p>
+
+</div>
+
+
+    <div class="post-guide">
+        <div class="item left">
+            
+              <a href="/2019/09/28/Python/python%E8%BF%9B%E7%A8%8B-%E7%BA%BF%E7%A8%8B-%E5%8D%8F%E7%A8%8B/">
+                  <i class="fa fa-angle-left" aria-hidden="true"></i>
+                  python进程-线程-协程
+              </a>
+            
+        </div>
+        <div class="item right">
+            
+              <a href="/2019/09/22/Python/python-pip/">
+                python-pip
+                <i class="fa fa-angle-right" aria-hidden="true"></i>
+              </a>
+            
+        </div>
+    </div>
+
+
+
+
+<script>
+	
+	
+</script>
+	</div>
+	<div id="footer">
+	<p>
+	©2019-<span id="footerYear"></span> 
+	<a href="/">MC</a> 
+	
+	
+		|
+		<span id="busuanzi_container_site_pv">
+			pv
+			<span id="busuanzi_value_site_pv"></span>
+		</span>
+		|
+		<span id="busuanzi_container_site_uv"> 
+			uv
+			<span id="busuanzi_value_site_uv"></span>
+		</span>
+	
+	<br>
+	Theme <a href="//github.com/wujun234/hexo-theme-tree" target="_blank">Tree</a>
+	by <a href="//github.com/wujun234" target="_blank">WuJun</a>
+	Powered by <a href="//hexo.io" target="_blank">Hexo</a>
+	</p>
+</div>
+<script type="text/javascript"> 
+	document.getElementById('footerYear').innerHTML = new Date().getFullYear() + '';
+</script>
+	<button id="totop-toggle" class="toggle"><i class="fa fa-angle-double-up" aria-hidden="true"></i></button>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/live2dw/assets/shizuku.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":true},"react":{"opacity":0.7}});</script></body>
+</html>

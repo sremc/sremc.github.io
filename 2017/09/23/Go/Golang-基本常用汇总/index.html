@@ -1,0 +1,2998 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+	
+	<!-- title -->
+	
+	<title>
+	
+		Golang-基本常用汇总 | 
+	 
+	Home
+	</title>
+	
+	<!-- keywords,description -->
+	 
+
+	<!-- favicon -->
+	
+	<link rel="shortcut icon" href="/favicon.ico">
+	
+
+
+	<!-- search -->
+	<script>
+		var searchEngine = "https://www.sogo.com/web?query=";
+		if(typeof searchEngine == "undefined" || searchEngine == null || searchEngine == ""){
+			searchEngine = "https://www.google.com/search?q=";
+		}
+		var homeHost = "sremc.github.io";
+		if(typeof homeHost == "undefined" || homeHost == null || homeHost == ""){
+			homeHost = window.location.host;
+		}
+	</script>
+
+
+	
+<link rel="stylesheet" href="/css/main.css">
+
+	
+<link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.17.1/build/styles/darcula.min.css">
+
+	
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
+
+
+	
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+
+	
+<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+
+	
+<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.17.1/build/highlight.min.js"></script>
+
+	
+<script src="https://cdn.jsdelivr.net/npm/jquery-pjax@2.0.1/jquery.pjax.min.js"></script>
+
+	
+<script src="/js/main.js"></script>
+
+	
+		
+<script src="https://cdn.jsdelivr.net/npm/leancloud-storage/dist/av-min.js"></script>
+
+		
+<script src="https://cdn.jsdelivr.net/npm/valine@v1.4.14/dist/Valine.min.js"></script>
+
+	
+	
+		<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+	
+<meta name="generator" content="Hexo 6.2.0"></head>
+
+<body>
+	<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?3efe99c287df5a1d6f0d02d187e403c1";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+<header id="header">
+    <a id="title" href="/" class="logo">Home</a>
+
+	<ul id="menu">
+		<li class="menu-item">
+			<a href="/about" class="menu-item-link">About</a>
+		</li>
+	
+		<li class="menu-item">
+			<a href="/tags" class="menu-item-link">Tags</a>
+		</li>
+	
+
+	
+		<li class="menu-item">
+			<a href="/categories" class="menu-item-link">Categories</a>
+		</li>
+	
+
+		<li class="menu-item">
+			<a href="https://github.com/sremc" class="menu-item-link" target="_blank">
+				<i class="fa fa-github fa-2x"></i>
+			</a>
+		</li>
+	</ul>
+</header>
+
+	
+<div id="sidebar">
+	<button id="sidebar-toggle" class="toggle" ><i class="fa fa-arrow-right " aria-hidden="true"></i></button>
+	
+	<div id="site-toc">
+		<input id="search-input" class="search-input" type="search" placeholder="按回车全站搜索">
+		<div id="tree">
+			
+
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										DNS
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/05/23/DNS/DNSmasq/">
+                     
+										    DNSmasq
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/12/02/DNS/DNS%E5%8F%8D%E8%A7%A3%E9%85%8D%E7%BD%AE/">
+                     
+										    DNS反解配置
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2019/10/12/DNS/DNS%E6%A6%82%E5%BF%B5/">
+                     
+										    DNS概念
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										Go
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/09/05/Go/Golang-beego/">
+                     
+										    Golang-beego
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/08/20/Go/Golang-json%E8%A7%A3%E6%9E%90/">
+                     
+										    Golang-json解析
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/01/21/Go/Golang-sync%E5%8C%85/">
+                     
+										    Golang-sync包
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/09/07/Go/Golang-%E5%8D%8F%E7%A8%8Bgoroutine/">
+                     
+										    Golang-协程goroutine
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file active">
+									<a href="/2017/09/23/Go/Golang-%E5%9F%BA%E6%9C%AC%E5%B8%B8%E7%94%A8%E6%B1%87%E6%80%BB/">
+                     
+										    Golang-基本常用汇总
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2018/10/23/Go/Golang-%E5%9F%BA%E6%9C%AC%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/">
+                     
+										    Golang-基本数据类型
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/06/21/Go/Golang-%E5%B9%B6%E5%8F%91%E6%8E%A7%E5%88%B6/">
+                     
+										    Golang-并发控制
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/09/07/Go/Golang%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C/">
+                     
+										    Golang文件操作
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/09/05/Go/golang-gorm%E6%A1%86%E6%9E%B6/">
+                     
+										    golang-gorm框架
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										HTTP
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2021/09/07/HTTP/1RBAC-%E5%9F%BA%E4%BA%8E%E8%A7%92%E8%89%B2%E7%9A%84%E6%9D%83%E9%99%90%E8%AE%BF%E9%97%AE%E6%8E%A7%E5%88%B6/">
+                     
+										    1RBAC-基于角色的权限访问控制
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2015/12/21/HTTP/3%E7%A7%8Dweb%E4%BC%9A%E8%AF%9D%E7%AE%A1%E7%90%86%E7%9A%84%E6%96%B9%E5%BC%8F/">
+                     
+										    3种web会话管理的方式
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2019/07/06/HTTP/%E4%B8%80%E4%BA%9B%E5%AE%89%E5%85%A8%E7%9B%B8%E5%85%B3%E7%9A%84HTTP%E5%93%8D%E5%BA%94%E5%A4%B4/">
+                     
+										    一些安全相关的HTTP响应头
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2017/10/07/HTTP/%E4%B8%BA%E4%BB%80%E4%B9%88%E6%88%91%E4%BB%AC%E5%BA%94%E8%AF%A5%E5%B0%BD%E5%BF%AB%E5%8D%87%E7%BA%A7%E5%88%B0HTTPS%EF%BC%9F/">
+                     
+										    为什么我们应该尽快升级到HTTPS？
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2017/04/07/HTTP/%E4%BB%8ENginx%E9%BB%98%E8%AE%A4%E4%B8%8D%E5%8E%8B%E7%BC%A9HTTP-1.0%E8%AF%B4%E8%B5%B7/">
+                     
+										    从Nginx默认不压缩HTTP-1.0说起
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2018/05/02/HTTP/%E7%90%86%E8%A7%A3HTTP%E5%B9%82%E7%AD%89%E6%80%A7/">
+                     
+										    理解HTTP幂等性
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										Java
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2017/11/09/Java/JAVA_Tips/">
+                     
+										    JAVA_Tips
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2017/10/12/Java/JavaScript_Tips/">
+                     
+										    JavaScript_Tips
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2017/04/07/Java/JavaScript%E8%B7%A8%E5%9F%9F%E8%AE%BF%E9%97%AE%E9%97%AE%E9%A2%98/">
+                     
+										    JavaScript跨域访问问题
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2019/09/28/Java/Java%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86/">
+                     
+										    Java内存管理
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2018/12/04/Java/Java%E5%A4%9A%E7%BA%BF%E7%A8%8B/">
+                     
+										    Java多线程
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/03/25/Java/java%E8%BF%9B%E7%A8%8B%E5%B7%A5%E5%85%B7/">
+                     
+										    java进程工具
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2017/09/01/Java/tomcat-servlet-demo/">
+                     
+										    tomcat-servlet-demo
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										K8S
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2022/01/26/K8S/CMD%E4%B8%8EENTRYPOINT%E4%B8%BB%E8%A6%81%E5%8C%BA%E5%88%AB/">
+                     
+										    CMD与ENTRYPOINT主要区别
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2019/02/24/K8S/Harbor%E9%95%9C%E5%83%8F%E4%BB%93%E5%BA%93%E9%9B%86%E7%BE%A4%E9%83%A8%E7%BD%B2%E6%96%87%E6%A1%A3/">
+                     
+										    Harbor镜像仓库集群部署文档
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2019/10/24/K8S/K8S-%E9%83%A8%E7%BD%B2/">
+                     
+										    K8S-部署
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2019/11/05/K8S/K8S-%E9%85%8D%E7%BD%AE/">
+                     
+										    K8S-配置
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2017/05/25/K8S/docker%E7%9B%B8%E5%85%B3/">
+                     
+										    docker相关
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2019/11/01/K8S/k8s-pause%E5%AE%B9%E5%99%A8/">
+                     
+										    k8s-pause容器
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2019/11/01/K8S/k8s-%E6%8E%92%E9%94%99/">
+                     
+										    k8s-排错
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2019/10/28/K8S/mankubectl/">
+                     
+										    mankubectl
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										Linux
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2018/12/27/Linux/CentOSYUM/">
+                     
+										    CentOSYUM
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2018/09/29/Linux/CentOS%E9%99%90%E5%88%B6%E7%94%A8%E6%88%B7%E7%9A%84%E8%B5%84%E6%BA%90%E4%BD%BF%E7%94%A8/">
+                     
+										    CentOS限制用户的资源使用
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2018/01/17/Linux/LinuxLVM%E5%9F%BA%E7%A1%80%E6%93%8D%E4%BD%9C/">
+                     
+										    LinuxLVM基础操作
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2018/12/26/Linux/Linux%E4%B8%8B%E6%9F%A5%E7%9C%8B%E8%BF%9B%E7%A8%8B%E7%9A%84%E5%B8%A6%E5%AE%BD%E4%BD%BF%E7%94%A8%E6%83%85%E5%86%B5/">
+                     
+										    Linux下查看进程的带宽使用情况
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2017/05/10/Linux/Linux%E5%86%85%E5%AD%98%E7%9B%B8%E5%85%B3%E7%AC%94%E8%AE%B0/">
+                     
+										    Linux内存相关笔记
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2019/05/08/Linux/Linux%E5%88%9D%E5%A7%8B%E5%8C%96/">
+                     
+										    Linux初始化
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2019/03/25/Linux/Linux%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/">
+                     
+										    Linux正则表达式
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2018/01/06/Linux/Linux%E7%9A%84inode%E7%9A%84%E7%90%86%E8%A7%A3/">
+                     
+										    Linux的inode的理解
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2019/05/09/Linux/NUMA%E6%9E%B6%E6%9E%84/">
+                     
+										    NUMA架构
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2016/03/21/Linux/disk_io.py%E2%80%93%E7%A3%81%E7%9B%98IO%E7%BB%9F%E8%AE%A1/">
+                     
+										    disk_io.py–磁盘IO统计
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2019/09/22/Linux/strace%E5%91%BD%E4%BB%A4/">
+                     
+										    strace命令
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2017/01/21/Linux/%E5%85%B3%E4%BA%8ELinux%E8%BF%9E%E6%8E%A5%E8%B7%9F%E8%B8%AA%E6%A8%A1%E5%9D%97/">
+                     
+										    关于Linux连接跟踪模块
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2016/07/22/Linux/%E6%B5%85%E8%B0%88Linux%E5%AE%B9%E5%99%A8%E6%8A%80%E6%9C%AFLXC%E4%B9%8Bnamespace/">
+                     
+										    浅谈Linux容器技术LXC之namespace
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2016/07/03/Linux/%E6%B5%85%E8%B0%88Linux%E8%BD%BB%E9%87%8F%E8%99%9A%E6%8B%9F%E5%8C%96%E6%8A%80%E6%9C%AFLXC%E4%B9%8Bcgroup/">
+                     
+										    浅谈Linux轻量虚拟化技术LXC之cgroup
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2018/02/01/Linux/%E8%A2%AB%E9%BB%91%E4%B9%8B%E5%90%8E%E6%89%BE%E5%87%BA%E9%9A%90%E8%97%8F%E7%9A%84%E8%BF%9B%E7%A8%8B/">
+                     
+										    被黑之后找出隐藏的进程
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2017/02/20/Linux/%E8%A7%A3%E5%86%B3Linux%E7%BB%88%E7%AB%AF%E4%BA%A4%E4%BA%92%E6%A8%A1%E5%BC%8F%E4%B8%8B%E6%96%B9%E5%90%91%E9%94%AE%E3%80%81%E9%80%80%E6%A0%BC%E9%94%AE%E7%AD%89%E5%87%BA%E7%8E%B0%E4%B9%B1%E7%A0%81%E7%9A%84%E9%97%AE%E9%A2%98/">
+                     
+										    解决Linux终端交互模式下方向键、退格键等出现乱码的问题
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2017/10/02/Linux/%E9%80%9A%E8%BF%87-proc-pid%E4%BA%86%E8%A7%A3%E4%B8%80%E4%B8%AA%E8%BF%9B%E7%A8%8B/">
+                     
+										    通过-proc-pid了解一个进程
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										MacOS
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/03/14/MacOS/MacBookPro%E5%A4%96%E6%8E%A5%E6%98%BE%E7%A4%BA%E5%99%A8%E5%BC%80%E5%90%AFhidpi/">
+                     
+										    MacBookPro外接显示器开启hidpi
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2017/10/14/MacOS/macOS%E5%B8%B8%E7%94%A8%E6%8A%80%E5%B7%A7%E5%90%88%E9%9B%86/">
+                     
+										    macOS常用技巧合集
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2016/03/21/MacOS/zsh%E2%80%93oh-my-zsh/">
+                     
+										    zsh–oh-my-zsh
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										Nginx
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2019/11/30/Nginx/IO%E5%A4%9A%E8%B7%AF%E5%A4%8D%E7%94%A8/">
+                     
+										    IO多路复用
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/02/28/Nginx/LVS-NGINX/">
+                     
+										    LVS-NGINX
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2017/03/19/Nginx/Nginx%E5%8A%A8%E6%80%81%E6%91%98%E9%99%A4/">
+                     
+										    Nginx动态摘除
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2019/04/18/Nginx/Nginx%E5%B8%B8%E7%94%A8%E9%85%8D%E7%BD%AE/">
+                     
+										    Nginx常用配置
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										Python
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2019/06/17/Python/Django-models/">
+                     
+										    Django-models
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2017/07/25/Python/PYTHON_Tips/">
+                     
+										    PYTHON_Tips
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2017/02/22/Python/Python-%E5%88%9D%E8%AF%86%E5%A4%9A%E7%BA%BF%E7%A8%8B/">
+                     
+										    Python-初识多线程
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/05/13/Python/Pythontipsfrom2021/">
+                     
+										    Pythontipsfrom2021
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/23/Python/Python%E5%A4%9A%E8%BF%9B%E7%A8%8B%E5%A4%9A%E7%BA%BF%E7%A8%8B%E6%B7%B7%E5%90%88/">
+                     
+										    Python多进程多线程混合
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2017/03/02/Python/Python%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86/">
+                     
+										    Python异常处理
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/02/23/Python/Python%E6%80%A7%E8%83%BD%E7%9B%B8%E5%85%B3/">
+                     
+										    Python性能相关
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/08/23/Python/Python%E6%8E%92%E5%BA%8F%E6%B1%87%E6%80%BB/">
+                     
+										    Python排序汇总
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/07/09/Python/celery/">
+                     
+										    celery
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/08/30/Python/django%E6%9E%B6%E6%9E%84%E5%9B%BE/">
+                     
+										    django架构图
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2019/09/22/Python/python-pip/">
+                     
+										    python-pip
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2019/09/10/Python/python-with%E8%AF%AD%E5%8F%A5/">
+                     
+										    python-with语句
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2019/09/15/Python/python%E5%A4%9A%E7%BA%BF%E7%A8%8B/">
+                     
+										    python多线程
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/01/30/Python/python%E6%A0%B8%E5%BF%83%E6%A6%82%E5%BF%B5/">
+                     
+										    python核心概念
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2019/09/30/Python/python%E8%B5%8B%E5%80%BC%E3%80%81%E6%B5%85%E6%8B%B7%E8%B4%9D%E5%92%8C%E6%B7%B1%E6%8B%B7%E8%B4%9D/">
+                     
+										    python赋值、浅拷贝和深拷贝
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2019/09/28/Python/python%E8%BF%9B%E7%A8%8B-%E7%BA%BF%E7%A8%8B-%E5%8D%8F%E7%A8%8B/">
+                     
+										    python进程-线程-协程
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2017/03/26/Python/%E4%BD%BF%E7%94%A8pyenv%E7%AE%A1%E7%90%86Python%E7%89%88%E6%9C%AC/">
+                     
+										    使用pyenv管理Python版本
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										Shell
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2017/07/10/Shell/SHELL_Tips/">
+                     
+										    SHELL_Tips
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2017/09/22/Shell/Shellfork%E7%82%B8%E5%BC%B9/">
+                     
+										    Shellfork炸弹
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2017/04/01/Shell/shell%E5%A4%9A%E8%BF%9B%E7%A8%8B%E5%92%8C%E4%BF%A1%E5%8F%B7%E6%8D%95%E6%8D%89/">
+                     
+										    shell多进程和信号捕捉
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										TCP
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2016/05/10/TCP/TCP%E4%B8%89%E6%AC%A1%E6%8F%A1%E6%89%8B/">
+                     
+										    TCP三次握手
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2016/11/11/TCP/TCP%E5%BB%BA%E8%BF%9E%E7%9A%84%E9%87%8D%E8%AF%95%E6%9C%BA%E5%88%B6/">
+                     
+										    TCP建连的重试机制
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2017/07/02/TCP/TCP%E7%9A%84%E5%8D%8A%E8%BF%9E%E6%8E%A5%E5%92%8C%E5%85%A8%E8%BF%9E%E6%8E%A5%E9%98%9F%E5%88%97/">
+                     
+										    TCP的半连接和全连接队列
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2017/08/16/TCP/tcpcopy/">
+                     
+										    tcpcopy
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2017/04/25/TCP/tcpdump/">
+                     
+										    tcpdump
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2019/09/11/TCP/tcpping/">
+                     
+										    tcpping
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										VPN
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2017/12/18/VPN/OpenVPN%E6%9C%8D%E5%8A%A1%E6%90%AD%E5%BB%BA/">
+                     
+										    OpenVPN服务搭建
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2017/09/26/VPN/squid-authentication-by-NCSA-style/">
+                     
+										    squid-authentication-by-NCSA-style
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2017/09/26/VPN/%E4%BD%BF%E7%94%A8stunnel%E5%8A%A0%E5%AF%86%E9%80%9A%E4%BF%A1/">
+                     
+										    使用stunnel加密通信
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										其他语言
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2018/12/02/%E5%85%B6%E4%BB%96%E8%AF%AD%E8%A8%80/GentelellaAlela/">
+                     
+										    GentelellaAlela
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2017/04/01/%E5%85%B6%E4%BB%96%E8%AF%AD%E8%A8%80/JS%E7%9A%84%E5%A4%A7%E6%8B%AC%E5%8F%B7%E5%92%8C%E4%B8%AD%E6%8B%AC%E5%8F%B7/">
+                     
+										    JS的大括号和中括号
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/05/24/%E5%85%B6%E4%BB%96%E8%AF%AD%E8%A8%80/LUA%E7%AC%94%E8%AE%B0/">
+                     
+										    LUA笔记
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2017/02/15/%E5%85%B6%E4%BB%96%E8%AF%AD%E8%A8%80/Node.JS%E4%B9%8Bexpress%E5%85%A5%E9%97%A8/">
+                     
+										    Node.JS之express入门
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2017/04/07/%E5%85%B6%E4%BB%96%E8%AF%AD%E8%A8%80/NodeJS_Tips/">
+                     
+										    NodeJS_Tips
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2017/04/07/%E5%85%B6%E4%BB%96%E8%AF%AD%E8%A8%80/PHP_Tips/">
+                     
+										    PHP_Tips
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2017/10/22/%E5%85%B6%E4%BB%96%E8%AF%AD%E8%A8%80/PHP%E7%8E%AF%E5%A2%83%E7%9B%B8%E5%85%B3%E6%93%8D%E4%BD%9C/">
+                     
+										    PHP环境相关操作
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2016/01/22/%E5%85%B6%E4%BB%96%E8%AF%AD%E8%A8%80/%E7%94%A8%E4%BA%8E%E6%93%8D%E4%BD%9Copenldap%E7%9A%84PHP%E7%B1%BB/">
+                     
+										    用于操作openldap的PHP类
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										回收站
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/01/28/%E5%9B%9E%E6%94%B6%E7%AB%99/%E8%BD%AC%E8%BD%BD-%E8%81%8C%E5%9C%BA%E7%A4%BC%E4%BB%AAA/">
+                     
+										    转载-职场礼仪A
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/01/28/%E5%9B%9E%E6%94%B6%E7%AB%99/%E8%BD%AC%E8%BD%BD-%E8%81%8C%E5%9C%BA%E7%A4%BC%E4%BB%AAB/">
+                     
+										    转载-职场礼仪B
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/01/28/%E5%9B%9E%E6%94%B6%E7%AB%99/%E8%BD%AC%E8%BD%BD-%E8%81%8C%E5%9C%BA%E7%A4%BC%E4%BB%AAC/">
+                     
+										    转载-职场礼仪C
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										大数据
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2018/05/11/%E5%A4%A7%E6%95%B0%E6%8D%AE/apache-flume/">
+                     
+										    apache-flume
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2018/05/08/%E5%A4%A7%E6%95%B0%E6%8D%AE/apache-kafka/">
+                     
+										    apache-kafka
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2018/05/04/%E5%A4%A7%E6%95%B0%E6%8D%AE/apache-maven/">
+                     
+										    apache-maven
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2018/04/11/%E5%A4%A7%E6%95%B0%E6%8D%AE/apache-storm/">
+                     
+										    apache-storm
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2019/10/10/%E5%A4%A7%E6%95%B0%E6%8D%AE/cloudera/">
+                     
+										    cloudera
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										存储
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2017/12/26/%E5%AD%98%E5%82%A8/CephFS%E5%88%86%E5%B8%83%E5%BC%8F%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F/">
+                     
+										    CephFS分布式文件系统
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2019/08/20/%E5%AD%98%E5%82%A8/ElasticSearch%E7%AC%94%E8%AE%B0/">
+                     
+										    ElasticSearch笔记
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2016/04/27/%E5%AD%98%E5%82%A8/ownCloud%E6%9E%B6%E8%AE%BE%E4%BA%91%E7%9B%98/">
+                     
+										    ownCloud架设云盘
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/03/30/%E5%AD%98%E5%82%A8/owncloud%E5%8D%87%E7%BA%A7/">
+                     
+										    owncloud升级
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2016/09/15/%E5%AD%98%E5%82%A8/%E4%BD%BF%E7%94%A8cgroup%E9%99%90%E5%88%B6%E7%A3%81%E7%9B%98IO%E9%80%9F%E7%8E%87/">
+                     
+										    使用cgroup限制磁盘IO速率
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2017/07/03/%E5%AD%98%E5%82%A8/%E7%A3%81%E7%9B%98%E6%80%A7%E8%83%BD%E7%9B%B8%E5%85%B3%E7%9A%84%E6%8C%87%E6%A0%87/">
+                     
+										    磁盘性能相关的指标
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										工作笔记
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2019/03/17/%E5%B7%A5%E4%BD%9C%E7%AC%94%E8%AE%B0/%E4%BA%92%E8%81%94%E7%BD%91%E6%9E%B6%E6%9E%84%EF%BC%8C%E7%A9%B6%E7%AB%9F%E4%B8%BA%E5%95%A5%E8%A6%81%E5%81%9A%E6%9C%8D%E5%8A%A1%E5%8C%96%EF%BC%9F/">
+                     
+										    互联网架构，究竟为啥要做服务化？
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/10/29/%E5%B7%A5%E4%BD%9C%E7%AC%94%E8%AE%B0/%E5%BA%94%E5%B1%8A%E7%94%9F%E9%9D%A2%E8%AF%95/">
+                     
+										    应届生面试
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2019/10/07/%E5%B7%A5%E4%BD%9C%E7%AC%94%E8%AE%B0/%E6%96%B0%E4%B9%B0%E7%9A%84%E7%94%B5%E8%84%91/">
+                     
+										    新买的电脑
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2017/10/21/%E5%B7%A5%E4%BD%9C%E7%AC%94%E8%AE%B0/%E7%AE%80%E5%8D%95%E7%9A%84SLA%E6%9C%8D%E5%8A%A1%E4%BC%98%E5%8C%96%E6%8C%87%E6%A0%87/">
+                     
+										    简单的SLA服务优化指标
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2017/01/13/%E5%B7%A5%E4%BD%9C%E7%AC%94%E8%AE%B0/%E9%83%A8%E7%BD%B2%E5%9F%BA%E4%BA%8EDocker%E7%9A%84graphite/">
+                     
+										    部署基于Docker的graphite
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2017/09/23/%E5%B7%A5%E4%BD%9C%E7%AC%94%E8%AE%B0/%E9%97%AE%E9%A2%98%E6%B1%87%E6%80%BB/">
+                     
+										    问题汇总
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2019/02/03/%E5%B7%A5%E4%BD%9C%E7%AC%94%E8%AE%B0/%E9%A2%98%E7%9B%AE201903/">
+                     
+										    题目201903
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										开发工具
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2019/04/08/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/git-flow%E5%88%86%E6%94%AF%E7%AE%A1%E7%90%86%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5/">
+                     
+										    git-flow分支管理最佳实践
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/11/27/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/%E5%88%A0%E9%99%A4github%E6%8F%90%E4%BA%A4%E8%AE%B0%E5%BD%95/">
+                     
+										    删除github提交记录
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2017/09/25/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/%E5%91%BD%E4%BB%A4%E8%A1%8C%E4%B8%8Bgit%E5%B8%B8%E7%94%A8%E6%93%8D%E4%BD%9C%E5%90%88%E9%9B%86/">
+                     
+										    命令行下git常用操作合集
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										数据库
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2019/05/08/%E6%95%B0%E6%8D%AE%E5%BA%93/MongoDB/">
+                     
+										    MongoDB
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2019/05/09/%E6%95%B0%E6%8D%AE%E5%BA%93/MySQL_Tips/">
+                     
+										    MySQL_Tips
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2018/06/19/%E6%95%B0%E6%8D%AE%E5%BA%93/REDIS/">
+                     
+										    REDIS
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2017/10/02/%E6%95%B0%E6%8D%AE%E5%BA%93/SQL%E9%9A%8F%E7%AC%94/">
+                     
+										    SQL随笔
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										编辑器
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2019/02/26/%E7%BC%96%E8%BE%91%E5%99%A8/Markdown%E8%BD%ACPDF/">
+                     
+										    Markdown转PDF
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/05/13/%E7%BC%96%E8%BE%91%E5%99%A8/PyCharm%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/">
+                     
+										    PyCharm开发环境
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2016/10/02/%E7%BC%96%E8%BE%91%E5%99%A8/SublimeText%E5%B8%B8%E7%94%A8%E5%8A%9F%E8%83%BD/">
+                     
+										    SublimeText常用功能
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2017/04/05/%E7%BC%96%E8%BE%91%E5%99%A8/vim%E7%9B%AE%E5%BD%95%E6%B5%8F%E8%A7%88%E6%8F%92%E4%BB%B6NERDTree/">
+                     
+										    vim目录浏览插件NERDTree
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2018/01/14/%E7%BC%96%E8%BE%91%E5%99%A8/vim%E8%87%AA%E5%8A%A8%E8%A1%A5%E5%85%A8%E6%8F%92%E4%BB%B6YouCompleteMe/">
+                     
+										    vim自动补全插件YouCompleteMe
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2016/01/19/%E7%BC%96%E8%BE%91%E5%99%A8/vim%E8%A7%86%E5%9B%BE%E6%A8%A1%E5%BC%8F/">
+                     
+										    vim视图模式
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2017/04/01/%E7%BC%96%E8%BE%91%E5%99%A8/%E5%BC%80%E6%BA%90%E7%AC%94%E8%AE%B0leanote%E5%AE%89%E8%A3%85/">
+                     
+										    开源笔记leanote安装
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										网络
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2017/02/19/%E7%BD%91%E7%BB%9C/%E5%8D%8F%E8%AE%AE%E6%9D%82%E8%B0%88/">
+                     
+										    协议杂谈
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2016/01/27/%E7%BD%91%E7%BB%9C/%E5%9C%B0%E5%9D%80%E6%A0%8FURL%E5%9B%9E%E8%BD%A6%E5%90%8E%E7%9A%84%E6%8A%80%E6%9C%AF/">
+                     
+										    地址栏URL回车后的技术
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2019/08/20/%E7%BD%91%E7%BB%9C/%E5%A4%9A%E9%98%9F%E5%88%97%E7%BD%91%E5%8D%A1/">
+                     
+										    多队列网卡
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2019/10/21/%E7%BD%91%E7%BB%9C/%E7%BD%91%E5%8D%A1bond/">
+                     
+										    网卡bond
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2017/04/26/%E7%BD%91%E7%BB%9C/%E8%80%97%E6%97%B6%E7%AA%81%E5%A2%9E%E9%97%AE%E9%A2%98%E6%8E%92%E6%9F%A5/">
+                     
+										    耗时突增问题排查
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2019/10/08/%E7%BD%91%E7%BB%9C/%E8%B7%AF%E7%94%B1%E5%92%8C%E4%BA%A4%E6%8D%A2/">
+                     
+										    路由和交换
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										读书笔记
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2021/06/29/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E3%80%8A%E7%BA%A2%E6%A5%BC%E6%A2%A6%E3%80%8B12%E6%94%AF%E6%9B%B2%E5%8F%8A%E8%B5%8F%E6%9E%90/">
+                     
+										    《红楼梦》12支曲及赏析
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2017/02/23/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E4%B8%80%E4%B9%9D%E5%9B%9B%E4%B9%9D%E5%92%8C%E7%BD%91%E7%BB%9C%E6%97%B6%E4%BB%A3%E7%9A%84%E6%84%8F%E8%AF%86%E5%BD%A2%E6%80%81/">
+                     
+										    一九四九和网络时代的意识形态
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2017/02/24/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E5%83%B5%E5%9B%BA%E5%9E%8B%E5%BF%83%E6%99%BA%E8%AD%A6%E7%A4%BA%E6%B8%85%E5%8D%95/">
+                     
+										    僵固型心智警示清单
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2018/04/08/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E5%91%BD%E7%90%86%E5%92%8C%E9%A3%8E%E6%B0%B4/">
+                     
+										    命理和风水
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/02/22/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E5%A4%A7%E6%98%8E%E7%8E%8B%E6%9C%9D1566%E8%AF%84%E4%BB%B7/">
+                     
+										    大明王朝1566评价
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2019/07/15/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E6%84%88%E6%BC%94%E6%84%88%E7%83%88%E7%9A%84%E9%98%B6%E5%B1%82%E5%88%86%E5%8C%96/">
+                     
+										    愈演愈烈的阶层分化
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2017/02/23/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E6%8A%80%E6%9C%AF%E8%B7%AF%E7%BA%BFor%E7%AE%A1%E7%90%86%E8%B7%AF%E7%BA%BF/">
+                     
+										    技术路线or管理路线
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2017/02/14/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E6%91%87%E5%8F%B7%E8%B4%AD%E8%BD%A6%E4%B8%AD%E7%9A%84%E5%B9%B3%E7%AD%89%E6%9D%83%E9%97%AE%E9%A2%98/">
+                     
+										    摇号购车中的平等权问题
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2017/06/18/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E6%9C%80%E6%B2%A1%E7%94%A8%E7%9A%84%E4%B8%9C%E8%A5%BF/">
+                     
+										    最没用的东西
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2016/02/22/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E6%AE%B5%E5%AD%90%E4%B8%8E%E5%90%AF%E5%8F%91/">
+                     
+										    段子与启发
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2018/06/11/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E7%A7%AF%E5%96%84%E4%B9%8B%E5%AE%B6%EF%BC%8C%E5%BF%85%E6%9C%89%E4%BD%99%E5%BA%86/">
+                     
+										    积善之家，必有余庆
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2018/05/14/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E8%82%A1%E7%A5%A8%E5%B8%B8%E8%AF%86/">
+                     
+										    股票常识
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/09/02/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E8%8A%82%E9%80%89%E3%80%8A%E6%B4%BB%E7%9D%80%E3%80%8B/">
+                     
+										    节选《活着》
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/08/27/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E8%8A%82%E9%80%89%E3%80%8A%E9%BB%84%E9%87%91%E6%97%B6%E4%BB%A3%E3%80%8B/">
+                     
+										    节选《黄金时代》
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2017/07/08/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/">
+                     
+										    读书笔记
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/09/05/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E8%BD%AC%E4%BA%BA%E7%94%9F%E5%AE%9E%E8%B7%B5%E4%B8%AD%E7%9A%8411%E4%B8%AA%E5%BF%85%E6%9D%80%E6%8A%80/">
+                     
+										    转人生实践中的11个必杀技
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2018/08/01/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E9%AB%98%E5%96%84%E6%96%87%E5%B1%B1%E8%A5%BF%E8%AF%81%E5%88%B830%E5%91%A8%E5%B9%B4%E6%BC%94%E8%AE%B2/">
+                     
+										    高善文山西证券30周年演讲
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										运维
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2017/12/18/%E8%BF%90%E7%BB%B4/ANSIBLE_Tips/">
+                     
+										    ANSIBLE_Tips
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2019/02/24/%E8%BF%90%E7%BB%B4/Jenkins%E9%9B%86%E7%BE%A4%E9%83%A8%E7%BD%B2%E6%96%87%E6%A1%A3/">
+                     
+										    Jenkins集群部署文档
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2017/10/22/%E8%BF%90%E7%BB%B4/OPS_Tips/">
+                     
+										    OPS_Tips
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2019/02/24/%E8%BF%90%E7%BB%B4/Rancher%E9%9B%86%E7%BE%A4%E9%83%A8%E7%BD%B2%E6%96%87%E6%A1%A3/">
+                     
+										    Rancher集群部署文档
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2018/12/26/%E8%BF%90%E7%BB%B4/SaltStack/">
+                     
+										    SaltStack
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2019/03/11/%E8%BF%90%E7%BB%B4/daemontools%E5%AE%88%E6%8A%A4%E8%BF%9B%E7%A8%8B/">
+                     
+										    daemontools守护进程
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/11/10/%E8%BF%90%E7%BB%B4/rsyslog%E5%8F%91%E9%80%81%E6%97%A5%E5%BF%97/">
+                     
+										    rsyslog发送日志
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2019/03/23/%E8%BF%90%E7%BB%B4/telegraf-influxdb-grafana/">
+                     
+										    telegraf-influxdb-grafana
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/02/08/%E8%BF%90%E7%BB%B4/%E5%85%A8%E5%B1%80limit%E5%8F%82%E6%95%B0%E5%92%8Csystemd%E8%BF%9B%E7%A8%8B%E7%9A%84%E4%B8%8D%E4%B8%80%E8%87%B4/">
+                     
+										    全局limit参数和systemd进程的不一致
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2016/08/21/%E8%BF%90%E7%BB%B4/%E5%87%A0%E7%A7%8D%E6%97%A5%E5%BF%97%E5%88%86%E6%9E%90%E5%9C%BA%E6%99%AF/">
+                     
+										    几种日志分析场景
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2017/10/11/%E8%BF%90%E7%BB%B4/%E5%88%97%E5%87%BA%E5%8D%A0%E7%94%A8swap%E7%9A%84%E8%BF%9B%E7%A8%8B/">
+                     
+										    列出占用swap的进程
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2015/10/06/%E8%BF%90%E7%BB%B4/%E5%88%A9%E7%94%A8%E5%BE%AE%E4%BF%A1%E4%BC%81%E4%B8%9A%E5%8F%B7%E5%AE%9E%E7%8E%B0%E6%8A%A5%E8%AD%A6/">
+                     
+										    利用微信企业号实现报警
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2016/07/23/%E8%BF%90%E7%BB%B4/%E7%A6%81%E7%94%A8iptables%E9%93%BE%E6%8E%A5%E8%B7%9F%E8%B8%AA%E8%A1%A8%E6%98%AF%E5%90%A6%E5%AE%89%E5%85%A8/">
+                     
+										    禁用iptables链接跟踪表是否安全
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2017/09/01/%E8%BF%90%E7%BB%B4/%E8%BF%90%E7%BB%B4%E7%AC%94%E8%AE%B001/">
+                     
+										    运维笔记01
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2017/03/29/%E8%BF%90%E7%BB%B4/%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6/">
+                     
+										    配置文件
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										随笔
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2016/10/12/%E9%9A%8F%E7%AC%94/Hexo/">
+                     
+										    Hexo
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/09/11/%E9%9A%8F%E7%AC%94/%E4%B8%AD%E7%A7%8B%E8%8A%82%E5%BF%AB%E4%B9%90/">
+                     
+										    中秋节快乐
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2019/03/29/%E9%9A%8F%E7%AC%94/%E4%BF%8F%E7%9A%AE%E8%AF%9D/">
+                     
+										    俏皮话
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2017/10/26/%E9%9A%8F%E7%AC%94/%E5%AE%9A%E5%9C%BA%E8%AF%97/">
+                     
+										    定场诗
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/08/07/%E9%9A%8F%E7%AC%94/%E6%96%B0%E7%9A%84%E5%BC%80%E5%A7%8B/">
+                     
+										    新的开始
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+		</div>
+	</div>
+</div>
+
+	<!-- 引入正文 -->
+	<div id="content">
+		<h1 id="article-title">
+	Golang-基本常用汇总
+</h1>
+<div class="article-meta">
+	
+	<span>MC</span>
+	<span>2017-09-23 16:09:08</span>
+		<div id="article-categories">
+    
+		<span>Categories：</span>
+            
+                
+                    <span>
+                        <i class="fa fa-folder" aria-hidden="true">
+                        <a href="/categories/开发/">开发</a>
+                        </i>
+                      
+                    </span>
+                
+            
+    
+
+    
+		<span>Tags：</span>
+            
+                
+                    <span>
+                        <i class="fa fa-tag" aria-hidden="true">
+                        <a href="/tags/go/">go</a>
+                        </i>
+                    </span>
+                
+            
+    
+		</div>
+
+</div>
+
+<div id="article-content">
+	<h2 id="各种转换"><a href="#各种转换" class="headerlink" title="各种转换"></a>各种转换</h2><pre><code class="line-numbers language-c">// interface&#123;&#125;转换成[]map[string]interface&#123;&#125;
+itemList := response[&quot;result&quot;].([]interface&#123;&#125;)
+for _, i := range itemList &#123;
+    item := i.(map[string]interface&#123;&#125;)
+
+// int转字符串
+strconv.Itoa(1)
+
+// 给定字符串转换为英文标题的首字母大写的格式(不能正确处理unicode标点)
+fmt.Println(strings.Title(&quot;her royal highness&quot;))// Her Royal Highness
+
+// 所有字母转换为小写
+fmt.Println(strings.ToLower(&quot;Gopher123&quot;))// gopher123
+
+// 所有字母转换为大写
+fmt.Println(strings.ToUpper(&quot;Gopher&quot;))// GOPHER
+</code></pre>
+<h2 id="变量关键字"><a href="#变量关键字" class="headerlink" title="变量关键字"></a>变量关键字</h2><ul>
+<li>var ：仅仅声明一个变量，不初始化内存地址</li>
+<li>make&#x2F;new相同点：声明变量，又初始化内存地址</li>
+<li>make&#x2F;new不同点<ul>
+<li>make：返回声明变量的本身（slice、map、array）</li>
+<li>new：返回变量的内存地址（指针）（struct）</li>
+</ul>
+</li>
+</ul>
+<h2 id="执行命令"><a href="#执行命令" class="headerlink" title="执行命令"></a>执行命令</h2><pre><code class="line-numbers language-c">func runCmd(cmd string) (res string, err error) &#123;
+    e := exec.Command(&quot;/bin/bash&quot;, &quot;-c&quot;, cmd)
+    stdout, err := e.Output()
+    if err != nil &#123;
+        fmt.Println(&quot;COMMAND ERROR: &quot;, err.Error())
+    &#125;
+    res = string(stdout)
+    return res, err
+&#125;
+</code></pre>
+<h2 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h2><pre><code class="line-numbers language-c">package main
+import &quot;fmt&quot;
+import &quot;net/url&quot;
+import &quot;reflect&quot;
+
+/*
+函数可以将其他函数调用作为它的参数，只要这个被调用函数的返回值个数、返回值类型和返回值的顺序与调用函数所需求的实参是一致的，例如：
+假设 f1 需要 3 个参数 f1(a, b, c int)，同时 f2 返回 3 个参数 f2(a, b int) (int, int, int)，就可以这样调用 f1：f1(f2(a, b))。
+
+*/
+
+//如果函数的最后一个参数是采用 ...type 的形式，那么这个函数就可以处理一个变长的参数，这个长度可以为 0，这样的函数称为变参函数。
+func Greeting(greet string, who ...string) &#123;
+    fmt.Println(&quot;greet is: &quot;, greet)
+    for _, person := range who &#123;
+        fmt.Println(&quot;I am: &quot;, person)
+    &#125;
+&#125;
+
+func Minimum(arr ...int) int &#123;
+    if len(arr) == 0 &#123;
+        return 0
+    &#125;
+    min := arr[0]
+    for _, v := range arr &#123;
+        if v &lt; min &#123;
+            min = v
+        &#125;
+    &#125;
+    return min
+&#125;
+
+
+func plusone(n int) (int) &#123;
+    res := n + 1
+    return res
+&#125;
+
+//如果传递的是slice，则传递的是引用，如果函数内修改变量则会修改变量本身
+func A(s []int) &#123;
+    s[0] = 5
+    fmt.Println(s)
+&#125;
+
+//如果参数是一个int或者str，传递的是一个拷贝
+func B(ss int) &#123;
+    ss = 5
+    fmt.Println(ss)
+&#125;
+
+//函数传递map类型的参数
+func printMap(datamap map[string]string) &#123;
+    for k, v := range datamap &#123;
+        fmt.Printf(&quot;k=%v, v=%v\n&quot;, k, v)
+    &#125;
+&#125;
+
+func printUrlValues(params url.Values) &#123;
+    fmt.Println(reflect.TypeOf(params))
+    fmt.Println(params)
+&#125;
+
+func main() &#123;
+    //传递变长参数
+
+    //在 Greeting 函数中，变量 who 的值为 []string&#123;&quot;Joe&quot;, &quot;Anna&quot;, &quot;Eileen&quot;&#125;。
+    Greeting(&quot;Hello&quot;, &quot;Jim&quot;, &quot;Tom&quot;, &quot;Hellen&quot;)
+    /*
+    greet is:  Hello
+    I am:  Jim
+    I am:  Tom
+    I am:  Hellen
+    */
+
+    //如果参数被存储在一个数组 arr 中，则可以通过 arr... 的形式来传递参数调用变参函数。
+    arr := []int&#123;22, 44, 1, 55, 6&#125;
+    x := Minimum(arr...)
+    fmt.Println(&quot;minimum number: &quot;, x)  //minimum number:  1
+
+    y := Minimum(0,2,3,4)
+    fmt.Println(&quot;minimum number: &quot;, y)  //minimum number:  0
+
+    res := 10
+    fmt.Println(plusone(res))
+    fmt.Println(res)
+
+    s1 := []int&#123;1,2,3,4&#125;
+    A(s1)
+    fmt.Println(s1)
+
+    s2 := 2
+    B(s2)
+    fmt.Println(s2)
+
+    //函数传递map类型的参数
+    data := make(map[string]string)
+    data[&quot;name&quot;] = &quot;Tom&quot;
+    data[&quot;class&quot;] = &quot;middle&quot;
+    printMap(data)
+
+    data1 := url.Values&#123;&#125;
+    data1.Set(&quot;a&quot;, &quot;good&quot;)
+    data1.Set(&quot;b&quot;, &quot;greate&quot;)
+    printUrlValues(data1)
+&#125;
+</code></pre>
+<h2 id="条件判断"><a href="#条件判断" class="headerlink" title="条件判断"></a>条件判断</h2><pre><code class="line-numbers language-c">package main
+import &quot;fmt&quot;
+
+func main() &#123;
+    //if条件判断
+    a := 10
+    if a := 1; a &gt; 0 &#123;
+        //if语句中的变量作用域只在if模块内
+        fmt.Println(a)
+    &#125;
+    fmt.Println(a, &quot;\n&quot;)
+
+    //for循环的三种结构
+    b := 0
+    for &#123;
+        fmt.Println(b)
+        b++
+        if b &gt; 5 &#123;
+            break
+        &#125;
+    &#125;
+
+    fmt.Println()
+    c := 1
+    for c &lt;= 5 &#123;
+        fmt.Println(c)
+        c++
+    &#125;
+
+    fmt.Println()
+    for i := 0; i &lt;= 4; i++ &#123;   //变量是局部变量，作用域指针在for语句内
+        fmt.Println(i)
+    &#125;
+
+    //switch 控制语句
+    d := 1
+    switch d &#123;
+    case 0:
+        fmt.Println(&quot;d=0&quot;)
+    case 1:
+        fmt.Println(&quot;d=1&quot;)
+    case 2:
+        fmt.Println(&quot;d=2&quot;)
+    default:
+        fmt.Println(&quot;default&quot;)
+    &#125;
+
+
+    switch e := 1; &#123;    //变量是局部变量，作用域指针在switch内
+    case e &gt;= 0:
+        fmt.Println(&quot;d&gt;=0&quot;)
+        fallthrough
+    case e &gt;= 1:
+        fmt.Println(&quot;d&gt;=1&quot;)
+    case e == 10:
+        fmt.Println(&quot;d&gt;=2&quot;)
+    default:
+        fmt.Println(&quot;default&quot;)
+    &#125;
+    fmt.Println()
+
+
+    //break + 标签， 跳出到标签所在的位置
+    LABEL1:
+    for &#123;
+        for f := 0; f &lt; 10; f++ &#123;
+            fmt.Println(f)
+            if f &gt; 3 &#123;
+                fmt.Println(&quot;在死循环开始的标签处break&quot;)
+                break LABEL1
+            &#125;
+        &#125;
+    &#125;
+
+    //goto + 标签， 改变程序执行的位置。  一般标签放到goto的后面
+    for &#123;
+        for f := 0; f &lt; 10; f++ &#123;
+            fmt.Println(f)
+            if f &gt; 3 &#123;
+                fmt.Println(&quot;goto到死循环结束后的标签处&quot;)
+                goto LABEL2
+            &#125;
+        &#125;
+    &#125;
+    LABEL2:
+
+    //continue + 标签， 继续下一次执行，场景一般为有限循环内的无限循环跳出
+    LABEL3:
+    for g := 0; g &lt;= 5; g++ &#123;
+        for &#123;
+            fmt.Printf(&quot;执行完第%v次死循环后跳出到外层循环\n&quot;, g)
+            continue LABEL3
+        &#125;
+    &#125;
+&#125;
+</code></pre>
+<h2 id="Printf"><a href="#Printf" class="headerlink" title="Printf"></a>Printf</h2><pre><code class="line-numbers language-c">package main
+import &quot;fmt&quot;
+import &quot;os&quot;
+type point struct &#123;
+    x, y int
+&#125;
+func main() &#123;
+//Go 为常规 Go 值的格式化设计提供了多种打印方式。例如，这里打印了 point 结构体的一个实例。
+    p := point&#123;1, 2&#125;
+    fmt.Printf(&quot;%v\n&quot;, p) // &#123;1 2&#125;
+//如果值是一个结构体，%+v 的格式化输出内容将包括结构体的字段名。
+    fmt.Printf(&quot;%+v\n&quot;, p) // &#123;x:1 y:2&#125;
+//%#v 形式则输出这个值的 Go 语法表示。例如，值的运行源代码片段。
+    fmt.Printf(&quot;%#v\n&quot;, p) // main.point&#123;x:1, y:2&#125;
+//需要打印值的类型，使用 %T。
+    fmt.Printf(&quot;%T\n&quot;, p) // main.point
+//格式化布尔值是简单的。
+    fmt.Printf(&quot;%t\n&quot;, true)
+//格式化整形数有多种方式，使用 %d进行标准的十进制格式化。
+    fmt.Printf(&quot;%d\n&quot;, 123)
+//这个输出二进制表示形式。
+    fmt.Printf(&quot;%b\n&quot;, 14)
+//这个输出给定整数的对应字符。
+    fmt.Printf(&quot;%c\n&quot;, 33)
+//%x 提供十六进制编码。
+    fmt.Printf(&quot;%x\n&quot;, 456)
+//对于浮点型同样有很多的格式化选项。使用 %f 进行最基本的十进制格式化。
+    fmt.Printf(&quot;%f\n&quot;, 78.9)
+//%e 和 %E 将浮点型格式化为（稍微有一点不同的）科学技科学记数法表示形式。
+    fmt.Printf(&quot;%e\n&quot;, 123400000.0)
+    fmt.Printf(&quot;%E\n&quot;, 123400000.0)
+//使用 %s 进行基本的字符串输出。
+    fmt.Printf(&quot;%s\n&quot;, &quot;\&quot;string\&quot;&quot;)
+//像 Go 源代码中那样带有双引号的输出，使用 %q。
+    fmt.Printf(&quot;%q\n&quot;, &quot;\&quot;string\&quot;&quot;)
+//和上面的整形数一样，%x 输出使用 base-16 编码的字符串，每个字节使用 2 个字符表示。
+    fmt.Printf(&quot;%x\n&quot;, &quot;hex this&quot;)
+//要输出一个指针的值，使用 %p。
+    fmt.Printf(&quot;%p\n&quot;, &amp;p)
+//当输出数字的时候，你将经常想要控制输出结果的宽度和精度，可以使用在 % 后面使用数字来控制输出宽度。默认结果使用右对齐并且通过空格来填充空白部分。
+    fmt.Printf(&quot;|%6d|%6d|\n&quot;, 12, 345)
+//你也可以指定浮点型的输出宽度，同时也可以通过 宽度.精度 的语法来指定输出的精度。
+    fmt.Printf(&quot;|%6.2f|%6.2f|\n&quot;, 1.2, 3.45)
+//要最对齐，使用 - 标志。
+    fmt.Printf(&quot;|%-6.2f|%-6.2f|\n&quot;, 1.2, 3.45)
+//你也许也想控制字符串输出时的宽度，特别是要确保他们在类表格输出时的对齐。这是基本的右对齐宽度表示。
+    fmt.Printf(&quot;|%6s|%6s|\n&quot;, &quot;foo&quot;, &quot;b&quot;)
+//要左对齐，和数字一样，使用 - 标志。
+    fmt.Printf(&quot;|%-6s|%-6s|\n&quot;, &quot;foo&quot;, &quot;b&quot;)
+//到目前为止，我们已经看过 Printf了，它通过 os.Stdout输出格式化的字符串。Sprintf 则格式化并返回一个字符串而不带任何输出。
+    s := fmt.Sprintf(&quot;a %s&quot;, &quot;string&quot;)
+    fmt.Println(s)
+//你可以使用 Fprintf 来格式化并输出到 io.Writers而不是 os.Stdout。
+    fmt.Fprintf(os.Stderr, &quot;an %s\n&quot;, &quot;error&quot;)
+&#125;
+</code></pre>
+<h2 id="time"><a href="#time" class="headerlink" title="time"></a>time</h2><pre><code class="line-numbers language-c">package main
+
+import &quot;fmt&quot;
+import &quot;time&quot;
+
+// 标准时间戳
+ts := time.Now().Format(&quot;2006-01-02 15:04:05&quot;)
+
+func now_time() string &#123;
+    now := time.Now()
+    s := fmt.Sprintf(&quot;%d-%02d-%02d %02d:%02d:%02d&quot;,
+         now.Year(), now.Month(), now.Day(), now.Hour(),
+         now.Minute(), now.Second())
+    return s
+&#125;
+
+func main() &#123;
+    p := fmt.Println
+
+    now := time.Now()
+    p(now)
+    p(now.Year())
+    p(now.Month())                      //October
+    fmt.Printf(&quot;%02d\n&quot;, now.Month())   //10
+    p(now.Day())
+    p(now.Hour())
+    p(now.Minute())
+    p(now.Second())
+
+
+    fmt.Printf(&quot;%d-%02d-%02d %02d:%02d:%02d\n&quot;,
+        now.Year(), now.Month(), now.Day(),
+        now.Hour(), now.Minute(), now.Second())
+
+
+    fmt.Println(&quot;==========================&quot;)
+    then := time.Date(2017, 06, 21, 20, 34, 58, 0, time.UTC)
+    p(then)
+    p(then.Year())
+    p(then.Month())
+    p(then.Day())
+    p(then.Hour())
+    p(then.Minute())
+    p(then.Second())
+    p(then.Nanosecond())
+    p(then.Location())
+
+    s := now_time()
+    p(s)
+&#125;
+
+/*
+2017-10-19 16:56:16.869103521 +0800 CST m=+0.000300578
+2017
+October
+10
+19
+16
+56
+16
+2017-10-19 16:56:16
+==========================
+2017-06-21 20:34:58 +0000 UTC
+2017
+June
+21
+20
+34
+58
+0
+UTC
+2017-10-19 16:56:16
+*/
+</code></pre>
+<h2 id="error"><a href="#error" class="headerlink" title="error"></a>error</h2><pre><code class="line-numbers language-c">package main
+import &quot;fmt&quot;
+import &quot;errors&quot;
+import &quot;math&quot;
+
+//自定义求开平方根函数，带有错误返回
+func GetSqrt(s float64) (float64, error) &#123;
+    if s &lt; 0 &#123;
+        return 0, errors.New(&quot;negative number found!&quot;)
+    &#125;
+    return math.Sqrt(s), nil
+&#125;
+
+func main() &#123;
+    res, err := GetSqrt(-1)
+    fmt.Printf(&quot;res: %v, err: %v\n&quot;, res, err)     //res: 0, err: negative number found!
+    
+    res1, err1 := GetSqrt(16)
+    fmt.Printf(&quot;res: %v, err: %v\n&quot;, res1, err1) //res: 4, err: &lt;nil&gt;
+&#125;
+</code></pre>
+<h2 id="panic"><a href="#panic" class="headerlink" title="panic"></a>panic</h2><p>Go中引入的Exception处理：defer, panic, recover。</p>
+<pre><code class="line-numbers language-c">package main
+import (
+    &quot;log&quot;
+    &quot;time&quot;
+)
+
+func main() &#123;
+    test1()
+    time.Sleep(time.Second * 3)
+    log.Println(&quot;主协程结束&quot;) //主协程正常运行
+&#125;
+func test1() &#123;
+    // test1处理了异常
+    defer func() &#123;
+        if err := recover(); err != nil &#123;
+            log.Println(&quot;test? err:&quot;, err)
+        &#125;
+    &#125;()
+    log.Println(&quot;test1 start&quot;)
+    test2()
+    log.Println(&quot;test1 end&quot;)
+&#125;
+func test2() &#123;
+    log.Println(&quot;test2 start&quot;)
+    panic(&quot;stop test2&quot;) //test2异常终止，把异常抛到test1
+    log.Println(&quot;test2 end&quot;)
+&#125;
+</code></pre>
+<h2 id="流程控制"><a href="#流程控制" class="headerlink" title="流程控制"></a>流程控制</h2><h3 id="defer"><a href="#defer" class="headerlink" title="defer"></a>defer</h3><pre><code class="line-numbers language-java">func testdefer(number int) int &#123;
+
+    //defer 语句会延迟函数的执行直到上层函数返回。
+    //延迟调用的参数会立刻生成，但是在上层函数返回前函数都不会被调用。
+    fmt.Println(&quot;\n测试defer语句！&quot;)
+    defer fmt.Println(&quot;world&quot;)
+    fmt.Println(&quot;hello&quot;)
+
+    //defer 栈
+    //延迟的函数调用被压入一个栈中。当函数返回时， 会按照后进先出的顺序调用被延迟的函数调用。
+    fmt.Println(&quot;start&quot;)
+    for d := 0; d &lt; 5; d++ &#123;
+        defer fmt.Println(&quot;in defer cycle&quot;, d)
+    &#125;
+    fmt.Println(&quot;end&quot;)
+    return number
+&#125;
+/*
+测试defer语句！
+hello
+start
+end
+in defer cycle 4
+in defer cycle 3
+in defer cycle 2
+in defer cycle 1
+in defer cycle 0
+world
+*/
+</code></pre>
+<h2 id="模块相关"><a href="#模块相关" class="headerlink" title="模块相关"></a>模块相关</h2><h3 id="flag-获取命令行参数"><a href="#flag-获取命令行参数" class="headerlink" title="flag 获取命令行参数"></a>flag 获取命令行参数</h3><pre><code class="line-numbers language-java">action := flag.Int(&quot;action&quot;, 200, &quot;输入要操作的类型(503/200)&quot;)	//flag.Int返回的是pointer
+host := flag.String(&quot;host&quot;, &quot;x.x.x.x&quot;, &quot;输入要操作的IP地址&quot;)
+flag.Parse()
+fmt.Println(&quot;your action type: &quot;, *action)
+fmt.Println(&quot;your action host: &quot;, *host)
+
+/*
+参数格式：
+-id=1
+--id=1
+-id 1
+--id 1
+*/
+</code></pre>
+<pre><code class="line-numbers language-java">import &quot;net/url&quot;
+
+v := url.Values&#123;&#125;
+v.Set(&quot;name&quot;, &quot;Ava&quot;)
+v.Add(&quot;friend&quot;, &quot;Jess&quot;)
+v.Add(&quot;friend&quot;, &quot;Sarah&quot;)
+v.Add(&quot;friend&quot;, &quot;Zoe&quot;)
+//v.Set(&quot;friend&quot;, &quot;tom&quot;)
+// v.Encode() == &quot;name=Ava&amp;friend=Jess&amp;friend=Sarah&amp;friend=Zoe&quot;
+fmt.Println(v.Encode())
+fmt.Println(v.Get(&quot;name&quot;))
+fmt.Println(v.Get(&quot;friend&quot;))
+fmt.Println(v[&quot;friend&quot;])
+</code></pre>
+<ul>
+<li>body这个变量名被多次使用的报错提示</li>
+</ul>
+<pre><code>cannot assign []byte to body (type *bytes.Buffer) in multiple assignment
+</code></pre>
+<ul>
+<li>函数名大小写错误的提示</li>
+</ul>
+<pre><code>form.encode undefined (type url.Values has no field or method encode, but does have Encode)
+</code></pre>
+<h2 id="http-post-and-get"><a href="#http-post-and-get" class="headerlink" title="http post and get"></a>http post and get</h2><pre><code class="line-numbers language-java">package main
+import &quot;fmt&quot;
+import &quot;os&quot;
+import &quot;path/filepath&quot;
+import &quot;net/http&quot;
+import &quot;io/ioutil&quot;
+import &quot;bytes&quot;
+import &quot;net/url&quot;
+
+func main () &#123;
+    //GET请求
+    //res, err := http.Get(&quot;http://www.littletom.com&quot;)
+
+    //POST请求
+    form := url.Values&#123;&#125;
+    form.Set(&quot;class&quot;, &quot;middle&quot;)
+    form.Set(&quot;user&quot;, &quot;michel&quot;)
+
+    postBody := bytes.NewBufferString(form.Encode())
+    //等同于如下：
+    //postBody := bytes.NewBufferString(&quot;a=123&amp;b=456&quot;)
+    
+    res, err := http.Post(&quot;http://i.littletom.com/_prt.php&quot;, &quot;application/x-www-form-urlencoded&quot;, postBody)
+
+    if err != nil &#123;
+        fmt.Println(err)
+        os.Exit(2)
+    &#125;
+
+    defer res.Body.Close()
+
+    body, err2 := ioutil.ReadAll(res.Body)
+    if err2 != nil &#123;
+        fmt.Println(err2)
+        os.Exit(2)
+    &#125;
+
+    fmt.Printf(&quot;%s&quot;, body)
+
+    if len(os.Args) != 2 &#123;
+        fmt.Printf(&quot;\n\nUsage: go run %s action(200/503) host(1.1.1.1)\n&quot;, filepath.Base(os.Args[0]))
+        os.Exit(1)
+    &#125;
+
+&#125;
+</code></pre>
+<h2 id="开发环境"><a href="#开发环境" class="headerlink" title="开发环境"></a>开发环境</h2><h3 id="vim插件安装"><a href="#vim插件安装" class="headerlink" title="vim插件安装"></a>vim插件安装</h3><pre><code class="line-numbers language-sh">wget https://storage.googleapis.com/golang/go1.3.3.src.tar.gz
+tar zxvf go1.3.3.src.tar.gz
+ll /usr/share/vim/vim74/syntax
+tar zvcf /usr/local/src/vim74-bak0901.tgz /usr/share/vim/vim74/
+tar zxvf go1.3.3.src.tar.gz
+cd misc/vim/
+cp -rvf * /usr/share/vim/vim74/
+vim hello-world.go
+</code></pre>
+<p>Go语言中的内建函数new和make是两个用于内存分配的原语（allocation primitives）。对于初学者，这两者的区别也挺容易让人迷糊的。简单的说，new只分配内存，make用于slice，map，和channel的初始化。</p>
+<h3 id="环境变量"><a href="#环境变量" class="headerlink" title="环境变量"></a>环境变量</h3><h4 id="GOROOT"><a href="#GOROOT" class="headerlink" title="GOROOT"></a>GOROOT</h4><p>GOROOT就是go的安装路径<br>在~&#x2F;.bash_profile中添加下面语句:</p>
+<pre><code>GOROOT=/usr/local/go
+export GOROOT
+</code></pre>
+<p>当然, 要执行go命令和go工具, 就要配置go的可执行文件的路径,操作如下:<br>在~&#x2F;.bash_profile中配置如下:</p>
+<pre><code>export $PATH:$GOROOT/bin
+</code></pre>
+<h4 id="GOPATH"><a href="#GOPATH" class="headerlink" title="GOPATH"></a>GOPATH</h4><p><code>go install</code>和<code>go get</code> go的工具等会用到GOPATH环境变量<br>GOPATH是作为编译后二进制的存放目的地和import包时的搜索路径 (其实也是你的工作目录, 你可以在src下创建你自己的go源文件, 然后开始工作)。</p>
+<p>GOPATH之下主要包含三个目录: bin、pkg、src</p>
+<p>bin目录主要存放可执行文件; pkg目录存放编译好的库文件, 主要是*.a文件; src目录下主要存放go的源文件</p>
+<p>不要把GOPATH设置成go的安装路径,可以自己在用户目录下面创建一个目录, 如gopath。操作如下:</p>
+<pre><code>cd ~
+mkdir gopath
+</code></pre>
+<p>在~&#x2F;.bash_profile中添加如下语句:</p>
+<pre><code>GOPATH=/Users/username/gopath
+</code></pre>
+<p>GOPATH可以是一个目录列表, <code>go get</code>下载的第三方库, 一般都会下载到列表的第一个目录里面<br>需要把GOPATH中的可执行目录也配置到环境变量中, 否则你自行下载的第三方go工具就无法使用了, 操作如下:<br>在~&#x2F;bash_profile中配置,</p>
+<pre><code>export $PATH:$GOPATH/bin
+</code></pre>
+<h2 id="基本和特殊"><a href="#基本和特殊" class="headerlink" title="基本和特殊"></a>基本和特殊</h2><h3 id="下划线"><a href="#下划线" class="headerlink" title="下划线"></a>下划线</h3><p>“_”(下划线)，可以简单理解为赋值但以后不再使用，在golang中使用比较多，使用场合不单一，这里稍作总结，方便理解</p>
+<p>用在import</p>
+<pre><code>import  _  &quot;net/http/pprof&quot;
+</code></pre>
+<p>pprof常见用法<br>引入包，会先调用包中的初始化函数，这种使用方式仅让导入的包做初始化，而不使用包中其他功能</p>
+<p>用在返回值</p>
+<pre><code>for _,v := range Slice&#123;&#125;
+</code></pre>
+<p>_,err :&#x3D; func()<br>表示忽略某个值。单函数有多个返回值，用来获取某个特定的值</p>
+<p>用在变量</p>
+<pre><code>type T struct&#123;&#125;
+var _ I = T&#123;&#125;
+</code></pre>
+<p>其中 I为interface<br>上面用来判断 type T是否实现了I,用作类型断言，如果T没有实现借口I，则编译错误.</p>
+<p>作者：大漠狼道<br>链接：<a target="_blank" rel="noopener" href="http://www.jianshu.com/p/309f55a152db">http://www.jianshu.com/p/309f55a152db</a><br>來源：简书<br>著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>
+<h3 id="println-VS-printf"><a href="#println-VS-printf" class="headerlink" title="println VS printf"></a>println VS printf</h3><pre><code class="line-numbers language-java">import &quot;fmt&quot;
+import &quot;os&quot;
+import &quot;path/filepath&quot;
+import &quot;flag&quot;
+import &quot;net/http&quot;
+
+fmt.Printf(&quot;Usage: go run %s action host\n&quot;, filepath.Base(os.Args[0]))
+os.Exit(1)
+
+Usage: go run go_do_task action host
+exit status 1
+
+
+fmt.Printf(&quot;Usage: go run %s action host\n&quot;, filepath.Base(os.Args[0]))
+os.Exit(1)
+
+Usage: go run %s action host go_do_task
+exit status 1
+</code></pre>
+<hr>
+<pre><code class="line-numbers language-c">// 环境
+go env -w GOPATH=&quot;/root/.go&quot;                  // 改变module下载位置
+go env -w GOPROXY=&quot;https://goproxy.cn,direct&quot; // 可以使用github了
+go get github.com/yanyiwu/gojieba
+
+// map 用两个返回值判断是否存在key
+res, ok := mapdata[key]
+
+// 随机整数
+import &quot;math/rand&quot;
+rand.Seed(time.Now().UnixNano())
+rdm := rand.Intn(100)
+</code></pre>
+
+</div>
+
+
+    <div class="post-guide">
+        <div class="item left">
+            
+              <a href="/2017/09/25/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/%E5%91%BD%E4%BB%A4%E8%A1%8C%E4%B8%8Bgit%E5%B8%B8%E7%94%A8%E6%93%8D%E4%BD%9C%E5%90%88%E9%9B%86/">
+                  <i class="fa fa-angle-left" aria-hidden="true"></i>
+                  命令行下git常用操作合集
+              </a>
+            
+        </div>
+        <div class="item right">
+            
+              <a href="/2017/09/23/%E5%B7%A5%E4%BD%9C%E7%AC%94%E8%AE%B0/%E9%97%AE%E9%A2%98%E6%B1%87%E6%80%BB/">
+                问题汇总
+                <i class="fa fa-angle-right" aria-hidden="true"></i>
+              </a>
+            
+        </div>
+    </div>
+
+
+
+
+<script>
+	
+	
+</script>
+	</div>
+	<div id="footer">
+	<p>
+	©2019-<span id="footerYear"></span> 
+	<a href="/">MC</a> 
+	
+	
+		|
+		<span id="busuanzi_container_site_pv">
+			pv
+			<span id="busuanzi_value_site_pv"></span>
+		</span>
+		|
+		<span id="busuanzi_container_site_uv"> 
+			uv
+			<span id="busuanzi_value_site_uv"></span>
+		</span>
+	
+	<br>
+	Theme <a href="//github.com/wujun234/hexo-theme-tree" target="_blank">Tree</a>
+	by <a href="//github.com/wujun234" target="_blank">WuJun</a>
+	Powered by <a href="//hexo.io" target="_blank">Hexo</a>
+	</p>
+</div>
+<script type="text/javascript"> 
+	document.getElementById('footerYear').innerHTML = new Date().getFullYear() + '';
+</script>
+	<button id="totop-toggle" class="toggle"><i class="fa fa-angle-double-up" aria-hidden="true"></i></button>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/live2dw/assets/shizuku.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":true},"react":{"opacity":0.7}});</script></body>
+</html>

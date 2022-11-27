@@ -1,0 +1,3407 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+	
+	<!-- title -->
+	
+	<title>
+	
+		K8S-部署 | 
+	 
+	Home
+	</title>
+	
+	<!-- keywords,description -->
+	 
+
+	<!-- favicon -->
+	
+	<link rel="shortcut icon" href="/favicon.ico">
+	
+
+
+	<!-- search -->
+	<script>
+		var searchEngine = "https://www.sogo.com/web?query=";
+		if(typeof searchEngine == "undefined" || searchEngine == null || searchEngine == ""){
+			searchEngine = "https://www.google.com/search?q=";
+		}
+		var homeHost = "sremc.github.io";
+		if(typeof homeHost == "undefined" || homeHost == null || homeHost == ""){
+			homeHost = window.location.host;
+		}
+	</script>
+
+
+	
+<link rel="stylesheet" href="/css/main.css">
+
+	
+<link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.17.1/build/styles/darcula.min.css">
+
+	
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
+
+
+	
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+
+	
+<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+
+	
+<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.17.1/build/highlight.min.js"></script>
+
+	
+<script src="https://cdn.jsdelivr.net/npm/jquery-pjax@2.0.1/jquery.pjax.min.js"></script>
+
+	
+<script src="/js/main.js"></script>
+
+	
+		
+<script src="https://cdn.jsdelivr.net/npm/leancloud-storage/dist/av-min.js"></script>
+
+		
+<script src="https://cdn.jsdelivr.net/npm/valine@v1.4.14/dist/Valine.min.js"></script>
+
+	
+	
+		<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+	
+<meta name="generator" content="Hexo 6.2.0"></head>
+
+<body>
+	<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?3efe99c287df5a1d6f0d02d187e403c1";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+<header id="header">
+    <a id="title" href="/" class="logo">Home</a>
+
+	<ul id="menu">
+		<li class="menu-item">
+			<a href="/about" class="menu-item-link">About</a>
+		</li>
+	
+		<li class="menu-item">
+			<a href="/tags" class="menu-item-link">Tags</a>
+		</li>
+	
+
+	
+		<li class="menu-item">
+			<a href="/categories" class="menu-item-link">Categories</a>
+		</li>
+	
+
+		<li class="menu-item">
+			<a href="https://github.com/sremc" class="menu-item-link" target="_blank">
+				<i class="fa fa-github fa-2x"></i>
+			</a>
+		</li>
+	</ul>
+</header>
+
+	
+<div id="sidebar">
+	<button id="sidebar-toggle" class="toggle" ><i class="fa fa-arrow-right " aria-hidden="true"></i></button>
+	
+	<div id="site-toc">
+		<input id="search-input" class="search-input" type="search" placeholder="按回车全站搜索">
+		<div id="tree">
+			
+
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										DNS
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/05/23/DNS/DNSmasq/">
+                     
+										    DNSmasq
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/12/02/DNS/DNS%E5%8F%8D%E8%A7%A3%E9%85%8D%E7%BD%AE/">
+                     
+										    DNS反解配置
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2019/10/12/DNS/DNS%E6%A6%82%E5%BF%B5/">
+                     
+										    DNS概念
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										Go
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/09/05/Go/Golang-beego/">
+                     
+										    Golang-beego
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/08/20/Go/Golang-json%E8%A7%A3%E6%9E%90/">
+                     
+										    Golang-json解析
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/01/21/Go/Golang-sync%E5%8C%85/">
+                     
+										    Golang-sync包
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/09/07/Go/Golang-%E5%8D%8F%E7%A8%8Bgoroutine/">
+                     
+										    Golang-协程goroutine
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2017/09/23/Go/Golang-%E5%9F%BA%E6%9C%AC%E5%B8%B8%E7%94%A8%E6%B1%87%E6%80%BB/">
+                     
+										    Golang-基本常用汇总
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2018/10/23/Go/Golang-%E5%9F%BA%E6%9C%AC%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/">
+                     
+										    Golang-基本数据类型
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/06/21/Go/Golang-%E5%B9%B6%E5%8F%91%E6%8E%A7%E5%88%B6/">
+                     
+										    Golang-并发控制
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/09/07/Go/Golang%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C/">
+                     
+										    Golang文件操作
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/09/05/Go/golang-gorm%E6%A1%86%E6%9E%B6/">
+                     
+										    golang-gorm框架
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										HTTP
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2021/09/07/HTTP/1RBAC-%E5%9F%BA%E4%BA%8E%E8%A7%92%E8%89%B2%E7%9A%84%E6%9D%83%E9%99%90%E8%AE%BF%E9%97%AE%E6%8E%A7%E5%88%B6/">
+                     
+										    1RBAC-基于角色的权限访问控制
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2015/12/21/HTTP/3%E7%A7%8Dweb%E4%BC%9A%E8%AF%9D%E7%AE%A1%E7%90%86%E7%9A%84%E6%96%B9%E5%BC%8F/">
+                     
+										    3种web会话管理的方式
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2019/07/06/HTTP/%E4%B8%80%E4%BA%9B%E5%AE%89%E5%85%A8%E7%9B%B8%E5%85%B3%E7%9A%84HTTP%E5%93%8D%E5%BA%94%E5%A4%B4/">
+                     
+										    一些安全相关的HTTP响应头
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2017/10/07/HTTP/%E4%B8%BA%E4%BB%80%E4%B9%88%E6%88%91%E4%BB%AC%E5%BA%94%E8%AF%A5%E5%B0%BD%E5%BF%AB%E5%8D%87%E7%BA%A7%E5%88%B0HTTPS%EF%BC%9F/">
+                     
+										    为什么我们应该尽快升级到HTTPS？
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2017/04/07/HTTP/%E4%BB%8ENginx%E9%BB%98%E8%AE%A4%E4%B8%8D%E5%8E%8B%E7%BC%A9HTTP-1.0%E8%AF%B4%E8%B5%B7/">
+                     
+										    从Nginx默认不压缩HTTP-1.0说起
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2018/05/02/HTTP/%E7%90%86%E8%A7%A3HTTP%E5%B9%82%E7%AD%89%E6%80%A7/">
+                     
+										    理解HTTP幂等性
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										Java
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2017/11/09/Java/JAVA_Tips/">
+                     
+										    JAVA_Tips
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2017/10/12/Java/JavaScript_Tips/">
+                     
+										    JavaScript_Tips
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2017/04/07/Java/JavaScript%E8%B7%A8%E5%9F%9F%E8%AE%BF%E9%97%AE%E9%97%AE%E9%A2%98/">
+                     
+										    JavaScript跨域访问问题
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2019/09/28/Java/Java%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86/">
+                     
+										    Java内存管理
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2018/12/04/Java/Java%E5%A4%9A%E7%BA%BF%E7%A8%8B/">
+                     
+										    Java多线程
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/03/25/Java/java%E8%BF%9B%E7%A8%8B%E5%B7%A5%E5%85%B7/">
+                     
+										    java进程工具
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2017/09/01/Java/tomcat-servlet-demo/">
+                     
+										    tomcat-servlet-demo
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										K8S
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2022/01/26/K8S/CMD%E4%B8%8EENTRYPOINT%E4%B8%BB%E8%A6%81%E5%8C%BA%E5%88%AB/">
+                     
+										    CMD与ENTRYPOINT主要区别
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2019/02/24/K8S/Harbor%E9%95%9C%E5%83%8F%E4%BB%93%E5%BA%93%E9%9B%86%E7%BE%A4%E9%83%A8%E7%BD%B2%E6%96%87%E6%A1%A3/">
+                     
+										    Harbor镜像仓库集群部署文档
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file active">
+									<a href="/2019/10/24/K8S/K8S-%E9%83%A8%E7%BD%B2/">
+                     
+										    K8S-部署
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2019/11/05/K8S/K8S-%E9%85%8D%E7%BD%AE/">
+                     
+										    K8S-配置
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2017/05/25/K8S/docker%E7%9B%B8%E5%85%B3/">
+                     
+										    docker相关
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2019/11/01/K8S/k8s-pause%E5%AE%B9%E5%99%A8/">
+                     
+										    k8s-pause容器
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2019/11/01/K8S/k8s-%E6%8E%92%E9%94%99/">
+                     
+										    k8s-排错
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2019/10/28/K8S/mankubectl/">
+                     
+										    mankubectl
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										Linux
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2018/12/27/Linux/CentOSYUM/">
+                     
+										    CentOSYUM
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2018/09/29/Linux/CentOS%E9%99%90%E5%88%B6%E7%94%A8%E6%88%B7%E7%9A%84%E8%B5%84%E6%BA%90%E4%BD%BF%E7%94%A8/">
+                     
+										    CentOS限制用户的资源使用
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2018/01/17/Linux/LinuxLVM%E5%9F%BA%E7%A1%80%E6%93%8D%E4%BD%9C/">
+                     
+										    LinuxLVM基础操作
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2018/12/26/Linux/Linux%E4%B8%8B%E6%9F%A5%E7%9C%8B%E8%BF%9B%E7%A8%8B%E7%9A%84%E5%B8%A6%E5%AE%BD%E4%BD%BF%E7%94%A8%E6%83%85%E5%86%B5/">
+                     
+										    Linux下查看进程的带宽使用情况
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2017/05/10/Linux/Linux%E5%86%85%E5%AD%98%E7%9B%B8%E5%85%B3%E7%AC%94%E8%AE%B0/">
+                     
+										    Linux内存相关笔记
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2019/05/08/Linux/Linux%E5%88%9D%E5%A7%8B%E5%8C%96/">
+                     
+										    Linux初始化
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2019/03/25/Linux/Linux%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/">
+                     
+										    Linux正则表达式
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2018/01/06/Linux/Linux%E7%9A%84inode%E7%9A%84%E7%90%86%E8%A7%A3/">
+                     
+										    Linux的inode的理解
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2019/05/09/Linux/NUMA%E6%9E%B6%E6%9E%84/">
+                     
+										    NUMA架构
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2016/03/21/Linux/disk_io.py%E2%80%93%E7%A3%81%E7%9B%98IO%E7%BB%9F%E8%AE%A1/">
+                     
+										    disk_io.py–磁盘IO统计
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2019/09/22/Linux/strace%E5%91%BD%E4%BB%A4/">
+                     
+										    strace命令
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2017/01/21/Linux/%E5%85%B3%E4%BA%8ELinux%E8%BF%9E%E6%8E%A5%E8%B7%9F%E8%B8%AA%E6%A8%A1%E5%9D%97/">
+                     
+										    关于Linux连接跟踪模块
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2016/07/22/Linux/%E6%B5%85%E8%B0%88Linux%E5%AE%B9%E5%99%A8%E6%8A%80%E6%9C%AFLXC%E4%B9%8Bnamespace/">
+                     
+										    浅谈Linux容器技术LXC之namespace
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2016/07/03/Linux/%E6%B5%85%E8%B0%88Linux%E8%BD%BB%E9%87%8F%E8%99%9A%E6%8B%9F%E5%8C%96%E6%8A%80%E6%9C%AFLXC%E4%B9%8Bcgroup/">
+                     
+										    浅谈Linux轻量虚拟化技术LXC之cgroup
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2018/02/01/Linux/%E8%A2%AB%E9%BB%91%E4%B9%8B%E5%90%8E%E6%89%BE%E5%87%BA%E9%9A%90%E8%97%8F%E7%9A%84%E8%BF%9B%E7%A8%8B/">
+                     
+										    被黑之后找出隐藏的进程
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2017/02/20/Linux/%E8%A7%A3%E5%86%B3Linux%E7%BB%88%E7%AB%AF%E4%BA%A4%E4%BA%92%E6%A8%A1%E5%BC%8F%E4%B8%8B%E6%96%B9%E5%90%91%E9%94%AE%E3%80%81%E9%80%80%E6%A0%BC%E9%94%AE%E7%AD%89%E5%87%BA%E7%8E%B0%E4%B9%B1%E7%A0%81%E7%9A%84%E9%97%AE%E9%A2%98/">
+                     
+										    解决Linux终端交互模式下方向键、退格键等出现乱码的问题
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2017/10/02/Linux/%E9%80%9A%E8%BF%87-proc-pid%E4%BA%86%E8%A7%A3%E4%B8%80%E4%B8%AA%E8%BF%9B%E7%A8%8B/">
+                     
+										    通过-proc-pid了解一个进程
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										MacOS
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/03/14/MacOS/MacBookPro%E5%A4%96%E6%8E%A5%E6%98%BE%E7%A4%BA%E5%99%A8%E5%BC%80%E5%90%AFhidpi/">
+                     
+										    MacBookPro外接显示器开启hidpi
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2017/10/14/MacOS/macOS%E5%B8%B8%E7%94%A8%E6%8A%80%E5%B7%A7%E5%90%88%E9%9B%86/">
+                     
+										    macOS常用技巧合集
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2016/03/21/MacOS/zsh%E2%80%93oh-my-zsh/">
+                     
+										    zsh–oh-my-zsh
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										Nginx
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2019/11/30/Nginx/IO%E5%A4%9A%E8%B7%AF%E5%A4%8D%E7%94%A8/">
+                     
+										    IO多路复用
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/02/28/Nginx/LVS-NGINX/">
+                     
+										    LVS-NGINX
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2017/03/19/Nginx/Nginx%E5%8A%A8%E6%80%81%E6%91%98%E9%99%A4/">
+                     
+										    Nginx动态摘除
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2019/04/18/Nginx/Nginx%E5%B8%B8%E7%94%A8%E9%85%8D%E7%BD%AE/">
+                     
+										    Nginx常用配置
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										Python
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2019/06/17/Python/Django-models/">
+                     
+										    Django-models
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2017/07/25/Python/PYTHON_Tips/">
+                     
+										    PYTHON_Tips
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2017/02/22/Python/Python-%E5%88%9D%E8%AF%86%E5%A4%9A%E7%BA%BF%E7%A8%8B/">
+                     
+										    Python-初识多线程
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/05/13/Python/Pythontipsfrom2021/">
+                     
+										    Pythontipsfrom2021
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/23/Python/Python%E5%A4%9A%E8%BF%9B%E7%A8%8B%E5%A4%9A%E7%BA%BF%E7%A8%8B%E6%B7%B7%E5%90%88/">
+                     
+										    Python多进程多线程混合
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2017/03/02/Python/Python%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86/">
+                     
+										    Python异常处理
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/02/23/Python/Python%E6%80%A7%E8%83%BD%E7%9B%B8%E5%85%B3/">
+                     
+										    Python性能相关
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/08/23/Python/Python%E6%8E%92%E5%BA%8F%E6%B1%87%E6%80%BB/">
+                     
+										    Python排序汇总
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/07/09/Python/celery/">
+                     
+										    celery
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/08/30/Python/django%E6%9E%B6%E6%9E%84%E5%9B%BE/">
+                     
+										    django架构图
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2019/09/22/Python/python-pip/">
+                     
+										    python-pip
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2019/09/10/Python/python-with%E8%AF%AD%E5%8F%A5/">
+                     
+										    python-with语句
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2019/09/15/Python/python%E5%A4%9A%E7%BA%BF%E7%A8%8B/">
+                     
+										    python多线程
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/01/30/Python/python%E6%A0%B8%E5%BF%83%E6%A6%82%E5%BF%B5/">
+                     
+										    python核心概念
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2019/09/30/Python/python%E8%B5%8B%E5%80%BC%E3%80%81%E6%B5%85%E6%8B%B7%E8%B4%9D%E5%92%8C%E6%B7%B1%E6%8B%B7%E8%B4%9D/">
+                     
+										    python赋值、浅拷贝和深拷贝
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2019/09/28/Python/python%E8%BF%9B%E7%A8%8B-%E7%BA%BF%E7%A8%8B-%E5%8D%8F%E7%A8%8B/">
+                     
+										    python进程-线程-协程
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2017/03/26/Python/%E4%BD%BF%E7%94%A8pyenv%E7%AE%A1%E7%90%86Python%E7%89%88%E6%9C%AC/">
+                     
+										    使用pyenv管理Python版本
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										Shell
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2017/07/10/Shell/SHELL_Tips/">
+                     
+										    SHELL_Tips
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2017/09/22/Shell/Shellfork%E7%82%B8%E5%BC%B9/">
+                     
+										    Shellfork炸弹
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2017/04/01/Shell/shell%E5%A4%9A%E8%BF%9B%E7%A8%8B%E5%92%8C%E4%BF%A1%E5%8F%B7%E6%8D%95%E6%8D%89/">
+                     
+										    shell多进程和信号捕捉
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										TCP
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2016/05/10/TCP/TCP%E4%B8%89%E6%AC%A1%E6%8F%A1%E6%89%8B/">
+                     
+										    TCP三次握手
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2016/11/11/TCP/TCP%E5%BB%BA%E8%BF%9E%E7%9A%84%E9%87%8D%E8%AF%95%E6%9C%BA%E5%88%B6/">
+                     
+										    TCP建连的重试机制
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2017/07/02/TCP/TCP%E7%9A%84%E5%8D%8A%E8%BF%9E%E6%8E%A5%E5%92%8C%E5%85%A8%E8%BF%9E%E6%8E%A5%E9%98%9F%E5%88%97/">
+                     
+										    TCP的半连接和全连接队列
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2017/08/16/TCP/tcpcopy/">
+                     
+										    tcpcopy
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2017/04/25/TCP/tcpdump/">
+                     
+										    tcpdump
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2019/09/11/TCP/tcpping/">
+                     
+										    tcpping
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										VPN
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2017/12/18/VPN/OpenVPN%E6%9C%8D%E5%8A%A1%E6%90%AD%E5%BB%BA/">
+                     
+										    OpenVPN服务搭建
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2017/09/26/VPN/squid-authentication-by-NCSA-style/">
+                     
+										    squid-authentication-by-NCSA-style
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2017/09/26/VPN/%E4%BD%BF%E7%94%A8stunnel%E5%8A%A0%E5%AF%86%E9%80%9A%E4%BF%A1/">
+                     
+										    使用stunnel加密通信
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										其他语言
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2018/12/02/%E5%85%B6%E4%BB%96%E8%AF%AD%E8%A8%80/GentelellaAlela/">
+                     
+										    GentelellaAlela
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2017/04/01/%E5%85%B6%E4%BB%96%E8%AF%AD%E8%A8%80/JS%E7%9A%84%E5%A4%A7%E6%8B%AC%E5%8F%B7%E5%92%8C%E4%B8%AD%E6%8B%AC%E5%8F%B7/">
+                     
+										    JS的大括号和中括号
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/05/24/%E5%85%B6%E4%BB%96%E8%AF%AD%E8%A8%80/LUA%E7%AC%94%E8%AE%B0/">
+                     
+										    LUA笔记
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2017/02/15/%E5%85%B6%E4%BB%96%E8%AF%AD%E8%A8%80/Node.JS%E4%B9%8Bexpress%E5%85%A5%E9%97%A8/">
+                     
+										    Node.JS之express入门
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2017/04/07/%E5%85%B6%E4%BB%96%E8%AF%AD%E8%A8%80/NodeJS_Tips/">
+                     
+										    NodeJS_Tips
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2017/04/07/%E5%85%B6%E4%BB%96%E8%AF%AD%E8%A8%80/PHP_Tips/">
+                     
+										    PHP_Tips
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2017/10/22/%E5%85%B6%E4%BB%96%E8%AF%AD%E8%A8%80/PHP%E7%8E%AF%E5%A2%83%E7%9B%B8%E5%85%B3%E6%93%8D%E4%BD%9C/">
+                     
+										    PHP环境相关操作
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2016/01/22/%E5%85%B6%E4%BB%96%E8%AF%AD%E8%A8%80/%E7%94%A8%E4%BA%8E%E6%93%8D%E4%BD%9Copenldap%E7%9A%84PHP%E7%B1%BB/">
+                     
+										    用于操作openldap的PHP类
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										回收站
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/01/28/%E5%9B%9E%E6%94%B6%E7%AB%99/%E8%BD%AC%E8%BD%BD-%E8%81%8C%E5%9C%BA%E7%A4%BC%E4%BB%AAA/">
+                     
+										    转载-职场礼仪A
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/01/28/%E5%9B%9E%E6%94%B6%E7%AB%99/%E8%BD%AC%E8%BD%BD-%E8%81%8C%E5%9C%BA%E7%A4%BC%E4%BB%AAB/">
+                     
+										    转载-职场礼仪B
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/01/28/%E5%9B%9E%E6%94%B6%E7%AB%99/%E8%BD%AC%E8%BD%BD-%E8%81%8C%E5%9C%BA%E7%A4%BC%E4%BB%AAC/">
+                     
+										    转载-职场礼仪C
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										大数据
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2018/05/11/%E5%A4%A7%E6%95%B0%E6%8D%AE/apache-flume/">
+                     
+										    apache-flume
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2018/05/08/%E5%A4%A7%E6%95%B0%E6%8D%AE/apache-kafka/">
+                     
+										    apache-kafka
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2018/05/04/%E5%A4%A7%E6%95%B0%E6%8D%AE/apache-maven/">
+                     
+										    apache-maven
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2018/04/11/%E5%A4%A7%E6%95%B0%E6%8D%AE/apache-storm/">
+                     
+										    apache-storm
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2019/10/10/%E5%A4%A7%E6%95%B0%E6%8D%AE/cloudera/">
+                     
+										    cloudera
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										存储
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2017/12/26/%E5%AD%98%E5%82%A8/CephFS%E5%88%86%E5%B8%83%E5%BC%8F%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F/">
+                     
+										    CephFS分布式文件系统
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2019/08/20/%E5%AD%98%E5%82%A8/ElasticSearch%E7%AC%94%E8%AE%B0/">
+                     
+										    ElasticSearch笔记
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2016/04/27/%E5%AD%98%E5%82%A8/ownCloud%E6%9E%B6%E8%AE%BE%E4%BA%91%E7%9B%98/">
+                     
+										    ownCloud架设云盘
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/03/30/%E5%AD%98%E5%82%A8/owncloud%E5%8D%87%E7%BA%A7/">
+                     
+										    owncloud升级
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2016/09/15/%E5%AD%98%E5%82%A8/%E4%BD%BF%E7%94%A8cgroup%E9%99%90%E5%88%B6%E7%A3%81%E7%9B%98IO%E9%80%9F%E7%8E%87/">
+                     
+										    使用cgroup限制磁盘IO速率
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2017/07/03/%E5%AD%98%E5%82%A8/%E7%A3%81%E7%9B%98%E6%80%A7%E8%83%BD%E7%9B%B8%E5%85%B3%E7%9A%84%E6%8C%87%E6%A0%87/">
+                     
+										    磁盘性能相关的指标
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										工作笔记
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2019/03/17/%E5%B7%A5%E4%BD%9C%E7%AC%94%E8%AE%B0/%E4%BA%92%E8%81%94%E7%BD%91%E6%9E%B6%E6%9E%84%EF%BC%8C%E7%A9%B6%E7%AB%9F%E4%B8%BA%E5%95%A5%E8%A6%81%E5%81%9A%E6%9C%8D%E5%8A%A1%E5%8C%96%EF%BC%9F/">
+                     
+										    互联网架构，究竟为啥要做服务化？
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/10/29/%E5%B7%A5%E4%BD%9C%E7%AC%94%E8%AE%B0/%E5%BA%94%E5%B1%8A%E7%94%9F%E9%9D%A2%E8%AF%95/">
+                     
+										    应届生面试
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2019/10/07/%E5%B7%A5%E4%BD%9C%E7%AC%94%E8%AE%B0/%E6%96%B0%E4%B9%B0%E7%9A%84%E7%94%B5%E8%84%91/">
+                     
+										    新买的电脑
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2017/10/21/%E5%B7%A5%E4%BD%9C%E7%AC%94%E8%AE%B0/%E7%AE%80%E5%8D%95%E7%9A%84SLA%E6%9C%8D%E5%8A%A1%E4%BC%98%E5%8C%96%E6%8C%87%E6%A0%87/">
+                     
+										    简单的SLA服务优化指标
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2017/01/13/%E5%B7%A5%E4%BD%9C%E7%AC%94%E8%AE%B0/%E9%83%A8%E7%BD%B2%E5%9F%BA%E4%BA%8EDocker%E7%9A%84graphite/">
+                     
+										    部署基于Docker的graphite
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2017/09/23/%E5%B7%A5%E4%BD%9C%E7%AC%94%E8%AE%B0/%E9%97%AE%E9%A2%98%E6%B1%87%E6%80%BB/">
+                     
+										    问题汇总
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2019/02/03/%E5%B7%A5%E4%BD%9C%E7%AC%94%E8%AE%B0/%E9%A2%98%E7%9B%AE201903/">
+                     
+										    题目201903
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										开发工具
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2019/04/08/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/git-flow%E5%88%86%E6%94%AF%E7%AE%A1%E7%90%86%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5/">
+                     
+										    git-flow分支管理最佳实践
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/11/27/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/%E5%88%A0%E9%99%A4github%E6%8F%90%E4%BA%A4%E8%AE%B0%E5%BD%95/">
+                     
+										    删除github提交记录
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2017/09/25/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/%E5%91%BD%E4%BB%A4%E8%A1%8C%E4%B8%8Bgit%E5%B8%B8%E7%94%A8%E6%93%8D%E4%BD%9C%E5%90%88%E9%9B%86/">
+                     
+										    命令行下git常用操作合集
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										数据库
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2019/05/08/%E6%95%B0%E6%8D%AE%E5%BA%93/MongoDB/">
+                     
+										    MongoDB
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2019/05/09/%E6%95%B0%E6%8D%AE%E5%BA%93/MySQL_Tips/">
+                     
+										    MySQL_Tips
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2018/06/19/%E6%95%B0%E6%8D%AE%E5%BA%93/REDIS/">
+                     
+										    REDIS
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2017/10/02/%E6%95%B0%E6%8D%AE%E5%BA%93/SQL%E9%9A%8F%E7%AC%94/">
+                     
+										    SQL随笔
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										编辑器
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2019/02/26/%E7%BC%96%E8%BE%91%E5%99%A8/Markdown%E8%BD%ACPDF/">
+                     
+										    Markdown转PDF
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/05/13/%E7%BC%96%E8%BE%91%E5%99%A8/PyCharm%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/">
+                     
+										    PyCharm开发环境
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2016/10/02/%E7%BC%96%E8%BE%91%E5%99%A8/SublimeText%E5%B8%B8%E7%94%A8%E5%8A%9F%E8%83%BD/">
+                     
+										    SublimeText常用功能
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2017/04/05/%E7%BC%96%E8%BE%91%E5%99%A8/vim%E7%9B%AE%E5%BD%95%E6%B5%8F%E8%A7%88%E6%8F%92%E4%BB%B6NERDTree/">
+                     
+										    vim目录浏览插件NERDTree
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2018/01/14/%E7%BC%96%E8%BE%91%E5%99%A8/vim%E8%87%AA%E5%8A%A8%E8%A1%A5%E5%85%A8%E6%8F%92%E4%BB%B6YouCompleteMe/">
+                     
+										    vim自动补全插件YouCompleteMe
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2016/01/19/%E7%BC%96%E8%BE%91%E5%99%A8/vim%E8%A7%86%E5%9B%BE%E6%A8%A1%E5%BC%8F/">
+                     
+										    vim视图模式
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2017/04/01/%E7%BC%96%E8%BE%91%E5%99%A8/%E5%BC%80%E6%BA%90%E7%AC%94%E8%AE%B0leanote%E5%AE%89%E8%A3%85/">
+                     
+										    开源笔记leanote安装
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										网络
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2017/02/19/%E7%BD%91%E7%BB%9C/%E5%8D%8F%E8%AE%AE%E6%9D%82%E8%B0%88/">
+                     
+										    协议杂谈
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2016/01/27/%E7%BD%91%E7%BB%9C/%E5%9C%B0%E5%9D%80%E6%A0%8FURL%E5%9B%9E%E8%BD%A6%E5%90%8E%E7%9A%84%E6%8A%80%E6%9C%AF/">
+                     
+										    地址栏URL回车后的技术
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2019/08/20/%E7%BD%91%E7%BB%9C/%E5%A4%9A%E9%98%9F%E5%88%97%E7%BD%91%E5%8D%A1/">
+                     
+										    多队列网卡
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2019/10/21/%E7%BD%91%E7%BB%9C/%E7%BD%91%E5%8D%A1bond/">
+                     
+										    网卡bond
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2017/04/26/%E7%BD%91%E7%BB%9C/%E8%80%97%E6%97%B6%E7%AA%81%E5%A2%9E%E9%97%AE%E9%A2%98%E6%8E%92%E6%9F%A5/">
+                     
+										    耗时突增问题排查
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2019/10/08/%E7%BD%91%E7%BB%9C/%E8%B7%AF%E7%94%B1%E5%92%8C%E4%BA%A4%E6%8D%A2/">
+                     
+										    路由和交换
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										读书笔记
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2021/06/29/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E3%80%8A%E7%BA%A2%E6%A5%BC%E6%A2%A6%E3%80%8B12%E6%94%AF%E6%9B%B2%E5%8F%8A%E8%B5%8F%E6%9E%90/">
+                     
+										    《红楼梦》12支曲及赏析
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2017/02/23/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E4%B8%80%E4%B9%9D%E5%9B%9B%E4%B9%9D%E5%92%8C%E7%BD%91%E7%BB%9C%E6%97%B6%E4%BB%A3%E7%9A%84%E6%84%8F%E8%AF%86%E5%BD%A2%E6%80%81/">
+                     
+										    一九四九和网络时代的意识形态
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2017/02/24/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E5%83%B5%E5%9B%BA%E5%9E%8B%E5%BF%83%E6%99%BA%E8%AD%A6%E7%A4%BA%E6%B8%85%E5%8D%95/">
+                     
+										    僵固型心智警示清单
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2018/04/08/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E5%91%BD%E7%90%86%E5%92%8C%E9%A3%8E%E6%B0%B4/">
+                     
+										    命理和风水
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/02/22/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E5%A4%A7%E6%98%8E%E7%8E%8B%E6%9C%9D1566%E8%AF%84%E4%BB%B7/">
+                     
+										    大明王朝1566评价
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2019/07/15/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E6%84%88%E6%BC%94%E6%84%88%E7%83%88%E7%9A%84%E9%98%B6%E5%B1%82%E5%88%86%E5%8C%96/">
+                     
+										    愈演愈烈的阶层分化
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2017/02/23/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E6%8A%80%E6%9C%AF%E8%B7%AF%E7%BA%BFor%E7%AE%A1%E7%90%86%E8%B7%AF%E7%BA%BF/">
+                     
+										    技术路线or管理路线
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2017/02/14/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E6%91%87%E5%8F%B7%E8%B4%AD%E8%BD%A6%E4%B8%AD%E7%9A%84%E5%B9%B3%E7%AD%89%E6%9D%83%E9%97%AE%E9%A2%98/">
+                     
+										    摇号购车中的平等权问题
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2017/06/18/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E6%9C%80%E6%B2%A1%E7%94%A8%E7%9A%84%E4%B8%9C%E8%A5%BF/">
+                     
+										    最没用的东西
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2016/02/22/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E6%AE%B5%E5%AD%90%E4%B8%8E%E5%90%AF%E5%8F%91/">
+                     
+										    段子与启发
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2018/06/11/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E7%A7%AF%E5%96%84%E4%B9%8B%E5%AE%B6%EF%BC%8C%E5%BF%85%E6%9C%89%E4%BD%99%E5%BA%86/">
+                     
+										    积善之家，必有余庆
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2018/05/14/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E8%82%A1%E7%A5%A8%E5%B8%B8%E8%AF%86/">
+                     
+										    股票常识
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/09/02/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E8%8A%82%E9%80%89%E3%80%8A%E6%B4%BB%E7%9D%80%E3%80%8B/">
+                     
+										    节选《活着》
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/08/27/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E8%8A%82%E9%80%89%E3%80%8A%E9%BB%84%E9%87%91%E6%97%B6%E4%BB%A3%E3%80%8B/">
+                     
+										    节选《黄金时代》
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2017/07/08/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/">
+                     
+										    读书笔记
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/09/05/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E8%BD%AC%E4%BA%BA%E7%94%9F%E5%AE%9E%E8%B7%B5%E4%B8%AD%E7%9A%8411%E4%B8%AA%E5%BF%85%E6%9D%80%E6%8A%80/">
+                     
+										    转人生实践中的11个必杀技
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2018/08/01/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E9%AB%98%E5%96%84%E6%96%87%E5%B1%B1%E8%A5%BF%E8%AF%81%E5%88%B830%E5%91%A8%E5%B9%B4%E6%BC%94%E8%AE%B2/">
+                     
+										    高善文山西证券30周年演讲
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										运维
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2017/12/18/%E8%BF%90%E7%BB%B4/ANSIBLE_Tips/">
+                     
+										    ANSIBLE_Tips
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2019/02/24/%E8%BF%90%E7%BB%B4/Jenkins%E9%9B%86%E7%BE%A4%E9%83%A8%E7%BD%B2%E6%96%87%E6%A1%A3/">
+                     
+										    Jenkins集群部署文档
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2017/10/22/%E8%BF%90%E7%BB%B4/OPS_Tips/">
+                     
+										    OPS_Tips
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2019/02/24/%E8%BF%90%E7%BB%B4/Rancher%E9%9B%86%E7%BE%A4%E9%83%A8%E7%BD%B2%E6%96%87%E6%A1%A3/">
+                     
+										    Rancher集群部署文档
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2018/12/26/%E8%BF%90%E7%BB%B4/SaltStack/">
+                     
+										    SaltStack
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2019/03/11/%E8%BF%90%E7%BB%B4/daemontools%E5%AE%88%E6%8A%A4%E8%BF%9B%E7%A8%8B/">
+                     
+										    daemontools守护进程
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/11/10/%E8%BF%90%E7%BB%B4/rsyslog%E5%8F%91%E9%80%81%E6%97%A5%E5%BF%97/">
+                     
+										    rsyslog发送日志
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2019/03/23/%E8%BF%90%E7%BB%B4/telegraf-influxdb-grafana/">
+                     
+										    telegraf-influxdb-grafana
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/02/08/%E8%BF%90%E7%BB%B4/%E5%85%A8%E5%B1%80limit%E5%8F%82%E6%95%B0%E5%92%8Csystemd%E8%BF%9B%E7%A8%8B%E7%9A%84%E4%B8%8D%E4%B8%80%E8%87%B4/">
+                     
+										    全局limit参数和systemd进程的不一致
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2016/08/21/%E8%BF%90%E7%BB%B4/%E5%87%A0%E7%A7%8D%E6%97%A5%E5%BF%97%E5%88%86%E6%9E%90%E5%9C%BA%E6%99%AF/">
+                     
+										    几种日志分析场景
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2017/10/11/%E8%BF%90%E7%BB%B4/%E5%88%97%E5%87%BA%E5%8D%A0%E7%94%A8swap%E7%9A%84%E8%BF%9B%E7%A8%8B/">
+                     
+										    列出占用swap的进程
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2015/10/06/%E8%BF%90%E7%BB%B4/%E5%88%A9%E7%94%A8%E5%BE%AE%E4%BF%A1%E4%BC%81%E4%B8%9A%E5%8F%B7%E5%AE%9E%E7%8E%B0%E6%8A%A5%E8%AD%A6/">
+                     
+										    利用微信企业号实现报警
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2016/07/23/%E8%BF%90%E7%BB%B4/%E7%A6%81%E7%94%A8iptables%E9%93%BE%E6%8E%A5%E8%B7%9F%E8%B8%AA%E8%A1%A8%E6%98%AF%E5%90%A6%E5%AE%89%E5%85%A8/">
+                     
+										    禁用iptables链接跟踪表是否安全
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2017/09/01/%E8%BF%90%E7%BB%B4/%E8%BF%90%E7%BB%B4%E7%AC%94%E8%AE%B001/">
+                     
+										    运维笔记01
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2017/03/29/%E8%BF%90%E7%BB%B4/%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6/">
+                     
+										    配置文件
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										随笔
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2016/10/12/%E9%9A%8F%E7%AC%94/Hexo/">
+                     
+										    Hexo
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/09/11/%E9%9A%8F%E7%AC%94/%E4%B8%AD%E7%A7%8B%E8%8A%82%E5%BF%AB%E4%B9%90/">
+                     
+										    中秋节快乐
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2019/03/29/%E9%9A%8F%E7%AC%94/%E4%BF%8F%E7%9A%AE%E8%AF%9D/">
+                     
+										    俏皮话
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2017/10/26/%E9%9A%8F%E7%AC%94/%E5%AE%9A%E5%9C%BA%E8%AF%97/">
+                     
+										    定场诗
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2022/08/07/%E9%9A%8F%E7%AC%94/%E6%96%B0%E7%9A%84%E5%BC%80%E5%A7%8B/">
+                     
+										    新的开始
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+		</div>
+	</div>
+</div>
+
+	<!-- 引入正文 -->
+	<div id="content">
+		<h1 id="article-title">
+	K8S-部署
+</h1>
+<div class="article-meta">
+	
+	<span>MC</span>
+	<span>2019-10-24 21:10:44</span>
+		<div id="article-categories">
+    
+		<span>Categories：</span>
+            
+                
+                    <span>
+                        <i class="fa fa-folder" aria-hidden="true">
+                        <a href="/categories/运维/">运维</a>
+                        </i>
+                      
+                    </span>
+                
+            
+    
+
+    
+		<span>Tags：</span>
+            
+                
+                    <span>
+                        <i class="fa fa-tag" aria-hidden="true">
+                        <a href="/tags/k8s/">k8s</a>
+                        </i>
+                    </span>
+                
+            
+    
+		</div>
+
+</div>
+
+<div id="article-content">
+	<h2 id="环境说明"><a href="#环境说明" class="headerlink" title="环境说明"></a>环境说明</h2><p>在下面的步骤中，我们将在三台CentOS系统的物理机上部署具有三个节点的kubernetes v1.16.0集群。</p>
+<h3 id="名词解释"><a href="#名词解释" class="headerlink" title="名词解释"></a>名词解释</h3><ul>
+<li>证书签名请求（Certificate Signing Request）</li>
+</ul>
+<h3 id="组件分布"><a href="#组件分布" class="headerlink" title="组件分布"></a>组件分布</h3><p>Master：172.16.213.10<br>Node：172.16.213.10 172.16.213.11 172.16.213.12</p>
+<table>
+<thead>
+<tr>
+<th>角色</th>
+<th>IP</th>
+<th>版本</th>
+<th>安装</th>
+<th>端口</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>kube-apiserver</td>
+<td>master</td>
+<td>1.16.0</td>
+<td>bin</td>
+<td>8080, 6443</td>
+</tr>
+<tr>
+<td>kube-controller-manager</td>
+<td>master</td>
+<td>1.16.0</td>
+<td>bin</td>
+<td>10252, 10257</td>
+</tr>
+<tr>
+<td>kube-scheduler</td>
+<td>master</td>
+<td>1.16.0</td>
+<td>bin</td>
+<td>10251, 10259</td>
+</tr>
+<tr>
+<td>kubelet</td>
+<td>nodes</td>
+<td>1.16.0</td>
+<td>bin</td>
+<td></td>
+</tr>
+<tr>
+<td>kube-proxy</td>
+<td>nodes</td>
+<td>1.16.0</td>
+<td>bin</td>
+<td>10250</td>
+</tr>
+<tr>
+<td>flanneld</td>
+<td>all</td>
+<td>0.7.1</td>
+<td>yum</td>
+<td></td>
+</tr>
+<tr>
+<td>etcd</td>
+<td>all</td>
+<td>3.3.11</td>
+<td>yum</td>
+<td>2379, 2380</td>
+</tr>
+<tr>
+<td>docker</td>
+<td>all</td>
+<td>19.03.4</td>
+<td>yum</td>
+<td></td>
+</tr>
+<tr>
+<td>harbor&amp;mariadb</td>
+<td>master</td>
+<td>1.9.1</td>
+<td>docker</td>
+<td></td>
+</tr>
+<tr>
+<td>os</td>
+<td>all</td>
+<td>CentOS-7.7</td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<h3 id="二进制文件"><a href="#二进制文件" class="headerlink" title="二进制文件"></a>二进制文件</h3><pre><code class="line-numbers language-sh">wget -c https://dl.k8s.io/v1.16.0/kubernetes-client-linux-amd64.tar.gz
+wget -c https://dl.k8s.io/v1.16.0/kubernetes-server-linux-amd64.tar.gz
+wget -c https://dl.k8s.io/v1.16.0/kubernetes-node-linux-amd64.tar.gz
+</code></pre>
+<h2 id="创建TSL证书和密钥"><a href="#创建TSL证书和密钥" class="headerlink" title="创建TSL证书和密钥"></a>创建TSL证书和密钥</h2><p><a target="_blank" rel="noopener" href="https://jimmysong.io/kubernetes-handbook/practice/create-tls-and-secret-key.html">https://jimmysong.io/kubernetes-handbook/practice/create-tls-and-secret-key.html</a></p>
+<h3 id="安装cfssl"><a href="#安装cfssl" class="headerlink" title="安装cfssl"></a>安装cfssl</h3><pre><code class="line-numbers language-sh">wget https://pkg.cfssl.org/R1.2/cfssl_linux-amd64
+chmod +x cfssl_linux-amd64
+mv cfssl_linux-amd64 /usr/local/bin/cfssl
+
+wget https://pkg.cfssl.org/R1.2/cfssljson_linux-amd64
+chmod +x cfssljson_linux-amd64
+mv cfssljson_linux-amd64 /usr/local/bin/cfssljson
+
+wget https://pkg.cfssl.org/R1.2/cfssl-certinfo_linux-amd64
+chmod +x cfssl-certinfo_linux-amd64
+mv cfssl-certinfo_linux-amd64 /usr/local/bin/cfssl-certinfo
+</code></pre>
+<h3 id="安装CA"><a href="#安装CA" class="headerlink" title="安装CA"></a>安装CA</h3><p>创建2个默认模板</p>
+<pre><code class="line-numbers language-sh">mkdir /root/ssl
+cd /root/ssl
+cfssl print-defaults config &gt; ca-config.json
+cfssl print-defaults csr &gt; csr.json
+</code></pre>
+<p>创建CA证书签名请求ca-csr.json</p>
+<pre><code>&#123;
+  &quot;CN&quot;: &quot;kubernetes&quot;,
+  &quot;key&quot;: &#123;
+    &quot;algo&quot;: &quot;rsa&quot;,
+    &quot;size&quot;: 2048
+  &#125;,
+  &quot;names&quot;: [
+    &#123;
+      &quot;C&quot;: &quot;CN&quot;,
+      &quot;ST&quot;: &quot;BeiJing&quot;,
+      &quot;L&quot;: &quot;BeiJing&quot;,
+      &quot;O&quot;: &quot;k8s&quot;,
+      &quot;OU&quot;: &quot;System&quot;
+    &#125;
+  ],
+    &quot;ca&quot;: &#123;
+       &quot;expiry&quot;: &quot;87600h&quot;
+    &#125;
+&#125;
+</code></pre>
+<p>生成CA证书和私钥</p>
+<pre><code class="line-numbers language-sh">$ cfssl gencert -initca ca-csr.json | cfssljson -bare ca
+2019/10/23 09:44:19 [INFO] generating a new CA key and certificate from CSR
+2019/10/23 09:44:19 [INFO] generate received request
+2019/10/23 09:44:19 [INFO] received CSR
+2019/10/23 09:44:19 [INFO] generating key: rsa-2048
+2019/10/23 09:44:19 [INFO] encoded CSR
+2019/10/23 09:44:19 [INFO] signed certificate with serial number 627944876188051783180136914574014704830004400999
+
+$ ls
+ca-config.json  ca.csr  ca-csr.json  ca-key.pem  ca.pem
+</code></pre>
+<h3 id="创建kubernetes证书"><a href="#创建kubernetes证书" class="headerlink" title="创建kubernetes证书"></a>创建kubernetes证书</h3><p>创建CA配置文件ca-config.json</p>
+<pre><code>&#123;
+  &quot;signing&quot;: &#123;
+    &quot;default&quot;: &#123;
+      &quot;expiry&quot;: &quot;87600h&quot;
+    &#125;,
+    &quot;profiles&quot;: &#123;
+      &quot;kubernetes&quot;: &#123;
+        &quot;usages&quot;: [
+            &quot;signing&quot;,
+            &quot;key encipherment&quot;,
+            &quot;server auth&quot;,
+            &quot;client auth&quot;
+        ],
+        &quot;expiry&quot;: &quot;87600h&quot;
+      &#125;
+    &#125;
+  &#125;
+&#125;
+</code></pre>
+<p>创建 kubernetes 证书签名请求文件 kubernetes-csr.json：</p>
+<pre><code>&#123;
+    &quot;CN&quot;: &quot;kubernetes&quot;,
+    &quot;hosts&quot;: [
+      &quot;127.0.0.1&quot;,
+      &quot;172.16.213.10&quot;,
+      &quot;172.16.213.11&quot;,
+      &quot;172.16.213.12&quot;,
+      &quot;172.16.213.13&quot;,
+      &quot;kubernetes&quot;,
+      &quot;kubernetes.default&quot;,
+      &quot;kubernetes.default.svc&quot;,
+      &quot;kubernetes.default.svc.cluster&quot;,
+      &quot;kubernetes.default.svc.cluster.local&quot;
+    ],
+    &quot;key&quot;: &#123;
+        &quot;algo&quot;: &quot;rsa&quot;,
+        &quot;size&quot;: 2048
+    &#125;,
+    &quot;names&quot;: [
+        &#123;
+            &quot;C&quot;: &quot;CN&quot;,
+            &quot;ST&quot;: &quot;BeiJing&quot;,
+            &quot;L&quot;: &quot;BeiJing&quot;,
+            &quot;O&quot;: &quot;k8s&quot;,
+            &quot;OU&quot;: &quot;System&quot;
+        &#125;
+    ]
+&#125;
+</code></pre>
+<p>生成 kubernetes 证书和私钥</p>
+<pre><code class="line-numbers language-sh">$ cfssl gencert -ca=ca.pem -ca-key=ca-key.pem -config=ca-config.json -profile=kubernetes kubernetes-csr.json | cfssljson -bare kubernetes
+2019/10/23 10:50:01 [INFO] generate received request
+2019/10/23 10:50:01 [INFO] received CSR
+2019/10/23 10:50:01 [INFO] generating key: rsa-2048
+2019/10/23 10:50:01 [INFO] encoded CSR
+2019/10/23 10:50:01 [INFO] signed certificate with serial number 69328630130988534770100489460939082526650002602
+2019/10/23 10:50:01 [WARNING] This certificate lacks a &quot;hosts&quot; field. This makes it unsuitable for
+websites. For more information see the Baseline Requirements for the Issuance and Management
+of Publicly-Trusted Certificates, v.1.1.6, from the CA/Browser Forum (https://cabforum.org);
+specifically, section 10.2.3 (&quot;Information Requirements&quot;).
+
+$ ls kubernetes*
+kubernetes.csr  kubernetes-csr.json  kubernetes-key.pem  kubernetes.pem
+</code></pre>
+<h3 id="创建admin证书"><a href="#创建admin证书" class="headerlink" title="创建admin证书"></a>创建admin证书</h3><p>创建 admin 证书签名请求文件 admin-csr.json：</p>
+<pre><code>&#123;
+  &quot;CN&quot;: &quot;admin&quot;,
+  &quot;hosts&quot;: [],
+  &quot;key&quot;: &#123;
+    &quot;algo&quot;: &quot;rsa&quot;,
+    &quot;size&quot;: 2048
+  &#125;,
+  &quot;names&quot;: [
+    &#123;
+      &quot;C&quot;: &quot;CN&quot;,
+      &quot;ST&quot;: &quot;BeiJing&quot;,
+      &quot;L&quot;: &quot;BeiJing&quot;,
+      &quot;O&quot;: &quot;system:masters&quot;,
+      &quot;OU&quot;: &quot;System&quot;
+    &#125;
+  ]
+&#125;
+</code></pre>
+<pre><code class="line-numbers language-sh">cfssl gencert -ca=ca.pem -ca-key=ca-key.pem -config=ca-config.json -profile=kubernetes admin-csr.json | cfssljson -bare admin
+2019/10/23 10:56:20 [INFO] generate received request
+2019/10/23 10:56:20 [INFO] received CSR
+2019/10/23 10:56:20 [INFO] generating key: rsa-2048
+2019/10/23 10:56:21 [INFO] encoded CSR
+2019/10/23 10:56:21 [INFO] signed certificate with serial number 82736544262599499583537442619868449573038523847
+2019/10/23 10:56:21 [WARNING] This certificate lacks a &quot;hosts&quot; field. This makes it unsuitable for
+websites. For more information see the Baseline Requirements for the Issuance and Management
+of Publicly-Trusted Certificates, v.1.1.6, from the CA/Browser Forum (https://cabforum.org);
+specifically, section 10.2.3 (&quot;Information Requirements&quot;).
+
+$ ls admin*
+admin.csr  admin-csr.json  admin-key.pem  admin.pem
+</code></pre>
+<h3 id="创建-kube-proxy-证书"><a href="#创建-kube-proxy-证书" class="headerlink" title="创建 kube-proxy 证书"></a>创建 kube-proxy 证书</h3><p>创建 kube-proxy 证书签名请求文件 kube-proxy-csr.json：</p>
+<pre><code>&#123;
+  &quot;CN&quot;: &quot;system:kube-proxy&quot;,
+  &quot;hosts&quot;: [],
+  &quot;key&quot;: &#123;
+    &quot;algo&quot;: &quot;rsa&quot;,
+    &quot;size&quot;: 2048
+  &#125;,
+  &quot;names&quot;: [
+    &#123;
+      &quot;C&quot;: &quot;CN&quot;,
+      &quot;ST&quot;: &quot;BeiJing&quot;,
+      &quot;L&quot;: &quot;BeiJing&quot;,
+      &quot;O&quot;: &quot;k8s&quot;,
+      &quot;OU&quot;: &quot;System&quot;
+    &#125;
+  ]
+&#125;
+</code></pre>
+<pre><code class="line-numbers language-sh">cfssl gencert -ca=ca.pem -ca-key=ca-key.pem -config=ca-config.json -profile=kubernetes  kube-proxy-csr.json | cfssljson -bare kube-proxy
+2019/10/23 10:58:39 [INFO] generate received request
+2019/10/23 10:58:39 [INFO] received CSR
+2019/10/23 10:58:39 [INFO] generating key: rsa-2048
+2019/10/23 10:58:40 [INFO] encoded CSR
+2019/10/23 10:58:40 [INFO] signed certificate with serial number 596262888061014969822070239785233061099858759712
+2019/10/23 10:58:40 [WARNING] This certificate lacks a &quot;hosts&quot; field. This makes it unsuitable for
+websites. For more information see the Baseline Requirements for the Issuance and Management
+of Publicly-Trusted Certificates, v.1.1.6, from the CA/Browser Forum (https://cabforum.org);
+specifically, section 10.2.3 (&quot;Information Requirements&quot;).
+
+$ ls kube-proxy*
+kube-proxy.csr  kube-proxy-csr.json  kube-proxy-key.pem  kube-proxy.pem
+</code></pre>
+<h3 id="校验证书"><a href="#校验证书" class="headerlink" title="校验证书"></a>校验证书</h3><pre><code>$ openssl x509  -noout -text -in  kubernetes.pem
+$ cfssl-certinfo -cert kubernetes.pem
+</code></pre>
+<h3 id="证书分发"><a href="#证书分发" class="headerlink" title="证书分发"></a>证书分发</h3><pre><code>mkdir -p /etc/kubernetes/ssl
+cp *.pem /etc/kubernetes/ssl
+</code></pre>
+<h3 id="汇总"><a href="#汇总" class="headerlink" title="汇总"></a>汇总</h3><p>生成的 CA 证书和秘钥文件如下：</p>
+<pre><code>$ ls *.pem
+admin-key.pem  admin.pem  ca-key.pem  ca.pem  kube-proxy-key.pem  kube-proxy.pem  kubernetes-key.pem  kubernetes.pem
+</code></pre>
+<p>使用证书的组件如下：</p>
+<ul>
+<li>etcd：使用 ca.pem、kubernetes-key.pem、kubernetes.pem；</li>
+<li>kube-apiserver：使用 ca.pem、kubernetes-key.pem、kubernetes.pem；</li>
+<li>kubelet：使用 ca.pem；</li>
+<li>kube-proxy：使用 ca.pem、kube-proxy-key.pem、kube-proxy.pem；</li>
+<li>kubectl：使用 ca.pem、admin-key.pem、admin.pem；</li>
+<li>kube-controller-manager：使用 ca-key.pem、ca.pem</li>
+</ul>
+<h2 id="创建kubeconfig文件"><a href="#创建kubeconfig文件" class="headerlink" title="创建kubeconfig文件"></a>创建kubeconfig文件</h2><h3 id="安装kubectl命令行工具"><a href="#安装kubectl命令行工具" class="headerlink" title="安装kubectl命令行工具"></a>安装kubectl命令行工具</h3><pre><code class="line-numbers language-sh">cp kubernetes/client/bin/kubectl  /usr/bin/
+</code></pre>
+<pre><code class="line-numbers language-sh">export KUBE_APISERVER=&quot;https://172.16.213.10:6443&quot;
+# 设置集群参数
+kubectl config set-cluster kubernetes \
+  --certificate-authority=/etc/kubernetes/ssl/ca.pem \
+  --embed-certs=true \
+  --server=$&#123;KUBE_APISERVER&#125;
+# 设置客户端认证参数
+kubectl config set-credentials admin \
+  --client-certificate=/etc/kubernetes/ssl/admin.pem \
+  --embed-certs=true \
+  --client-key=/etc/kubernetes/ssl/admin-key.pem
+# 设置上下文参数
+kubectl config set-context kubernetes \
+  --cluster=kubernetes \
+  --user=admin
+# 设置默认上下文
+kubectl config use-context kubernetes
+</code></pre>
+<p>注意：<code>~/.kube/config</code>文件拥有对该集群的最高权限，请妥善保管。只保存在master节点。</p>
+<h3 id="创建-TLS-Bootstrapping-Token"><a href="#创建-TLS-Bootstrapping-Token" class="headerlink" title="创建 TLS Bootstrapping Token"></a>创建 TLS Bootstrapping Token</h3><p>kubelet、kube-proxy 等 Node 机器上的进程与 Master 机器的 kube-apiserver 进程通信时需要认证和授权；</p>
+<p>Token可以是任意的包含128 bit的字符串，可以使用安全的随机数发生器生成。</p>
+<pre><code class="line-numbers language-sh">export BOOTSTRAP_TOKEN=$(head -c 16 /dev/urandom | od -An -t x | tr -d &#39; &#39;)
+cat &gt; token.csv &lt;&lt;EOF
+$&#123;BOOTSTRAP_TOKEN&#125;,kubelet-bootstrap,10001,&quot;system:kubelet-bootstrap&quot;
+EOF
+cp token.csv /etc/kubernetes/
+</code></pre>
+<h3 id="创建-kubelet-bootstrapping-kubeconfig-文件"><a href="#创建-kubelet-bootstrapping-kubeconfig-文件" class="headerlink" title="创建 kubelet bootstrapping kubeconfig 文件"></a>创建 kubelet bootstrapping kubeconfig 文件</h3><pre><code class="line-numbers language-sh">cd /etc/kubernetes
+export KUBE_APISERVER=&quot;https://172.16.213.10:6443&quot;
+
+# 设置集群参数
+kubectl config set-cluster kubernetes \
+  --certificate-authority=/etc/kubernetes/ssl/ca.pem \
+  --embed-certs=true \
+  --server=$&#123;KUBE_APISERVER&#125; \
+  --kubeconfig=bootstrap.kubeconfig
+
+# 设置客户端认证参数
+kubectl config set-credentials kubelet-bootstrap \
+  --token=$&#123;BOOTSTRAP_TOKEN&#125; \
+  --kubeconfig=bootstrap.kubeconfig
+
+# 设置上下文参数
+kubectl config set-context default \
+  --cluster=kubernetes \
+  --user=kubelet-bootstrap \
+  --kubeconfig=bootstrap.kubeconfig
+
+# 设置默认上下文
+kubectl config use-context default --kubeconfig=bootstrap.kubeconfig
+</code></pre>
+<h3 id="创建-kube-proxy-kubeconfig-文件"><a href="#创建-kube-proxy-kubeconfig-文件" class="headerlink" title="创建 kube-proxy kubeconfig 文件"></a>创建 kube-proxy kubeconfig 文件</h3><pre><code class="line-numbers language-sh">export KUBE_APISERVER=&quot;https://172.16.213.10:6443&quot;
+# 设置集群参数
+kubectl config set-cluster kubernetes \
+  --certificate-authority=/etc/kubernetes/ssl/ca.pem \
+  --embed-certs=true \
+  --server=$&#123;KUBE_APISERVER&#125; \
+  --kubeconfig=kube-proxy.kubeconfig
+# 设置客户端认证参数
+kubectl config set-credentials kube-proxy \
+  --client-certificate=/etc/kubernetes/ssl/kube-proxy.pem \
+  --client-key=/etc/kubernetes/ssl/kube-proxy-key.pem \
+  --embed-certs=true \
+  --kubeconfig=kube-proxy.kubeconfig
+# 设置上下文参数
+kubectl config set-context default \
+  --cluster=kubernetes \
+  --user=kube-proxy \
+  --kubeconfig=kube-proxy.kubeconfig
+# 设置默认上下文
+kubectl config use-context default --kubeconfig=kube-proxy.kubeconfig
+</code></pre>
+<p>把创建的kubeconfig文件分发到所有的node主机上</p>
+<pre><code>cd /etc/kubernetes/
+cp bootstrap.kubeconfig kube-proxy.kubeconfig /etc/kubernetes/
+</code></pre>
+<h2 id="部署etcd集群"><a href="#部署etcd集群" class="headerlink" title="部署etcd集群"></a>部署etcd集群</h2><h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><pre><code class="line-numbers language-sh">yum -y install etcd
+</code></pre>
+<h3 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h3><p>配置&#x2F;etc&#x2F;etcd&#x2F;etcd.conf，更改IP为自身IP</p>
+<pre><code class="line-numbers language-sh">#[member]
+ETCD_NAME=infra1
+ETCD_DATA_DIR=&quot;/var/lib/etcd&quot;
+ETCD_LISTEN_PEER_URLS=&quot;https://172.16.213.10:2380&quot;
+ETCD_LISTEN_CLIENT_URLS=&quot;https://172.16.213.10:2379&quot;
+
+#[cluster]
+ETCD_INITIAL_ADVERTISE_PEER_URLS=&quot;https://172.16.213.10:2380&quot;
+ETCD_INITIAL_CLUSTER_TOKEN=&quot;etcd-cluster&quot;
+ETCD_ADVERTISE_CLIENT_URLS=&quot;https://172.16.213.10:2379&quot;
+</code></pre>
+<p>配置&#x2F;etc&#x2F;etcd&#x2F;etcd.conf，更改每台主机的<code>ETCD_NAME</code>和IP地址</p>
+<pre><code class="line-numbers language-sh">#[member]
+ETCD_NAME=infra1
+ETCD_DATA_DIR=&quot;/var/lib/etcd&quot;
+ETCD_LISTEN_PEER_URLS=&quot;https://172.16.213.10:2380&quot;
+ETCD_LISTEN_CLIENT_URLS=&quot;https://172.16.213.10:2379&quot;
+
+#[cluster]
+ETCD_INITIAL_ADVERTISE_PEER_URLS=&quot;https://172.16.213.10:2380&quot;
+ETCD_INITIAL_CLUSTER_TOKEN=&quot;etcd-cluster&quot;
+ETCD_ADVERTISE_CLIENT_URLS=&quot;https://172.16.213.10:2379&quot;
+cat /usr/lib/systemd/system/etc
+cat: /usr/lib/systemd/system/etc: No such file or directory
+cat /usr/lib/systemd/system/etcd.service
+[Unit]
+Description=Etcd Server
+After=network.target
+After=network-online.target
+Wants=network-online.target
+Documentation=https://github.com/coreos
+
+[Service]
+Type=notify
+WorkingDirectory=/var/lib/etcd/
+EnvironmentFile=-/etc/etcd/etcd.conf
+ExecStart=/usr/bin/etcd \
+  --name $&#123;ETCD_NAME&#125; \
+  --cert-file=/etc/kubernetes/ssl/kubernetes.pem \
+  --key-file=/etc/kubernetes/ssl/kubernetes-key.pem \
+  --peer-cert-file=/etc/kubernetes/ssl/kubernetes.pem \
+  --peer-key-file=/etc/kubernetes/ssl/kubernetes-key.pem \
+  --trusted-ca-file=/etc/kubernetes/ssl/ca.pem \
+  --peer-trusted-ca-file=/etc/kubernetes/ssl/ca.pem \
+  --initial-advertise-peer-urls $&#123;ETCD_INITIAL_ADVERTISE_PEER_URLS&#125; \
+  --listen-peer-urls $&#123;ETCD_LISTEN_PEER_URLS&#125; \
+  --listen-client-urls $&#123;ETCD_LISTEN_CLIENT_URLS&#125;,http://127.0.0.1:2379 \
+  --advertise-client-urls $&#123;ETCD_ADVERTISE_CLIENT_URLS&#125; \
+  --initial-cluster-token $&#123;ETCD_INITIAL_CLUSTER_TOKEN&#125; \
+  --initial-cluster infra1=https://172.16.213.10:2380,infra2=https://172.16.213.11:2380,infra3=https://172.16.213.12:2380 \
+  --initial-cluster-state new \
+  --data-dir=$&#123;ETCD_DATA_DIR&#125;
+Restart=on-failure
+RestartSec=5
+LimitNOFILE=65536
+
+[Install]
+WantedBy=multi-user.target
+</code></pre>
+<h3 id="启动"><a href="#启动" class="headerlink" title="启动"></a>启动</h3><pre><code class="line-numbers language-sh">iptables -F
+systemctl start etcd
+</code></pre>
+<h3 id="验证"><a href="#验证" class="headerlink" title="验证"></a>验证</h3><pre><code>etcdctl \
+  --ca-file=/etc/kubernetes/ssl/ca.pem \
+  --cert-file=/etc/kubernetes/ssl/kubernetes.pem \
+  --key-file=/etc/kubernetes/ssl/kubernetes-key.pem \
+  cluster-health
+
+member 1bc15959b51c061e is healthy: got healthy result from https://172.16.213.11:2379
+member 5c8cf9d3d5046ef6 is healthy: got healthy result from https://172.16.213.10:2379
+member 9d74efc6ac368c65 is healthy: got healthy result from https://172.16.213.12:2379
+cluster is healthy
+</code></pre>
+<h2 id="部署master节点"><a href="#部署master节点" class="headerlink" title="部署master节点"></a>部署master节点</h2><p>kubernetes master 节点包含的组件：</p>
+<ul>
+<li>kube-apiserver</li>
+<li>kube-scheduler</li>
+<li>kube-controller-manager</li>
+</ul>
+<p>拷贝所有组件的二进制文件</p>
+<pre><code class="line-numbers language-sh">cp -fv kubernetes/server/bin/&#123;kube-apiserver,kube-controller-manager,kube-scheduler,kubectl,kube-proxy,kubelet&#125; /usr/local/bin/
+</code></pre>
+<h3 id="部署kube-apiserver"><a href="#部署kube-apiserver" class="headerlink" title="部署kube-apiserver"></a>部署kube-apiserver</h3><h4 id="创建kube-apiserver的service文件"><a href="#创建kube-apiserver的service文件" class="headerlink" title="创建kube-apiserver的service文件"></a>创建kube-apiserver的service文件</h4><p>cat &#x2F;usr&#x2F;lib&#x2F;systemd&#x2F;system&#x2F;kube-apiserver.service</p>
+<pre><code>[Unit]
+Description=Kubernetes API Service
+Documentation=https://github.com/GoogleCloudPlatform/kubernetes
+After=network.target
+After=etcd.service
+
+[Service]
+EnvironmentFile=-/etc/kubernetes/config
+EnvironmentFile=-/etc/kubernetes/apiserver
+ExecStart=/usr/local/bin/kube-apiserver \
+        $KUBE_LOGTOSTDERR \
+        $KUBE_LOG_LEVEL \
+        $KUBE_ETCD_SERVERS \
+        $KUBE_API_ADDRESS \
+        $KUBE_API_PORT \
+        $KUBELET_PORT \
+        $KUBE_ALLOW_PRIV \
+        $KUBE_SERVICE_ADDRESSES \
+        $KUBE_ADMISSION_CONTROL \
+        $KUBE_API_ARGS
+Restart=on-failure
+Type=notify
+LimitNOFILE=65536
+
+[Install]
+WantedBy=multi-user.target
+</code></pre>
+<h4 id="创建kube-apiserver的配置文件"><a href="#创建kube-apiserver的配置文件" class="headerlink" title="创建kube-apiserver的配置文件"></a>创建kube-apiserver的配置文件</h4><p>cat &#x2F;etc&#x2F;kubernetes&#x2F;apiserver</p>
+<pre><code class="line-numbers language-sh">###
+## kubernetes system config
+##
+## The following values are used to configure the kube-apiserver
+##
+#
+## The address on the local server to listen to.
+#KUBE_API_ADDRESS=&quot;--insecure-bind-address=test-001.jimmysong.io&quot;
+KUBE_API_ADDRESS=&quot;--advertise-address=172.16.213.10 --bind-address=172.16.213.10 --insecure-bind-address=172.16.213.10&quot;
+#
+## The port on the local server to listen on.
+#KUBE_API_PORT=&quot;--port=8080&quot;
+#
+## Port minions listen on
+#KUBELET_PORT=&quot;--kubelet-port=10250&quot;
+#
+## Comma separated list of nodes in the etcd cluster
+KUBE_ETCD_SERVERS=&quot;--etcd-servers=https://172.16.213.10:2379,https://172.16.213.11:2379,https://172.16.213.12:2379&quot;
+#
+## Address range to use for services
+KUBE_SERVICE_ADDRESSES=&quot;--service-cluster-ip-range=10.254.0.0/16&quot;
+#
+## default admission control policies
+KUBE_ADMISSION_CONTROL=&quot;--admission-control=ServiceAccount,NamespaceLifecycle,NamespaceExists,LimitRanger,ResourceQuota&quot;
+#
+## Add your own!
+KUBE_API_ARGS=&quot;--authorization-mode=Node,RBAC --runtime-config=rbac.authorization.k8s.io/v1beta1 --kubelet-https=true --enable-bootstrap-token-auth --token-auth-file=/etc/kubernetes/token.csv --service-node-port-range=30000-32767 --tls-cert-file=/etc/kubernetes/ssl/kubernetes.pem --tls-private-key-file=/etc/kubernetes/ssl/kubernetes-key.pem --client-ca-file=/etc/kubernetes/ssl/ca.pem --service-account-key-file=/etc/kubernetes/ssl/ca-key.pem --etcd-cafile=/etc/kubernetes/ssl/ca.pem --etcd-certfile=/etc/kubernetes/ssl/kubernetes.pem --etcd-keyfile=/etc/kubernetes/ssl/kubernetes-key.pem --enable-swagger-ui=true --apiserver-count=3 --audit-log-maxage=30 --audit-log-maxbackup=3 --audit-log-maxsize=100 --audit-log-path=/var/log/audit.log --event-ttl=1h&quot;
+</code></pre>
+<h4 id="创建通用配置文件"><a href="#创建通用配置文件" class="headerlink" title="创建通用配置文件"></a>创建通用配置文件</h4><p>&#x2F;etc&#x2F;kubernetes&#x2F;config</p>
+<pre><code class="line-numbers language-sh">###
+# kubernetes system config
+#
+# The following values are used to configure various aspects of all
+# kubernetes services, including
+#
+#   kube-apiserver.service
+#   kube-controller-manager.service
+#   kube-scheduler.service
+#   kubelet.service
+#   kube-proxy.service
+# logging to stderr means we get it in the systemd journal
+KUBE_LOGTOSTDERR=&quot;--logtostderr=true&quot;
+
+# journal message level, 0 is debug
+KUBE_LOG_LEVEL=&quot;--v=0&quot;
+
+# Should this cluster be allowed to run privileged docker containers
+KUBE_ALLOW_PRIV=&quot;--allow-privileged=true&quot;
+
+# How the controller-manager, scheduler, and proxy find the apiserver
+#KUBE_MASTER=&quot;--master=http://test-001.jimmysong.io:8080&quot;
+KUBE_MASTER=&quot;--master=http://172.16.213.10:8080&quot;
+</code></pre>
+<h4 id="启动kube-apiserver"><a href="#启动kube-apiserver" class="headerlink" title="启动kube-apiserver"></a>启动kube-apiserver</h4><pre><code class="line-numbers language-sh">systemctl daemon-reload
+systemctl enable kube-apiserver
+systemctl start kube-apiserver
+systemctl status kube-apiserver
+</code></pre>
+<h3 id="部署kube-controller-manager"><a href="#部署kube-controller-manager" class="headerlink" title="部署kube-controller-manager"></a>部署kube-controller-manager</h3><h4 id="创建service文件"><a href="#创建service文件" class="headerlink" title="创建service文件"></a>创建service文件</h4><p>cat &#x2F;usr&#x2F;lib&#x2F;systemd&#x2F;system&#x2F;kube-controller-manager.service</p>
+<pre><code>[Unit]
+Description=Kubernetes Controller Manager
+Documentation=https://github.com/GoogleCloudPlatform/kubernetes
+
+[Service]
+EnvironmentFile=-/etc/kubernetes/config
+EnvironmentFile=-/etc/kubernetes/controller-manager
+ExecStart=/usr/local/bin/kube-controller-manager \
+        $KUBE_LOGTOSTDERR \
+        $KUBE_LOG_LEVEL \
+        $KUBE_MASTER \
+        $KUBE_CONTROLLER_MANAGER_ARGS
+Restart=on-failure
+LimitNOFILE=65536
+
+[Install]
+WantedBy=multi-user.target
+</code></pre>
+<h4 id="创建配置文件"><a href="#创建配置文件" class="headerlink" title="创建配置文件"></a>创建配置文件</h4><p>cat &#x2F;etc&#x2F;kubernetes&#x2F;controller-manager</p>
+<pre><code class="line-numbers language-sh"># The following values are used to configure the kubernetes controller-manager
+
+# defaults from config and apiserver should be adequate
+
+# Add your own!
+KUBE_CONTROLLER_MANAGER_ARGS=&quot;--address=127.0.0.1 --service-cluster-ip-range=10.254.0.0/16 --cluster-name=kubernetes --cluster-signing-cert-file=/etc/kubernetes/ssl/ca.pem --cluster-signing-key-file=/etc/kubernetes/ssl/ca-key.pem  --service-account-private-key-file=/etc/kubernetes/ssl/ca-key.pem --root-ca-file=/etc/kubernetes/ssl/ca.pem --leader-elect=true&quot;
+
+#--address 值必须为 127.0.0.1，kube-apiserver 期望 scheduler 和 controller-manager 在同一台机器；
+</code></pre>
+<h4 id="启动kube-controller-manager"><a href="#启动kube-controller-manager" class="headerlink" title="启动kube-controller-manager"></a>启动kube-controller-manager</h4><pre><code class="line-numbers language-sh">systemctl daemon-reload
+systemctl enable kube-controller-manager
+systemctl start kube-controller-manager
+systemctl status kube-controller-manager
+</code></pre>
+<h3 id="部署kube-scheduler"><a href="#部署kube-scheduler" class="headerlink" title="部署kube-scheduler"></a>部署kube-scheduler</h3><h4 id="创建service文件-1"><a href="#创建service文件-1" class="headerlink" title="创建service文件"></a>创建service文件</h4><p>cat &#x2F;usr&#x2F;lib&#x2F;systemd&#x2F;system&#x2F;kube-scheduler.service</p>
+<pre><code>[Unit]
+Description=Kubernetes Scheduler Plugin
+Documentation=https://github.com/GoogleCloudPlatform/kubernetes
+
+[Service]
+EnvironmentFile=-/etc/kubernetes/config
+EnvironmentFile=-/etc/kubernetes/scheduler
+ExecStart=/usr/local/bin/kube-scheduler \
+            $KUBE_LOGTOSTDERR \
+            $KUBE_LOG_LEVEL \
+            $KUBE_MASTER \
+            $KUBE_SCHEDULER_ARGS
+Restart=on-failure
+LimitNOFILE=65536
+
+[Install]
+WantedBy=multi-user.target
+</code></pre>
+<h4 id="创建配置文件-1"><a href="#创建配置文件-1" class="headerlink" title="创建配置文件"></a>创建配置文件</h4><p>cat &#x2F;etc&#x2F;kubernetes&#x2F;scheduler</p>
+<pre><code class="line-numbers language-sh"># kubernetes scheduler config
+
+# default config should be adequate
+
+# Add your own!
+KUBE_SCHEDULER_ARGS=&quot;--leader-elect=true --address=127.0.0.1&quot;
+</code></pre>
+<h4 id="启动kube-scheduler"><a href="#启动kube-scheduler" class="headerlink" title="启动kube-scheduler"></a>启动kube-scheduler</h4><pre><code>systemctl daemon-reload
+systemctl enable kube-scheduler 
+systemctl start kube-scheduler 
+systemctl status kube-scheduler 
+</code></pre>
+<h3 id="验证已经安装的组件"><a href="#验证已经安装的组件" class="headerlink" title="验证已经安装的组件"></a>验证已经安装的组件</h3><pre><code>$ kubectl get componentstatuses
+
+NAME                 AGE
+controller-manager   &lt;unknown&gt;
+scheduler            &lt;unknown&gt;
+etcd-0               &lt;unknown&gt;
+etcd-2               &lt;unknown&gt;
+etcd-1               &lt;unknown&gt;
+</code></pre>
+<h2 id="安装flannel网络插件"><a href="#安装flannel网络插件" class="headerlink" title="安装flannel网络插件"></a>安装flannel网络插件</h2><p><a target="_blank" rel="noopener" href="https://jimmysong.io/kubernetes-handbook/practice/flannel-installation.html">https://jimmysong.io/kubernetes-handbook/practice/flannel-installation.html</a><br><a target="_blank" rel="noopener" href="https://jimmysong.io/kubernetes-handbook/practice/network-and-cluster-perfermance-test.html">https://jimmysong.io/kubernetes-handbook/practice/network-and-cluster-perfermance-test.html</a></p>
+<p>所有的node节点都需要安装网络插件才能让所有的Pod加入到同一个局域网中</p>
+<h3 id="flannel工作原理"><a href="#flannel工作原理" class="headerlink" title="flannel工作原理"></a>flannel工作原理</h3><ul>
+<li>flannel从etcd数据库中获取network的配置信息</li>
+<li>flannel划分子网subnet，并在etcd中进行注册</li>
+<li>flannel将子网信息记录到&#x2F;run&#x2F;flannel&#x2F;subnet.env中</li>
+<li>flannel再通过mk-docker-opts.sh生产docker配置&#x2F;run&#x2F;flannel&#x2F;docker</li>
+<li>配置docker启动时加载&#x2F;run&#x2F;flannel&#x2F;docker中的网络配置</li>
+</ul>
+<pre><code class="line-numbers language-sh">yum install -y flannel
+</code></pre>
+<h3 id="创建service文件-2"><a href="#创建service文件-2" class="headerlink" title="创建service文件"></a>创建service文件</h3><p>cat &#x2F;usr&#x2F;lib&#x2F;systemd&#x2F;system&#x2F;flanneld.service</p>
+<pre><code>[Unit]
+Description=Flanneld overlay address etcd agent
+After=network.target
+After=network-online.target
+Wants=network-online.target
+After=etcd.service
+Before=docker.service
+
+[Service]
+Type=notify
+EnvironmentFile=/etc/sysconfig/flanneld
+EnvironmentFile=-/etc/sysconfig/docker-network
+ExecStart=/usr/bin/flanneld-start \
+  -etcd-endpoints=$&#123;FLANNEL_ETCD_ENDPOINTS&#125; \
+  -etcd-prefix=$&#123;FLANNEL_ETCD_PREFIX&#125; \
+  $FLANNEL_OPTIONS
+ExecStartPost=/usr/libexec/flannel/mk-docker-opts.sh -k DOCKER_NETWORK_OPTIONS -d /run/flannel/docker
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
+RequiredBy=docker.service
+</code></pre>
+<h3 id="创建配置文件-2"><a href="#创建配置文件-2" class="headerlink" title="创建配置文件"></a>创建配置文件</h3><p>cat &#x2F;etc&#x2F;sysconfig&#x2F;flanneld</p>
+<pre><code class="line-numbers language-sh"># Flanneld configuration options
+
+# etcd url location.  Point this to the server where etcd runs
+FLANNEL_ETCD_ENDPOINTS=&quot;https://172.16.213.10:2379,https://172.16.213.11:2379,https://172.16.213.12:2379&quot;
+
+# etcd config key.  This is the configuration key that flannel queries
+# For address range assignment
+FLANNEL_ETCD_PREFIX=&quot;/kube-centos/network&quot;
+
+# Any additional options that you want to pass
+FLANNEL_OPTIONS=&quot;-etcd-cafile=/etc/kubernetes/ssl/ca.pem -etcd-certfile=/etc/kubernetes/ssl/kubernetes.pem -etcd-keyfile=/etc/kubernetes/ssl/kubernetes-key.pem&quot;
+</code></pre>
+<blockquote>
+<p>如果是多网卡（例如vagrant环境），则需要在FLANNEL_OPTIONS中增加指定的外网出口的网卡，例如-iface&#x3D;eth2</p>
+</blockquote>
+<h3 id="在etcd中创建网络配置"><a href="#在etcd中创建网络配置" class="headerlink" title="在etcd中创建网络配置"></a>在etcd中创建网络配置</h3><p>封装一个的简单命令</p>
+<pre><code class="line-numbers language-sh">ETCD_ENDPOINTS=&#39;https://172.16.213.10:2379,https://172.16.213.11:2379,https://172.16.213.12:2379&#39;
+ETCDCTL=&quot;etcdctl --endpoints=$&#123;ETCD_ENDPOINTS&#125; \
+  --ca-file=/etc/kubernetes/ssl/ca.pem \
+  --cert-file=/etc/kubernetes/ssl/kubernetes.pem \
+  --key-file=/etc/kubernetes/ssl/kubernetes-key.pem &quot;
+</code></pre>
+<p>执行下面的命令为docker分配IP地址段。</p>
+<pre><code class="line-numbers language-sh">$ETCDCTL mkdir /kube-centos/network
+$ETCDCTL mk /kube-centos/network/config &#39;&#123;&quot;Network&quot;:&quot;172.30.0.0/16&quot;,&quot;SubnetLen&quot;:24,&quot;Backend&quot;:&#123;&quot;Type&quot;:&quot;vxlan&quot;&#125;&#125;&#39;
+</code></pre>
+<blockquote>
+<p>如果你要使用host-gw模式，可以直接将vxlan改成host-gw即可。</p>
+</blockquote>
+<h3 id="启动flannal"><a href="#启动flannal" class="headerlink" title="启动flannal"></a>启动flannal</h3><p>启动flannel</p>
+<pre><code class="line-numbers language-sh">systemctl daemon-reload
+systemctl enable flanneld
+systemctl start flanneld
+systemctl status flanneld
+</code></pre>
+<h3 id="在etcd中验证flannel"><a href="#在etcd中验证flannel" class="headerlink" title="在etcd中验证flannel"></a>在etcd中验证flannel</h3><p>在所有node主机(3台)上同步配置，启动flannel。</p>
+<pre><code class="line-numbers language-sh">$ETCDCTL ls /kube-centos/network/subnets
+/kube-centos/network/subnets/172.30.52.0-24
+/kube-centos/network/subnets/172.30.77.0-24
+/kube-centos/network/subnets/172.30.12.0-24
+
+$ETCDCTL get /kube-centos/network/subnets/172.30.52.0-24
+&#123;&quot;PublicIP&quot;:&quot;172.16.213.10&quot;,&quot;BackendType&quot;:&quot;vxlan&quot;,&quot;BackendData&quot;:&#123;&quot;VtepMAC&quot;:&quot;a2:a9:0c:ab:3e:a8&quot;&#125;&#125;
+$ETCDCTL get /kube-centos/network/subnets/172.30.77.0-24
+&#123;&quot;PublicIP&quot;:&quot;172.16.213.11&quot;,&quot;BackendType&quot;:&quot;vxlan&quot;,&quot;BackendData&quot;:&#123;&quot;VtepMAC&quot;:&quot;6a:5a:bf:e9:b8:e1&quot;&#125;&#125;
+$ETCDCTL get /kube-centos/network/subnets/172.30.12.0-24
+&#123;&quot;PublicIP&quot;:&quot;172.16.213.12&quot;,&quot;BackendType&quot;:&quot;vxlan&quot;,&quot;BackendData&quot;:&#123;&quot;VtepMAC&quot;:&quot;9a:de:bf:44:51:73&quot;&#125;&#125;
+</code></pre>
+<h2 id="部署node"><a href="#部署node" class="headerlink" title="部署node"></a>部署node</h2><p><a target="_blank" rel="noopener" href="https://jimmysong.io/kubernetes-handbook/practice/node-installation.html">https://jimmysong.io/kubernetes-handbook/practice/node-installation.html</a></p>
+<h3 id="部署docker"><a href="#部署docker" class="headerlink" title="部署docker"></a>部署docker</h3><p><a target="_blank" rel="noopener" href="https://docs.docker.com/install/linux/docker-ce/centos/">https://docs.docker.com/install/linux/docker-ce/centos/</a><br><a target="_blank" rel="noopener" href="https://download.docker.com/linux/centos/7/x86_64/stable/Packages/">https://download.docker.com/linux/centos/7/x86_64/stable/Packages/</a></p>
+<h4 id="安装-1"><a href="#安装-1" class="headerlink" title="安装"></a>安装</h4><pre><code class="line-numbers language-sh">wget https://download.docker.com/linux/centos/docker-ce.repo -O /etc/yum.repos.d/docker-ce.repo
+yum -y install docker-ce
+systemctl daemon-reload
+systemctl restart docker
+systemctl enable docker
+systemctl status docker
+</code></pre>
+<h4 id="调整docker-service文件"><a href="#调整docker-service文件" class="headerlink" title="调整docker.service文件"></a>调整docker.service文件</h4><pre><code class="line-numbers language-sh">[Unit]
+Description=Docker Application Container Engine
+Documentation=https://docs.docker.com
+BindsTo=containerd.service
+After=network-online.target firewalld.service containerd.service
+Wants=network-online.target
+Requires=docker.socket
+
+[Service]
+Type=notify
+# the default is not to use systemd for cgroups because the delegate issues still
+# exists and systemd currently does not support the cgroup feature set required
+# for containers run by docker
+EnvironmentFile=-/run/flannel/docker
+ExecStart=/usr/bin/dockerd -H fd:// --containerd=/run/containerd/containerd.sock --insecure-registry 172.16.213.10:8888 $DOCKER_NETWORK_OPTIONS
+ExecStartPost=/sbin/iptables -P FORWARD ACCEPT
+ExecReload=/bin/kill -s HUP $MAINPID
+TimeoutSec=0
+RestartSec=2
+Restart=always
+
+# Note that StartLimit* options were moved from &quot;Service&quot; to &quot;Unit&quot; in systemd 229.
+# Both the old, and new location are accepted by systemd 229 and up, so using the old location
+# to make them work for either version of systemd.
+StartLimitBurst=3
+
+# Note that StartLimitInterval was renamed to StartLimitIntervalSec in systemd 230.
+# Both the old, and new name are accepted by systemd 230 and up, so using the old name to make
+# this option work for either version of systemd.
+StartLimitInterval=60s
+
+# Having non-zero Limit*s causes performance problems due to accounting overhead
+# in the kernel. We recommend using cgroups to do container-local accounting.
+LimitNOFILE=infinity
+LimitNPROC=infinity
+LimitCORE=infinity
+
+# Comment TasksMax if your systemd version does not support it.
+# Only systemd 226 and above support this option.
+TasksMax=infinity
+
+# set delegate yes so that systemd does not reset the cgroups of docker containers
+Delegate=yes
+
+# kill only the docker process, not all processes in the cgroup
+KillMode=process
+
+[Install]
+WantedBy=multi-user.target
+</code></pre>
+<p>增加的配置如下，用于加载flannel创建的配置文件和调整iptables默认规则</p>
+<pre><code class="line-numbers language-sh">EnvironmentFile=-/run/flannel/docker
+ExecStart=/usr/bin/dockerd -H fd:// --containerd=/run/containerd/containerd.sock --insecure-registry 172.16.213.10:8888 $DOCKER_NETWORK_OPTIONS
+ExecStartPost=/sbin/iptables -P FORWARD ACCEPT
+</code></pre>
+<h4 id="确认docker和flannel网络配置"><a href="#确认docker和flannel网络配置" class="headerlink" title="确认docker和flannel网络配置"></a>确认docker和flannel网络配置</h4><p>在节点（172.16.213.12），确认<code>docker0</code> <code>flannel.1</code>在一个网段</p>
+<pre><code>ip addr show docker0
+52: docker0: &lt;BROADCAST,MULTICAST,UP,LOWER_UP&gt; mtu 1450 qdisc noqueue state UP group default
+    link/ether 02:42:e3:ab:fe:d4 brd ff:ff:ff:ff:ff:ff
+    inet 172.30.12.1/24 brd 172.30.12.255 scope global docker0
+       valid_lft forever preferred_lft forever
+    inet6 fe80::42:e3ff:feab:fed4/64 scope link
+       valid_lft forever preferred_lft forever
+</code></pre>
+<pre><code>ip addr show flannel.1
+51: flannel.1: &lt;BROADCAST,MULTICAST,UP,LOWER_UP&gt; mtu 1450 qdisc noqueue state UNKNOWN group default
+    link/ether 9a:de:bf:44:51:73 brd ff:ff:ff:ff:ff:ff
+    inet 172.30.12.0/32 scope global flannel.1
+       valid_lft forever preferred_lft forever
+    inet6 fe80::98de:bfff:fe44:5173/64 scope link
+       valid_lft forever preferred_lft forever
+</code></pre>
+<p>docker进程中绑定了网络配置</p>
+<pre><code>ps aux | grep dockerd | grep -v grep
+root     108200  0.4  4.2 734072 79300 ?        Ssl  17:21   1:03 /usr/bin/dockerd -H fd:// --containerd=/run/containerd/containerd.sock --insecure-registry 172.16.213.10:8888 --bip=172.30.12.1/24 --ip-masq=true --mtu=1450
+</code></pre>
+<p>容器分配的地址网段</p>
+<pre><code>docker exec d155bf56b265 /sbin/ip a
+63: eth0@if64: &lt;BROADCAST,MULTICAST,UP,LOWER_UP&gt; mtu 1450 qdisc noqueue state UP group default
+    link/ether 02:42:ac:1e:0c:03 brd ff:ff:ff:ff:ff:ff link-netnsid 0
+    inet 172.30.12.3/24 brd 172.30.12.255 scope global eth0
+       valid_lft forever preferred_lft forever
+</code></pre>
+<p>删除虚拟网卡</p>
+<pre><code>ip link del flannel.1
+</code></pre>
+<h3 id="创建集群角色绑定"><a href="#创建集群角色绑定" class="headerlink" title="创建集群角色绑定"></a>创建集群角色绑定</h3><p>kubelet 启动时向 kube-apiserver 发送 TLS bootstrapping 请求，需要先将 bootstrap token 文件中的 kubelet-bootstrap 用户赋予 system:node-bootstrapper cluster 角色(role)， 然后 kubelet 才能有权限创建认证请求(certificate signing requests)：</p>
+<pre><code>cd /etc/kubernetes
+kubectl create clusterrolebinding kubelet-bootstrap \
+  --clusterrole=system:node-bootstrapper \
+  --user=kubelet-bootstrap
+
+clusterrolebinding.rbac.authorization.k8s.io/kubelet-bootstrap created
+</code></pre>
+<p>kubelet 通过认证后向 kube-apiserver 发送 register node 请求，需要先将 kubelet-nodes 用户赋予 system:node cluster角色(role) 和 system:nodes 组(group)， 然后 kubelet 才能有权限创建节点请求：</p>
+<pre><code>kubectl create clusterrolebinding kubelet-nodes \
+  --clusterrole=system:node \
+  --group=system:nodes
+
+clusterrolebinding.rbac.authorization.k8s.io/kubelet-nodes created  
+</code></pre>
+<h3 id="部署kubelet"><a href="#部署kubelet" class="headerlink" title="部署kubelet"></a>部署kubelet</h3><p>kubelet角色部署在node节点</p>
+<h4 id="创建kubelet-service文件"><a href="#创建kubelet-service文件" class="headerlink" title="创建kubelet.service文件"></a>创建kubelet.service文件</h4><p>cat &#x2F;usr&#x2F;lib&#x2F;systemd&#x2F;system&#x2F;kubelet.service</p>
+<pre><code>[Unit]
+Description=Kubernetes Kubelet Server
+Documentation=https://github.com/GoogleCloudPlatform/kubernetes
+After=docker.service
+Requires=docker.service
+
+[Service]
+WorkingDirectory=/var/lib/kubelet
+EnvironmentFile=-/etc/kubernetes/config
+EnvironmentFile=-/etc/kubernetes/kubelet
+ExecStart=/usr/local/bin/kubelet \
+            $KUBE_LOGTOSTDERR \
+            $KUBE_LOG_LEVEL \
+            $KUBELET_API_SERVER \
+            $KUBELET_ADDRESS \
+            $KUBELET_PORT \
+            $KUBELET_HOSTNAME \
+            $KUBE_ALLOW_PRIV \
+            $KUBELET_POD_INFRA_CONTAINER \
+            $KUBELET_ARGS
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
+</code></pre>
+<h4 id="创建kubelet配置文件"><a href="#创建kubelet配置文件" class="headerlink" title="创建kubelet配置文件"></a>创建kubelet配置文件</h4><blockquote>
+<p>把配置文件中的IP修改为当前node的IP<br>cat &#x2F;etc&#x2F;kubernetes&#x2F;kubelet</p>
+</blockquote>
+<pre><code class="line-numbers language-sh">###
+## kubernetes kubelet (minion) config
+#
+## The address for the info server to serve on (set to 0.0.0.0 or &quot;&quot; for all interfaces)
+KUBELET_ADDRESS=&quot;--address=172.16.213.11&quot;
+#
+## The port for the info server to serve on
+#KUBELET_PORT=&quot;--port=10250&quot;
+#
+## You may leave this blank to use the actual hostname
+KUBELET_HOSTNAME=&quot;--hostname-override=172.16.213.11&quot;
+#
+## location of the api-server
+## COMMENT THIS ON KUBERNETES 1.8+
+#KUBELET_API_SERVER=&quot;--api-servers=http://172.16.213.10:8080&quot;
+#
+## pod infrastructure container
+KUBELET_POD_INFRA_CONTAINER=&quot;--pod-infra-container-image=172.16.213.10:8888/k8s/tomcat:1&quot;
+#
+## Add your own!
+KUBELET_ARGS=&quot;--fail-swap-on=false --cgroup-driver=cgroupfs --cluster-dns=10.254.0.2 --bootstrap-kubeconfig=/etc/kubernetes/bootstrap.kubeconfig --kubeconfig=/etc/kubernetes/kubelet.kubeconfig --cert-dir=/etc/kubernetes/ssl --cluster-domain=cluster.local --hairpin-mode promiscuous-bridge --serialize-image-pulls=false&quot;
+</code></pre>
+<h4 id="启动kublet"><a href="#启动kublet" class="headerlink" title="启动kublet"></a>启动kublet</h4><pre><code class="line-numbers language-sh">systemctl daemon-reload
+systemctl enable kubelet
+systemctl start kubelet
+systemctl status kubelet
+</code></pre>
+<h4 id="master通过kubelet的TLS证书请求"><a href="#master通过kubelet的TLS证书请求" class="headerlink" title="master通过kubelet的TLS证书请求"></a>master通过kubelet的TLS证书请求</h4><p>kubelet 首次启动时向 kube-apiserver 发送证书签名请求，必须通过后 kubernetes 系统才会将该 Node 加入到集群。</p>
+<p>查看未授权的csr</p>
+<pre><code>$ kubectl get csr
+
+NAME                                                   AGE     REQUESTOR           CONDITION
+node-csr-BTQ0Ul707rDTmwKBHj4VX-JwgO4bjZ2vLO75Gemi9gM   17m     kubelet-bootstrap   Pending
+node-csr-IQE_Dz9FB8lNyXjx-31UK5HkziQ7YsiyHinbUk0nQlg   9m36s   kubelet-bootstrap   Pending
+</code></pre>
+<p>通过 CSR 请求</p>
+<pre><code>$ kubectl certificate approve node-csr-BTQ0Ul707rDTmwKBHj4VX-JwgO4bjZ2vLO75Gemi9gM
+certificatesigningrequest.certificates.k8s.io/node-csr-BTQ0Ul707rDTmwKBHj4VX-JwgO4bjZ2vLO75Gemi9gM approved
+
+$ kubectl certificate approve node-csr-IQE_Dz9FB8lNyXjx-31UK5HkziQ7YsiyHinbUk0nQlg
+certificatesigningrequest.certificates.k8s.io/node-csr-IQE_Dz9FB8lNyXjx-31UK5HkziQ7YsiyHinbUk0nQlg approved
+</code></pre>
+<p>生成了公私钥</p>
+<pre><code>$ cd /etc/kubernetes/ssl
+$ ls -l kubelet*
+-rw------- 1 root root 1273 Oct 24 21:48 kubelet-client-2019-10-24-21-48-39.pem
+lrwxrwxrwx 1 root root   58 Oct 24 21:48 kubelet-client-current.pem -&gt; /etc/kubernetes/ssl/kubelet-client-2019-10-24-21-48-39.pem
+-rw-r--r-- 1 root root 2185 Oct 24 21:29 kubelet.crt
+-rw------- 1 root root 1675 Oct 24 21:29 kubelet.key
+</code></pre>
+<p>查看当前nodes</p>
+<pre><code>$ kubectl get nodes
+NAME            STATUS   ROLES    AGE     VERSION
+172.16.213.11   Ready    &lt;none&gt;   3m33s   v1.16.0
+172.16.213.12   Ready    &lt;none&gt;   100s    v1.16.0
+</code></pre>
+<h3 id="部署kube-proxy"><a href="#部署kube-proxy" class="headerlink" title="部署kube-proxy"></a>部署kube-proxy</h3><h4 id="创建kube-proxy-service文件"><a href="#创建kube-proxy-service文件" class="headerlink" title="创建kube-proxy.service文件"></a>创建kube-proxy.service文件</h4><p>cat &#x2F;usr&#x2F;lib&#x2F;systemd&#x2F;system&#x2F;kube-proxy.service</p>
+<pre><code>[Unit]
+Description=Kubernetes Kube-Proxy Server
+Documentation=https://github.com/GoogleCloudPlatform/kubernetes
+After=network.target
+
+[Service]
+EnvironmentFile=-/etc/kubernetes/config
+EnvironmentFile=-/etc/kubernetes/proxy
+ExecStart=/usr/local/bin/kube-proxy \
+        $KUBE_LOGTOSTDERR \
+        $KUBE_LOG_LEVEL \
+        $KUBE_MASTER \
+        $KUBE_PROXY_ARGS
+Restart=on-failure
+LimitNOFILE=65536
+
+[Install]
+WantedBy=multi-user.target
+</code></pre>
+<h4 id="创建kube-proxy配置文件"><a href="#创建kube-proxy配置文件" class="headerlink" title="创建kube-proxy配置文件"></a>创建kube-proxy配置文件</h4><p>cat &#x2F;etc&#x2F;kubernetes&#x2F;proxy</p>
+<pre><code>###
+# kubernetes proxy config
+
+# default config should be adequate
+
+# Add your own!
+KUBE_PROXY_ARGS=&quot;--bind-address=172.16.213.11 --hostname-override=172.16.213.11 --kubeconfig=/etc/kubernetes/kube-proxy.kubeconfig --cluster-cidr=10.254.0.0/16&quot;
+</code></pre>
+<h4 id="启动-kube-proxy"><a href="#启动-kube-proxy" class="headerlink" title="启动 kube-proxy"></a>启动 kube-proxy</h4><pre><code>systemctl daemon-reload
+systemctl enable kube-proxy
+systemctl start kube-proxy
+systemctl status kube-proxy
+</code></pre>
+<h2 id="部署harbor仓库"><a href="#部署harbor仓库" class="headerlink" title="部署harbor仓库"></a>部署harbor仓库</h2><p><a target="_blank" rel="noopener" href="https://www.jsbktom.com/article/104">https://www.jsbktom.com/article/104</a></p>
+<h3 id="安装docker-compose"><a href="#安装docker-compose" class="headerlink" title="安装docker-compose"></a>安装docker-compose</h3><p><a target="_blank" rel="noopener" href="https://docs.docker.com/compose/install/">https://docs.docker.com/compose/install/</a></p>
+<pre><code>sudo curl -L &quot;https://github.com/docker/compose/releases/download/1.24.1/docker-compose-$(uname -s)-$(uname -m)&quot; -o /usr/local/bin/docker-compose
+</code></pre>
+<h3 id="安装MySQL"><a href="#安装MySQL" class="headerlink" title="安装MySQL"></a>安装MySQL</h3><pre><code class="line-numbers language-sh">yum -y install mariadb-server
+systemctl start mariadb
+mysqladmin -uroot password &#39;root123&#39;
+</code></pre>
+<h3 id="下载和启动"><a href="#下载和启动" class="headerlink" title="下载和启动"></a>下载和启动</h3><pre><code class="line-numbers language-sh">wget -c https://storage.googleapis.com/harbor-releases/release-1.9.0/harbor-offline-installer-v1.9.1.tgz
+tar zxvf harbor-offline-installer-v1.9.1.tgz
+cd harbor
+vim harbor.yml #modify port and hostname
+docker-compose start
+</code></pre>
+<h3 id="docker添加insecure-registrt"><a href="#docker添加insecure-registrt" class="headerlink" title="docker添加insecure-registrt"></a>docker添加insecure-registrt</h3><pre><code class="line-numbers language-sh">$ grep insecure-registry /usr/lib/systemd/system/docker.service
+
+ExecStart=/usr/bin/dockerd -H fd:// --containerd=/run/containerd/containerd.sock --insecure-registry 172.16.213.10:8888
+</code></pre>
+<h3 id="测试私有仓库登录"><a href="#测试私有仓库登录" class="headerlink" title="测试私有仓库登录"></a>测试私有仓库登录</h3><pre><code>$ docker login -u admin -p admin http://172.16.213.10:8888
+Login Succeeded
+</code></pre>
+<h3 id="把测试镜像放进harbor"><a href="#把测试镜像放进harbor" class="headerlink" title="把测试镜像放进harbor"></a>把测试镜像放进harbor</h3><pre><code>docker pull tomcat
+docker tag 882487b8be1d 172.16.213.10:8888/k8s/tomcat:1
+docker push 172.16.213.10:8888/k8s/tomcat:1
+</code></pre>
+<h2 id="创建资源"><a href="#创建资源" class="headerlink" title="创建资源"></a>创建资源</h2><p><a target="_blank" rel="noopener" href="https://www.jianshu.com/p/b2d13cec7091">https://www.jianshu.com/p/b2d13cec7091</a><br><a target="_blank" rel="noopener" href="https://www.zhihu.com/tardis/sogou/art/34558421">https://www.zhihu.com/tardis/sogou/art/34558421</a></p>
+<p>创建deployment</p>
+<pre><code class="line-numbers language-sh">$ cat tomcat-deployment.yml
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: tomcat-deployment
+  labels:
+    app: tomcat
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: tomcat
+  template:
+    metadata:
+      labels:
+        app: tomcat
+    spec:
+      #hostNetwork: false
+      containers:
+      - name: tomcat
+        image: 172.16.213.10:8888/k8s/tomcat:2
+        #command: [ &quot;sleep&quot; ]
+        #args: [ &quot;infinity&quot; ]
+        command: [ &quot;/bin/bash&quot; ]
+        args: [ &quot;-c&quot;, &quot;/sbin/ip a &gt; /usr/local/tomcat/webapps/ROOT/index.jsp; sleep infinity&quot;]
+        ports:
+        - containerPort: 8080
+
+$ kubectl apply -f tomcat-deployment.yml
+deployment.apps/tomcat-deployment created
+</code></pre>
+<p>创建service</p>
+<pre><code>$ kubectl expose deployment tomcat-deployment --type=&quot;NodePort&quot; --port 8081 --target-port=8080
+service/tomcat-deployment exposed
+</code></pre>
+<p>查看资源</p>
+<pre><code>$ kubectl get svc
+NAME                TYPE        CLUSTER-IP       EXTERNAL-IP   PORT(S)          AGE
+kubernetes          ClusterIP   10.254.0.1       &lt;none&gt;        443/TCP          7d23h
+tomcat-deployment   NodePort    10.254.201.211   &lt;none&gt;        8081:30927/TCP   5h39m
+
+$ kubectl get node
+NAME            STATUS   ROLES    AGE     VERSION
+172.16.213.11   Ready    &lt;none&gt;   6d12h   v1.16.0
+172.16.213.12   Ready    &lt;none&gt;   6d12h   v1.16.0
+
+$ kubectl get deploy
+NAME                READY   UP-TO-DATE   AVAILABLE   AGE
+tomcat-deployment   2/2     2            2           5h16m
+</code></pre>
+<p>测试</p>
+<pre><code class="line-numbers language-sh">while true;do curl 10.254.201.211:8081;sleep 1;done
+#2个节点轮休
+</code></pre>
+<h3 id="kubectl常用命令"><a href="#kubectl常用命令" class="headerlink" title="kubectl常用命令"></a>kubectl常用命令</h3><pre><code class="line-numbers language-sh">kubectl get all
+</code></pre>
+<ul>
+<li>hostNetwork相当于 docker run –net&#x3D;host ,不用创建svc,因此端口只在容器运行的vm上监听</li>
+<li>hostPort相当于docker run -p 8081:8080,不用创建svc,因此端口只在容器运行的vm上监听<br><a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_33804990/article/details/85961203">https://blog.csdn.net/weixin_33804990/article/details/85961203</a></li>
+</ul>
+
+</div>
+
+
+    <div class="post-guide">
+        <div class="item left">
+            
+              <a href="/2019/10/28/K8S/mankubectl/">
+                  <i class="fa fa-angle-left" aria-hidden="true"></i>
+                  mankubectl
+              </a>
+            
+        </div>
+        <div class="item right">
+            
+              <a href="/2019/10/21/%E7%BD%91%E7%BB%9C/%E7%BD%91%E5%8D%A1bond/">
+                网卡bond
+                <i class="fa fa-angle-right" aria-hidden="true"></i>
+              </a>
+            
+        </div>
+    </div>
+
+
+
+
+<script>
+	
+	
+</script>
+	</div>
+	<div id="footer">
+	<p>
+	©2019-<span id="footerYear"></span> 
+	<a href="/">MC</a> 
+	
+	
+		|
+		<span id="busuanzi_container_site_pv">
+			pv
+			<span id="busuanzi_value_site_pv"></span>
+		</span>
+		|
+		<span id="busuanzi_container_site_uv"> 
+			uv
+			<span id="busuanzi_value_site_uv"></span>
+		</span>
+	
+	<br>
+	Theme <a href="//github.com/wujun234/hexo-theme-tree" target="_blank">Tree</a>
+	by <a href="//github.com/wujun234" target="_blank">WuJun</a>
+	Powered by <a href="//hexo.io" target="_blank">Hexo</a>
+	</p>
+</div>
+<script type="text/javascript"> 
+	document.getElementById('footerYear').innerHTML = new Date().getFullYear() + '';
+</script>
+	<button id="totop-toggle" class="toggle"><i class="fa fa-angle-double-up" aria-hidden="true"></i></button>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/live2dw/assets/shizuku.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":true},"react":{"opacity":0.7}});</script></body>
+</html>

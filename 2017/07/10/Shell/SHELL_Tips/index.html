@@ -2376,10 +2376,75 @@ done
 
 littletom:x:503:503::/home/littletom:/usr/local/scripts/myssh.sh
 </code></pre>
-<h2 id="array"><a href="#array" class="headerlink" title="array"></a>array</h2><p>&#96;&#96;&#96;sh<br>#!&#x2F;bin&#x2F;bash</p>
-<p>#定义数组<br>A&#x3D;(a b c def)</p>
-<p>#把数组按字符串显示输出<br>echo ${A[@]}<br>#屏幕显示：a b c def</p>
-<p>#数组的长度表示$</p>
+<h2 id="expr"><a href="#expr" class="headerlink" title="expr"></a>expr</h2><pre><code class="line-numbers language-sh">value=sunmc.txt
+expr $value : &#39;.*&#39;    #计算字符个数
+value=sunmc.txt
+expr $value : &#39;\(.*\).txt&#39;   #提取文件名字
+ 
+做整数运算
+expr 10 + 20
+expr 60 / 20
+expr 60 \* 2
+ 
+计数器
+loop=0
+expr $loop + 1
+ 
+判断是不是整数
+rr=1.1
+expr $rr + 1
+rr=2
+expr $rr + 1
+ 
+判断是不是数字
+i=10
+expr $i + 10 &gt;/dev/null 2&gt;&amp;1
+echo $?
+ 
+ii=hi
+expr $ii + 10 &gt;/dev/null 2&gt;&amp;1
+echo $?
+</code></pre>
+<h2 id="if"><a href="#if" class="headerlink" title="if"></a>if</h2><pre><code class="line-numbers language-sh">$ if ps uax |grep -v grep |grep sshd;then echo sshd is alive;fi
+$ if true;then echo true;fi
+$ if false;then echo false;fi
+$ if True;then echo true;fi                                   
+</code></pre>
+<h2 id="array"><a href="#array" class="headerlink" title="array"></a>array</h2><p>定义数组</p>
+<pre><code>A=(a b c def)
+</code></pre>
+<p>把数组按字符串显示输出 </p>
+<pre><code>echo $&#123;A[@]&#125;
+#屏幕显示：a b c def
+</code></pre>
+<p>改变数组元素的值</p>
+<pre><code>A[3]=&#39;vivian&#39;
+echo $&#123;A[*]&#125;
+#屏幕显示：a b c vivian
+</code></pre>
+<p>循环输出数组元素 </p>
+<pre><code>i=0
+while [ $i -lt $len ];do
+    echo $&#123;A[$i]&#125;
+    let i=i+1
+done
+
+#屏幕输出：
+#a
+#b
+#c
+#vivian
+</code></pre>
+<p>循环输出数组元素的另一种写法，注意，在条件中，引用变量一定要用双引号 ，否则报错</p>
+<pre><code>for (( j=0; j&lt;&quot;$len&quot;; j=j+1 ));do
+    echo $&#123;A[$j]&#125;
+done
+</code></pre>
+<p>循环输出数组元素的另一种写法，注意，${A[*]}不能写成$A ,$A默认是第一个元素,如果A&#x3D;”a b c ded”,就可以写$A</p>
+<pre><code>for value in $&#123;A[*]&#125; ; do
+    echo $value
+done
+</code></pre>
 
 </div>
 

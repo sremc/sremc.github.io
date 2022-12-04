@@ -8,8 +8,6 @@
 	<!-- title -->
 	
 	<title>
-	
-		Golang-并发控制 | 
 	 
 	SREMC
 	</title>
@@ -243,8 +241,8 @@ var _hmt = _hmt || [];
 							</ul>
 			
 							<ul>
-								<li class="file active">
-									<a href="/2022/06/21/Go/Golang-%E5%B9%B6%E5%8F%91%E6%8E%A7%E5%88%B6/">
+								<li class="file">
+									<a href="/2022/06/01/Go/Golang-%E5%B9%B6%E5%8F%91%E6%8E%A7%E5%88%B6/">
                      
 										    Golang-并发控制
                      
@@ -255,9 +253,9 @@ var _hmt = _hmt || [];
 			
 							<ul>
 								<li class="file">
-									<a href="/2020/09/07/Go/Golang%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C/">
+									<a href="/2020/09/07/Go/Golang-%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C/">
                      
-										    Golang文件操作
+										    Golang-文件操作
                      
 									</a>
 								</li>
@@ -2287,173 +2285,49 @@ var _hmt = _hmt || [];
 
 	<!-- 引入正文 -->
 	<div id="content">
-		<h1 id="article-title">
-	Golang-并发控制
-</h1>
-<div class="article-meta">
+		<div id="index">
 	
-	<span>MC</span>
-	<span>2022-06-21 11:25:00</span>
-		<div id="article-categories">
-    
-		<span>Categories：</span>
-            
-                
-                    <span>
-                        <i class="fa fa-folder" aria-hidden="true">
-                        <a href="/categories/开发/">开发</a>
-                        </i>
-                      
-                    </span>
-                
-            
-    
+		<div class="index-li">
+			<a href="/2022/06/01/Go/Golang-%E5%B9%B6%E5%8F%91%E6%8E%A7%E5%88%B6/">
+				<h2 class="index-title">
+					Golang-并发控制
+				</h2>
+				<div class="index-brief">
+					
+原理：通过golang的有缓冲channel，设置缓冲池大小，来实现协程的并发数的控制，每次执行完一个任务后，读取channel中的元素，以便下一个任务加入执行。从而实现了始终是【缓冲池大小】的并发数执行
 
-    
-		<span>Tags：</span>
-            
-                
-                    <span>
-                        <i class="fa fa-tag" aria-hidden="true">
-                        <a href="/tags/go/">go</a>
-                        </i>
-                    </span>
-                
-            
-    
-		</div>
 
-</div>
+协程并发代码验证
 
-<div id="article-content">
-	<blockquote>
-<p>通过golang的有缓冲channel，设置缓冲池大小，来实现协程的并发数控制</p>
-</blockquote>
-<ul>
-<li>协程并发代码验证</li>
-</ul>
-<pre><code class="line-numbers language-go">package main
+package main
 
 import (
-    &quot;fmt&quot;
-    &quot;sync&quot;
-    &quot;time&quot;
-)
-
-// 使用并发安全数组接收结果
-var safeResult sync.Map
-
-func worker(p string, wg *sync.WaitGroup, ch chan bool)  &#123;
-    defer wg.Done()
-    GOTIME := &quot;2006-01-02 15:04:05&quot;
-    time.Sleep(time.Second * 1)
-    fmt.Println(time.Now().Format(GOTIME), p)
-
-    //并发安全数组存储结果
-    safeResult.Store(p, &quot;as_fake_result&quot;)
-
-    &lt;-ch
-&#125;
-
-func concurrentProxy(paramList []string, maxC int, wg *sync.WaitGroup)  &#123;
-    //Result = sync.Map&#123;&#125;
-    limitChan := make(chan bool, maxC)
-    defer close(limitChan)
-    for _, p := range paramList&#123;
-        limitChan &lt;- true
-        wg.Add(1)
-        go worker(p, wg, limitChan)
-    &#125;
-    wg.Wait()
-
-    // 并发安全数组获取结果
-    safeResult.Range(func(k, v interface&#123;&#125;) bool &#123;
-        fmt.Println(k, v)
-        return true
-    &#125;)
-
-&#125;
-
-func main() &#123;
-    wg := &amp;sync.WaitGroup&#123;&#125;
-    p := []string&#123;&quot;1&quot;,&quot;2&quot;,&quot;3&quot;,&quot;4&quot;,&quot;5&quot;,&quot;6&quot;,&quot;7&quot;,&quot;8&quot;,&quot;9&quot;,&quot;10&quot;,&quot;11&quot;,&quot;12&quot;,&quot;13&quot;,&quot;14&quot;,&quot;15&quot;,&quot;16&quot;,&quot;17&quot;,&quot;18&quot;,&quot;19&quot;,&quot;20&quot;&#125;
-    concurrentProxy(p, 5,wg)
-&#125;
-</code></pre>
-<ul>
-<li>并发数5，输出结果：</li>
-</ul>
-<pre><code>2022-11-27 22:00:10 3
-2022-11-27 22:00:10 2
-2022-11-27 22:00:10 5
-2022-11-27 22:00:10 4
-2022-11-27 22:00:10 1
-2022-11-27 22:00:11 6
-2022-11-27 22:00:11 10
-2022-11-27 22:00:11 9
-2022-11-27 22:00:11 8
-2022-11-27 22:00:11 7
-2022-11-27 22:00:12 11
-2022-11-27 22:00:12 13
-2022-11-27 22:00:12 14
-2022-11-27 22:00:12 15
-2022-11-27 22:00:12 12
-2022-11-27 22:00:13 18
-2022-11-27 22:00:13 19
-2022-11-27 22:00:13 16
-2022-11-27 22:00:13 20
-2022-11-27 22:00:13 17
-6 as_fake_result
-8 as_fake_result
-9 as_fake_result
-11 as_fake_result
-13 as_fake_result
-12 as_fake_result
-3 as_fake_result
-2 as_fake_result
-19 as_fake_result
-16 as_fake_result
-10 as_fake_result
-15 as_fake_result
-20 as_fake_result
-4 as_fake_result
-1 as_fake_result
-5 as_fake_result
-7 as_fake_result
-17 as_fake_result
-14 as_fake_result
-18 as_fake_result
-</code></pre>
-
+    &quot;f
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2022-06-01</span>
+                    
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/开发/">开发</a>
+										
+                                    </span>
+                                
+                            
+                    
+                </div>
+		</div>	
+	
+	
+	<div id="index-paginator">
+		
+	</div>
 </div>
 
-
-    <div class="post-guide">
-        <div class="item left">
-            
-              <a href="/2022/08/07/%E9%9A%8F%E7%AC%94/%E6%96%B0%E7%9A%84%E5%BC%80%E5%A7%8B/">
-                  <i class="fa fa-angle-left" aria-hidden="true"></i>
-                  新的开始
-              </a>
-            
-        </div>
-        <div class="item right">
-            
-              <a href="/2022/01/26/K8S/CMD%E4%B8%8EENTRYPOINT%E4%B8%BB%E8%A6%81%E5%8C%BA%E5%88%AB/">
-                CMD与ENTRYPOINT主要区别
-                <i class="fa fa-angle-right" aria-hidden="true"></i>
-              </a>
-            
-        </div>
-    </div>
-
-
-
-
-<script>
-	
-	
-</script>
 	</div>
 	<div id="footer">
 	<p>

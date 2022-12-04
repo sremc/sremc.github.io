@@ -8,8 +8,6 @@
 	<!-- title -->
 	
 	<title>
-	
-		Golang文件操作 | 
 	 
 	SREMC
 	</title>
@@ -244,7 +242,7 @@ var _hmt = _hmt || [];
 			
 							<ul>
 								<li class="file">
-									<a href="/2022/06/21/Go/Golang-%E5%B9%B6%E5%8F%91%E6%8E%A7%E5%88%B6/">
+									<a href="/2022/06/01/Go/Golang-%E5%B9%B6%E5%8F%91%E6%8E%A7%E5%88%B6/">
                      
 										    Golang-并发控制
                      
@@ -254,10 +252,10 @@ var _hmt = _hmt || [];
 							</ul>
 			
 							<ul>
-								<li class="file active">
-									<a href="/2020/09/07/Go/Golang%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C/">
+								<li class="file">
+									<a href="/2020/09/07/Go/Golang-%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C/">
                      
-										    Golang文件操作
+										    Golang-文件操作
                      
 									</a>
 								</li>
@@ -2287,204 +2285,49 @@ var _hmt = _hmt || [];
 
 	<!-- 引入正文 -->
 	<div id="content">
-		<h1 id="article-title">
-	Golang文件操作
-</h1>
-<div class="article-meta">
+		<div id="index">
 	
-	<span>MC</span>
-	<span>2020-09-07 20:09:00</span>
-		<div id="article-categories">
-    
-		<span>Categories：</span>
-            
-                
-                    <span>
-                        <i class="fa fa-folder" aria-hidden="true">
-                        <a href="/categories/开发/">开发</a>
-                        </i>
-                      
-                    </span>
-                
-            
-    
+		<div class="index-li">
+			<a href="/2022/06/01/Go/Golang-%E5%B9%B6%E5%8F%91%E6%8E%A7%E5%88%B6/">
+				<h2 class="index-title">
+					Golang-并发控制
+				</h2>
+				<div class="index-brief">
+					
+原理：通过golang的有缓冲channel，设置缓冲池大小，来实现协程的并发数的控制，每次执行完一个任务后，读取channel中的元素，以便下一个任务加入执行。从而实现了始终是【缓冲池大小】的并发数执行
 
-    
-		<span>Tags：</span>
-            
-                
-                    <span>
-                        <i class="fa fa-tag" aria-hidden="true">
-                        <a href="/tags/go/">go</a>
-                        </i>
-                    </span>
-                
-            
-    
-		</div>
 
-</div>
+协程并发代码验证
 
-<div id="article-content">
-	<h1 id="文件操作"><a href="#文件操作" class="headerlink" title="文件操作"></a>文件操作</h1><pre><code class="line-numbers language-go">package main
+package main
 
 import (
-    &quot;bufio&quot;
-    &quot;fmt&quot;
-    &quot;io&quot;
-    &quot;io/ioutil&quot;
-    &quot;os&quot;
-)
-
-/*
-打开标记：
-O_RDONLY：只读模式(read-only)
-O_WRONLY：只写模式(write-only)
-O_RDWR：读写模式(read-write)
-O_APPEND：追加模式(append)
-O_CREATE：文件不存在就创建(create a new file if none exists.)
-O_EXCL：与 O_CREATE 一起用，构成一个新建文件的功能，它要求文件必须不存在(used with O_CREATE, file must not exist)
-O_SYNC：同步方式打开，即不使用缓存，直接写入硬盘
-O_TRUNC：打开并清空文件
-文件权限（unix权限位）：只有在创建文件时才需要，不需要创建文件可以设置为 0。os库虽然提供常量，但是我一般直接写数字，如0664。
-如果你需要设置多个打开标记和unix权限位，需要使用位操作符&quot;|&quot;，示例代码如下：
-
-https://www.kancloud.cn/kancloud/the-way-to-go/72680
-*/
-
-func writer(wfile string, wline string, wappend bool) bool &#123;
-    var outputFile *os.File
-    var outputError error
-    if wappend == true &#123;
-        outputFile, outputError = os.OpenFile(wfile, os.O_WRONLY|os.O_APPEND|os.O_CREATE, 0666)
-    &#125; else &#123;
-        outputFile, outputError = os.OpenFile(wfile, os.O_WRONLY|os.O_CREATE, 0666)
-    &#125;
-
-    if outputError != nil &#123;
-        fmt.Printf(&quot;an error occurred: %v \n&quot;, outputError)
-        return false
-    &#125;
-    defer outputFile.Close()
-
-    //fmt.Fprintf(outputFile, &quot;Some data test\n&quot;)
-
-    outputWriter := bufio.NewWriter(outputFile)
-    outputWriter.WriteString(wline + &quot;\n&quot;)
-    outputWriter.Flush()
-    return true
-&#125;
-
-func reader(wfile string) string &#123;
-    //变量 inputFile 是 *os.File 类型的。该类型是一个结构，表示一个打开文件的描述符（文件句柄）。
-    var inputFile *os.File
-    var inputError error
-    inputFile, inputError = os.Open(wfile)
-
-    if inputError != nil &#123;
-        fmt.Printf(&quot;an error occurred: %v \n&quot;, inputError)
-        return &quot;&quot;
-    &#125;
-    defer inputFile.Close()
-
-    //fmt.Fprintf(inputFile, &quot;Some data test\n&quot;)
-    var output string
-    inputReader := bufio.NewReader(inputFile)
-    for &#123;
-        inputString, readerError := inputReader.ReadString(&#39;\n&#39;)
-        output += inputString
-        if readerError == io.EOF &#123;
-            break
-        &#125;
-    &#125;
-    return output
-&#125;
-
-/*
-type FileInfo interface &#123;
-    Name() string       // base name of the file
-    Size() int64        // length in bytes for regular files; system-dependent for others
-    Mode() FileMode     // file mode bits
-    ModTime() time.Time // modification time
-    IsDir() bool        // abbreviation for Mode().IsDir()
-    Sys() interface&#123;&#125;   // underlying data source (can return nil)
-&#125;
-*/
-func listDirFiles(dir string) &#123;
-    info, err0 := ioutil.ReadDir(dir)
-    if err0 != nil &#123;
-        panic(err0)
-    &#125;
-    fmt.Println(&quot;Total files: &quot;, len(info))
-    for _, f := range info &#123;
-        //fmt.Println(f.IsDir(), f.Name(), f.Size(), f.Mode(), f.ModTime())
-        fmt.Printf(&quot;dir:%v, mode:%s, modtime:%s, size:%d, name:%s\n&quot;, f.IsDir(), f.Mode(), f.ModTime(), f.Size(), f.Name())
-    &#125;
-
-&#125;
-
-func main() &#123;
-    listDirFiles(&quot;/tmp/&quot;)
-    os.Exit(0)
-    //2017-10-24 22:20:14
-    //字节类型的变量可直接对本地文件进行读写
-    var content []byte
-    //func ReadFile(filename string) ([]byte, error)
-    content, err := ioutil.ReadFile(&quot;/etc/hosts&quot;)
-    if err != nil &#123;
-        panic(err)
-    &#125; else &#123;
-        fmt.Println(string(content))
-        fmt.Println(&quot;read success.&quot;)
-    &#125;
-
-    //func WriteFile(filename string, data []byte, perm os.FileMode) error
-    err2 := ioutil.WriteFile(&quot;/Users/yuanhang/123.txt&quot;, content, 0666)
-    if err2 != nil &#123;
-        panic(err2)
-    &#125; else &#123;
-        fmt.Println(&quot;write success.&quot;)
-    &#125;
-
-    os.Exit(0)
-    fmt.Println(&quot;write ... &quot;)
-    fmt.Println(writer(&quot;/tmp/testfile.txt&quot;, &quot;Hello, everyone!&quot;, true))
-    fmt.Println(&quot;&quot;)
-    fmt.Println(&quot;read ... &quot;)
-    fmt.Println(reader(&quot;/tmp/testfile.txt&quot;))
-
-&#125;
-</code></pre>
-
+    &quot;f
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2022-06-01</span>
+                    
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/开发/">开发</a>
+										
+                                    </span>
+                                
+                            
+                    
+                </div>
+		</div>	
+	
+	
+	<div id="index-paginator">
+		
+	</div>
 </div>
 
-
-    <div class="post-guide">
-        <div class="item left">
-            
-              <a href="/2020/10/29/%E5%B7%A5%E4%BD%9C%E7%AC%94%E8%AE%B0/%E5%BA%94%E5%B1%8A%E7%94%9F%E9%9D%A2%E8%AF%95/">
-                  <i class="fa fa-angle-left" aria-hidden="true"></i>
-                  应届生面试
-              </a>
-            
-        </div>
-        <div class="item right">
-            
-              <a href="/2020/09/05/Go/Golang-beego/">
-                Golang-beego
-                <i class="fa fa-angle-right" aria-hidden="true"></i>
-              </a>
-            
-        </div>
-    </div>
-
-
-
-
-<script>
-	
-	
-</script>
 	</div>
 	<div id="footer">
 	<p>

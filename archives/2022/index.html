@@ -242,7 +242,7 @@ var _hmt = _hmt || [];
 			
 							<ul>
 								<li class="file">
-									<a href="/2022/06/21/Go/Golang-%E5%B9%B6%E5%8F%91%E6%8E%A7%E5%88%B6/">
+									<a href="/2022/06/01/Go/Golang-%E5%B9%B6%E5%8F%91%E6%8E%A7%E5%88%B6/">
                      
 										    Golang-并发控制
                      
@@ -253,9 +253,9 @@ var _hmt = _hmt || [];
 			
 							<ul>
 								<li class="file">
-									<a href="/2020/09/07/Go/Golang%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C/">
+									<a href="/2020/09/07/Go/Golang-%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C/">
                      
-										    Golang文件操作
+										    Golang-文件操作
                      
 									</a>
 								</li>
@@ -2464,13 +2464,13 @@ Delete
 		</div>	
 	
 		<div class="index-li">
-			<a href="/2022/06/21/Go/Golang-%E5%B9%B6%E5%8F%91%E6%8E%A7%E5%88%B6/">
+			<a href="/2022/06/01/Go/Golang-%E5%B9%B6%E5%8F%91%E6%8E%A7%E5%88%B6/">
 				<h2 class="index-title">
 					Golang-并发控制
 				</h2>
 				<div class="index-brief">
 					
-通过golang的有缓冲channel，设置缓冲池大小，来实现协程的并发数控制
+原理：通过golang的有缓冲channel，设置缓冲池大小，来实现协程的并发数的控制，每次执行完一个任务后，读取channel中的元素，以便下一个任务加入执行。从而实现了始终是【缓冲池大小】的并发数执行
 
 
 协程并发代码验证
@@ -2478,17 +2478,12 @@ Delete
 package main
 
 import (
-    &quot;fmt&quot;
-    &quot;sync&quot;
-    &quot;time&quot;
-)
-
-// 使用并发安全
+    &quot;f
 					...
 				</div>
 			</a>
                 <div class="article-meta">
-				    <span>2022-06-21</span>
+				    <span>2022-06-01</span>
                     
                             
                                 

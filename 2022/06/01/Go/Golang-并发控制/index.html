@@ -1685,6 +1685,17 @@ var _hmt = _hmt || [];
 									
 							<ul>
 								<li class="file">
+									<a href="/2016/10/12/%E7%BC%96%E8%BE%91%E5%99%A8/Hexo/">
+                     
+										    Hexo
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
 									<a href="/2019/02/26/%E7%BC%96%E8%BE%91%E5%99%A8/Markdown%E8%BD%ACPDF/">
                      
 										    Markdown转PDF
@@ -2224,17 +2235,6 @@ var _hmt = _hmt || [];
 									
 							<ul>
 								<li class="file">
-									<a href="/2016/10/12/%E9%9A%8F%E7%AC%94/Hexo/">
-                     
-										    Hexo
-                     
-									</a>
-								</li>
-								<div class="article-toc" style="display: none;"></div>
-							</ul>
-			
-							<ul>
-								<li class="file">
 									<a href="/2022/09/11/%E9%9A%8F%E7%AC%94/%E4%B8%AD%E7%A7%8B%E8%8A%82%E5%BF%AB%E4%B9%90/">
                      
 										    中秋节快乐
@@ -2342,7 +2342,8 @@ var _hmt = _hmt || [];
 </div>
 
 <div id="article-content">
-	<blockquote>
+	<p>在日常的开发中，我们会根据服务器CPU的核心数量和业务的实际情况会限制并发任务的执行数量，在golang中怎么实现呢？</p>
+<blockquote>
 <p>原理：通过golang的有缓冲channel，设置缓冲池大小，来实现协程的并发数的控制，每次执行完一个任务后，读取channel中的元素，以便下一个任务加入执行。从而实现了始终是【缓冲池大小】的并发数执行</p>
 </blockquote>
 <ul>

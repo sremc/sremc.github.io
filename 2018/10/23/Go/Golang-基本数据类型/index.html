@@ -2326,7 +2326,16 @@ var _hmt = _hmt || [];
 </div>
 
 <div id="article-content">
-	<h2 id="json和map"><a href="#json和map" class="headerlink" title="json和map"></a>json和map</h2><p>Let’s see one more example where we convert a map to a JSON where we have a struct for the value in the map. Below is the code for that</p>
+	<h2 id="变量关键字"><a href="#变量关键字" class="headerlink" title="变量关键字"></a>变量关键字</h2><ul>
+<li>var ：仅仅声明一个变量，不初始化内存地址</li>
+<li>make&#x2F;new相同点：声明变量，又初始化内存地址</li>
+<li>make&#x2F;new不同点<ul>
+<li>make：返回声明变量的本身（slice、map、array）</li>
+<li>new：返回变量的内存地址（指针）（struct）</li>
+</ul>
+</li>
+</ul>
+<h2 id="json和map"><a href="#json和map" class="headerlink" title="json和map"></a>json和map</h2><p>Let’s see one more example where we convert a map to a JSON where we have a struct for the value in the map. Below is the code for that</p>
 <pre><code class="line-numbers language-c">package main
 import (
     &quot;encoding/json&quot;
@@ -2491,10 +2500,255 @@ func main() &#123;
 
 &#125;
 </code></pre>
+<h2 id="切片slice"><a href="#切片slice" class="headerlink" title="切片slice"></a>切片slice</h2><h3 id="插入到切片第一个元素"><a href="#插入到切片第一个元素" class="headerlink" title="插入到切片第一个元素"></a>插入到切片第一个元素</h3><pre><code class="line-numbers language-go">x := []int&#123;2, 4, 6, 8&#125;
+fmt.Println(x)
+x = append([]int&#123;1&#125;, x...)
+fmt.Println(x)
+
+// [2 4 6 8]
+// [1 2 4 6 8]
+</code></pre>
+<h3 id="切片和数组不同之处"><a href="#切片和数组不同之处" class="headerlink" title="切片和数组不同之处"></a>切片和数组不同之处</h3><ol>
+<li>数组长度固定，定义后不能改变</li>
+<li>切片数组是可变，内存方式不同</li>
+<li>一般常用切片</li>
+</ol>
+<h3 id="切片去重"><a href="#切片去重" class="headerlink" title="切片去重"></a>切片去重</h3><pre><code class="line-numbers language-c">// 清空
+postIndexData = nil
+
+func contains(s []string, ele string) bool &#123;
+    for _, v := range s &#123;
+        if v == ele &#123;
+            return true
+        &#125;
+    &#125;
+    return false
+&#125;
+
+func uniqSlice(s []string) []string &#123;
+    var res []string
+    for _, v := range s &#123;
+        if contains(res, v) == false &#123;
+            res = append(res, v)
+        &#125;
+    &#125;
+    return res
+&#125;
+</code></pre>
+<h3 id="切片转字符串"><a href="#切片转字符串" class="headerlink" title="切片转字符串"></a>切片转字符串</h3><pre><code class="line-numbers language-c">sliceData := []string&#123;&quot;Mon&quot;, &quot;Wed&quot;, &quot;Fri&quot;&#125;
+fmt.Println(reflect.TypeOf(sliceData)) //[]string
+stringData1 := strings.Join(sliceData, &quot; &quot;)
+stringData2 := strings.Join(sliceData, &quot;, &quot;)
+fmt.Println(stringData1) //Mon Wed Fri
+fmt.Println(stringData2) //Mon, Wed, Fri
+fmt.Println(reflect.TypeOf(stringData2)) //string
+</code></pre>
+<h3 id="判断两个切片是否相等"><a href="#判断两个切片是否相等" class="headerlink" title="判断两个切片是否相等"></a>判断两个切片是否相等</h3><pre><code class="line-numbers language-c">func equal(a, b []string) bool &#123;
+    if len(a) != len(b) &#123;
+        return false
+    &#125;
+    sort.Strings(a)
+    sort.Strings(b)
+    for i, v := range a &#123;
+        if v != b[i] &#123;
+            return false
+        &#125;
+    &#125;
+    return true
+&#125;
+</code></pre>
+<h3 id="多个切片合并"><a href="#多个切片合并" class="headerlink" title="多个切片合并"></a>多个切片合并</h3><pre><code class="line-numbers language-c">package main
+
+import &quot;fmt&quot;
+
+func main() &#123;
+    s1 := []string&#123;&quot;James&quot;, &quot;Wagner&quot;, &quot;Christene&quot;, &quot;Mike&quot;&#125;
+    s2 := []string&#123;&quot;Paul&quot;, &quot;Haaland&quot;, &quot;Patrick&quot;&#125;
+
+    s3 := append(s1, s2...)
+    fmt.Println(s3) // [James Wagner Christene Mike Paul Haaland Patrick]
+&#125;
+</code></pre>
+<h3 id="切片排序"><a href="#切片排序" class="headerlink" title="切片排序"></a>切片排序</h3><pre><code class="line-numbers language-go">// Sorting a slice of Strings
+strs := []string&#123;&quot;quick&quot;, &quot;brown&quot;, &quot;fox&quot;, &quot;jumps&quot;&#125;
+sort.Strings(strs)
+fmt.Println(&quot;Sorted strings: &quot;, strs)
+
+// Sorting a slice of Integers
+ints := []int&#123;56, 19, 78, 67, 14, 25&#125;
+sort.Ints(ints)
+fmt.Println(&quot;Sorted integers: &quot;, ints)
+
+// Sorting a slice of Floats
+floats := []float64&#123;176.8, 19.5, 20.8, 57.4&#125;
+sort.Float64s(floats)
+fmt.Println(&quot;Sorted floats: &quot;, floats)
+
+// Sorted strings:  [brown fox jumps quick]
+// Sorted integers:  [14 19 25 56 67 78]
+// Sorted floats:  [19.5 20.8 57.4 176.8]
+</code></pre>
+<h3 id="切片倒排"><a href="#切片倒排" class="headerlink" title="切片倒排"></a>切片倒排</h3><pre><code class="line-numbers language-go">// Sorting a slice of Strings
+strs := []string&#123;&quot;quick&quot;, &quot;brown&quot;, &quot;fox&quot;, &quot;jumps&quot;&#125;
+sort.Sort(sort.Reverse(sort.StringSlice(strs)))
+fmt.Println(&quot;Sorted strings in reverse order: &quot;, strs)
+
+// Sorted floats in reverse order:  [176.8 57.4 20.8 19.5] --&gt;
+</code></pre>
+<h3 id="切片元素长度排序"><a href="#切片元素长度排序" class="headerlink" title="切片元素长度排序"></a>切片元素长度排序</h3><pre><code class="line-numbers language-go">// Sorting a slice of strings by length
+strs := []string&#123;&quot;United States&quot;, &quot;India&quot;, &quot;France&quot;, &quot;United Kingdom&quot;, &quot;Spain&quot;&#125;
+sort.Slice(strs, func(i, j int) bool &#123;
+    return len(strs[i]) &lt; len(strs[j])
+&#125;)
+</code></pre>
+<h3 id="切片中的集合排序"><a href="#切片中的集合排序" class="headerlink" title="切片中的集合排序"></a>切片中的集合排序</h3><pre><code class="line-numbers language-go">type User struct &#123;
+    Name string
+    Age  int
+&#125;
+
+func main() &#123;
+    // Sorting a slice of structs by a field
+    users := []User&#123;
+        &#123;
+            Name: &quot;Rajeev&quot;,
+            Age:  28,
+        &#125;,
+        &#123;
+            Name: &quot;Monica&quot;,
+            Age:  31,
+        &#125;,
+        &#123;
+            Name: &quot;John&quot;,
+            Age:  56,
+        &#125;,
+        &#123;
+            Name: &quot;Amanda&quot;,
+            Age:  16,
+        &#125;,
+        &#123;
+            Name: &quot;Steven&quot;,
+            Age:  28,
+        &#125;,
+    &#125;
+
+    // Sort users by their age
+    sort.Slice(users, func(i, j int) bool &#123;
+        return users[i].Age &lt; users[j].Age
+    &#125;)
+    fmt.Println(&quot;Sorted users by age: &quot;, users)
+
+    // Stable sort
+    sort.SliceStable(users, func(i, j int) bool &#123;
+        return users[i].Age &lt; users[j].Age
+    &#125;)
+    fmt.Println(&quot;Sorted users by age: &quot;, users)
+&#125;
+</code></pre>
+<p><a target="_blank" rel="noopener" href="https://www.callicoder.com/golang-sorting-custom-functions/">https://www.callicoder.com/golang-sorting-custom-functions/</a></p>
+<h3 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h3><pre><code class="line-numbers language-c">package main
+import &quot;fmt&quot;
+
+func main() &#123;
+    //初始化切片，len=cap=5
+    s := []int&#123;11,22,33,44,55&#125;
+    fmt.Println(len(s), cap(s))
+    fmt.Println(s)      //[11 22 33 44 55]
+    fmt.Println(s[:3])  //[11 22 33]
+    fmt.Println(s[2:])  //[33 44 55]
+    fmt.Println(s[2:len(s)])    //[33 44 55]
+    fmt.Println(s[1:2]) //[22]
+
+    //前闭后开，冒号前的不包含，后面的包含。索引号，从0开始。
+    fmt.Println(s[2:5]) //[33 44 55]
+
+    //make([]type ,len,cap)
+    //其中cap可以省略,省略时和len值相同
+    //len表示存储的个数,cap表示容量
+    //如果多个slice指向相同底层数组,其中一个值改变会影响全部
+    s1 := make([]int, 3, 10)
+    fmt.Println(s1) //[0 0 0]
+    fmt.Println(len(s1), cap(s1))   //3 10
+
+    arr := []string&#123;&quot;a&quot;, &quot;b&quot;, &quot;c&quot;, &quot;d&quot;, &quot;e&quot;, &quot;f&quot;, &quot;g&quot;, &quot;h&quot;&#125;
+    fmt.Println(len(arr), cap(arr))
+
+    //把arr中下标2到5下的元元素创建一个新的切片
+    //切片容量为最初的长度减去当前切割下标之前的元素个数。
+    sli1 := arr[2:5]
+    fmt.Println(sli1)                   //[c d e]
+    fmt.Println(len(sli1), cap(sli1))   //3 6
+
+    sli2 := sli1[:2]
+    fmt.Println(sli2)   //[c d]
+    fmt.Println(len(sli2), cap(sli2))   //2 6
+
+    sli3 := sli2[1:]
+    fmt.Println(sli3)   //[d]
+    fmt.Println(len(sli3), cap(sli3))   //1 5
+
+    sli := []int&#123;1,2,3,4,5&#125;
+    fmt.Println(len(sli),cap(sli))      //5 5
+    sli4 := sli[2:4]
+    fmt.Println(len(sli4),cap(sli4))    //2 3
+
+    sli5 := append(sli, 11, 22, 33)
+    fmt.Println(sli5)   //[1 2 3 4 5 11 22 33]
+
+    sli6 := []int&#123;100, 200, 300, 400&#125;
+    sli7 := []int&#123;101, 201&#125;
+    //把sli7拷贝到sli6中
+    copy(sli6, sli7)
+    fmt.Println(sli6, sli7) //[101 201 300 400] [101 201]
+    //把sli6拷贝到sli7中
+    copy(sli7, sli6)
+    fmt.Println(sli6, sli7) //[101 201 300 400] [101 201]
+    sli8 := []int&#123;1,2,3&#125;
+    sli9 := []int&#123;4,5,6,7&#125;
+    copy(sli8, sli9)
+    fmt.Println(sli8)   // [4 5 6]
+
+    copy(sli8, sli9[:3])
+    fmt.Println(sli8)   // [4 5 6]
+&#125;
+</code></pre>
+<h2 id="字符串"><a href="#字符串" class="headerlink" title="字符串"></a>字符串</h2><h3 id="替换"><a href="#替换" class="headerlink" title="替换"></a>替换</h3><pre><code class="line-numbers language-go">// 替换
+res = strings.Replace(res, &quot; &quot;, &quot;&quot;, -1)
+res = strings.ReplaceAll(res, &quot;\n&quot;, &quot;&quot;)
+
+// 包含
+strings.Contains(&quot;abc&quot;, &quot;a&quot;)
+
+// 字符串重复N次
+p(&quot;ba&quot; + strings.Repeat(&quot;na&quot;, 2))   //banana
+</code></pre>
+<h3 id="切割"><a href="#切割" class="headerlink" title="切割"></a>切割</h3><pre><code class="line-numbers language-c">p(strings.Split(&quot;a-b-c&quot;, &quot;-&quot;))      //[a b c]
+
+// 多空格切割
+someString := &quot;one    two   three four &quot;
+words := strings.Fields(someString)
+fmt.Println(words, len(words)) // [one two three four] 4
+</code></pre>
+<h3 id="去掉最后一个字母"><a href="#去掉最后一个字母" class="headerlink" title="去掉最后一个字母"></a>去掉最后一个字母</h3><pre><code class="line-numbers language-c">s := &quot;abc.&quot;
+fmt.Println(s[:(len(s) - 1)])
+// abc
+</code></pre>
+<h3 id="删除首尾空格"><a href="#删除首尾空格" class="headerlink" title="删除首尾空格"></a>删除首尾空格</h3><pre><code class="line-numbers language-go">fmt.Printf(&quot;%q\n&quot;, strings.Trim(&quot; !!! Achtung! Achtung! !!! &quot;,&quot;! &quot;)) //&quot;Achtung! Achtung&quot;
+fmt.Printf(&quot;%q\n&quot;, strings.TrimSpace(&quot; \t\n a lone gopher \n\t\r\n&quot;)) //&quot;a lone gopher&quot;
+</code></pre>
+<h3 id="字符串前缀后缀"><a href="#字符串前缀后缀" class="headerlink" title="字符串前缀后缀"></a>字符串前缀后缀</h3><pre><code class="line-numbers language-go">fmt.Println(strings.HasPrefix(&quot;Gopher&quot;,&quot;Go&quot;))// true
+fmt.Println(strings.HasPrefix(&quot;Gopher&quot;,&quot;go&quot;))// false
+fmt.Println(strings.HasPrefix(&quot;Gopher&quot;,&quot;C&quot;))// false
+fmt.Println(strings.HasPrefix(&quot;Gopher&quot;,&quot;&quot;))// true
+
+fmt.Println(strings.HasSuffix(&quot;Amigo&quot;,&quot;go&quot;))// true
+fmt.Println(strings.HasSuffix(&quot;Amigo&quot;,&quot;O&quot;))// false
+fmt.Println(strings.HasSuffix(&quot;Amigo&quot;,&quot;Ami&quot;))// false
+fmt.Println(strings.HasSuffix(&quot;Amigo&quot;,&quot;&quot;))// true
+</code></pre>
 <h2 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h2><blockquote>
 <p>长度属于数组类型的一部分，长度不同的数组属于不同的类型<br>数组是内置(build-in)类型,是一组同类型数据的集合，它是值类型，通过从0开始的下标索引访问元素值。在初始化后长度是固定的，无法修改其长度。当作为方法的参数传入时将复制一份数组而不是引用同一指针。数组的长度也是其类型的一部分，通过内置函数len(array)获取其长度。</p>
 </blockquote>
-<pre><code class="line-numbers language-c">package main
+<pre><code class="line-numbers language-go">package main
 
 import &quot;fmt&quot;
 func main() &#123;
@@ -2592,198 +2846,6 @@ func main() &#123;
     myprint(a) //PRINT:  100
     //myprint2(b) //cannot use b (type int) as type *int in argument to myprint2
     myprint2(&amp;b) //PRINT: i=0xc420016100, *i=200
-&#125;
-</code></pre>
-<h2 id="切片slice"><a href="#切片slice" class="headerlink" title="切片slice"></a>切片slice</h2><pre><code class="line-numbers language-c">package main
-import &quot;fmt&quot;
-
-func main() &#123;
-    //初始化切片，len=cap=5
-    s := []int&#123;11,22,33,44,55&#125;
-    fmt.Println(len(s), cap(s))
-    fmt.Println(s)      //[11 22 33 44 55]
-    fmt.Println(s[:3])  //[11 22 33]
-    fmt.Println(s[2:])  //[33 44 55]
-    fmt.Println(s[2:len(s)])    //[33 44 55]
-    fmt.Println(s[1:2]) //[22]
-
-    //前闭后开，冒号前的不包含，后面的包含。索引号，从0开始。
-    fmt.Println(s[2:5]) //[33 44 55]
-
-    //make([]type ,len,cap)
-    //其中cap可以省略,省略时和len值相同
-    //len表示存储的个数,cap表示容量
-    //如果多个slice指向相同底层数组,其中一个值改变会影响全部
-    s1 := make([]int, 3, 10)
-    fmt.Println(s1) //[0 0 0]
-    fmt.Println(len(s1), cap(s1))   //3 10
-
-    arr := []string&#123;&quot;a&quot;, &quot;b&quot;, &quot;c&quot;, &quot;d&quot;, &quot;e&quot;, &quot;f&quot;, &quot;g&quot;, &quot;h&quot;&#125;
-    fmt.Println(len(arr), cap(arr))
-
-    //把arr中下标2到5下的元元素创建一个新的切片
-    //切片容量为最初的长度减去当前切割下标之前的元素个数。
-    sli1 := arr[2:5]
-    fmt.Println(sli1)                   //[c d e]
-    fmt.Println(len(sli1), cap(sli1))   //3 6
-
-    sli2 := sli1[:2]
-    fmt.Println(sli2)   //[c d]
-    fmt.Println(len(sli2), cap(sli2))   //2 6
-
-    sli3 := sli2[1:]
-    fmt.Println(sli3)   //[d]
-    fmt.Println(len(sli3), cap(sli3))   //1 5
-
-    sli := []int&#123;1,2,3,4,5&#125;
-    fmt.Println(len(sli),cap(sli))      //5 5
-    sli4 := sli[2:4]
-    fmt.Println(len(sli4),cap(sli4))    //2 3
-
-    sli5 := append(sli, 11, 22, 33)
-    fmt.Println(sli5)   //[1 2 3 4 5 11 22 33]
-
-    sli6 := []int&#123;100, 200, 300, 400&#125;
-    sli7 := []int&#123;101, 201&#125;
-    //把sli7拷贝到sli6中
-    copy(sli6, sli7)
-    fmt.Println(sli6, sli7) //[101 201 300 400] [101 201]
-    //把sli6拷贝到sli7中
-    copy(sli7, sli6)
-    fmt.Println(sli6, sli7) //[101 201 300 400] [101 201]
-    sli8 := []int&#123;1,2,3&#125;
-    sli9 := []int&#123;4,5,6,7&#125;
-    copy(sli8, sli9)
-    fmt.Println(sli8)   // [4 5 6]
-
-    copy(sli8, sli9[:3])
-    fmt.Println(sli8)   // [4 5 6]
-&#125;
-</code></pre>
-<h2 id="字符串"><a href="#字符串" class="headerlink" title="字符串"></a>字符串</h2><h3 id="替换字符串"><a href="#替换字符串" class="headerlink" title="替换字符串"></a>替换字符串</h3><pre><code>res = strings.Replace(res, &quot; &quot;, &quot;&quot;, -1)
-res = strings.Replace(res, &quot;\n&quot;, &quot;&quot;, -1)
-</code></pre>
-<h3 id="替换字符串-1"><a href="#替换字符串-1" class="headerlink" title="替换字符串"></a>替换字符串</h3><pre><code class="line-numbers language-c">strings.Contains(&quot;abc&quot;, &quot;a&quot;)
-
-//字符串重复N次
-p(&quot;ba&quot; + strings.Repeat(&quot;na&quot;, 2))   //banana
-</code></pre>
-<h3 id="切割字符串"><a href="#切割字符串" class="headerlink" title="切割字符串"></a>切割字符串</h3><pre><code class="line-numbers language-c">p(strings.Split(&quot;a-b-c&quot;, &quot;-&quot;))      //[a b c]
-
-// 多空格切割
-someString := &quot;one    two   three four &quot;
-words := strings.Fields(someString)
-fmt.Println(words, len(words)) // [one two three four] 4
-</code></pre>
-<h3 id="去掉最后一个字母"><a href="#去掉最后一个字母" class="headerlink" title="去掉最后一个字母"></a>去掉最后一个字母</h3><pre><code class="line-numbers language-c">s := &quot;abc.&quot;
-fmt.Println(s[:(len(s) - 1)])
-// abc
-</code></pre>
-<h3 id="字符串String"><a href="#字符串String" class="headerlink" title="字符串String"></a>字符串String</h3><pre><code class="line-numbers language-c">package main
-import &quot;fmt&quot;
-import &quot;strings&quot;
-
-func main() &#123;
-
-    p := fmt.Println
-
-    //声明多行字符串
-    multiLineStr := `
-line1
-line2
-line2
-    `
-    p(multiLineStr)
-
-    //
-    sa := &quot;aa&quot;
-    sb := &quot;bb&quot;
-    s := []string&#123;sa, &quot;xx&quot;, sb&#125; //[a b c]
-    res := strings.Join(s, &quot;&quot;)  //aaxxbb
-    p(res)
-
-    // 删除首部和尾部的 ! 和空格
-    fmt.Printf(&quot;%q\n&quot;, strings.Trim(&quot; !!! Achtung! Achtung! !!! &quot;,&quot;! &quot;)) //&quot;Achtung! Achtung&quot;
-    fmt.Printf(&quot;%q\n&quot;, strings.TrimSpace(&quot; \t\n a lone gopher \n\t\r\n&quot;)) //&quot;a lone gopher&quot;
-
-    //字符串前缀后缀
-    fmt.Println(strings.HasPrefix(&quot;Gopher&quot;,&quot;Go&quot;))// true
-    fmt.Println(strings.HasPrefix(&quot;Gopher&quot;,&quot;go&quot;))// false
-    fmt.Println(strings.HasPrefix(&quot;Gopher&quot;,&quot;C&quot;))// false
-    fmt.Println(strings.HasPrefix(&quot;Gopher&quot;,&quot;&quot;))// true
-
-    fmt.Println(strings.HasSuffix(&quot;Amigo&quot;,&quot;go&quot;))// true
-    fmt.Println(strings.HasSuffix(&quot;Amigo&quot;,&quot;O&quot;))// false
-    fmt.Println(strings.HasSuffix(&quot;Amigo&quot;,&quot;Ami&quot;))// false
-    fmt.Println(strings.HasSuffix(&quot;Amigo&quot;,&quot;&quot;))// true
-
-    //字符串比较
-    fmt.Println(strings.Compare(string(&quot;hello&quot;),string(&quot;haha&quot;)))// 1
-    fmt.Println(strings.Compare(string(&quot;hello&quot;),string(&quot;world&quot;)))// -1
-    fmt.Println(strings.Compare(string(&quot;hello&quot;),string(&quot;helloworld&quot;)))// -1
-    fmt.Println(strings.Compare(string(&quot;hello&quot;),string(&quot;hello&quot;)))//0
-
-&#125;
-</code></pre>
-<h2 id="切片和数组"><a href="#切片和数组" class="headerlink" title="切片和数组"></a>切片和数组</h2><h3 id="不同之处"><a href="#不同之处" class="headerlink" title="不同之处"></a>不同之处</h3><ol>
-<li>数组长度固定，定义后不能改变</li>
-<li>切片数组是可变，内存方式不同</li>
-<li>一般常用切片</li>
-</ol>
-<p>清空slice</p>
-<pre><code>postIndexData = nil
-</code></pre>
-<h3 id="切片去重"><a href="#切片去重" class="headerlink" title="切片去重"></a>切片去重</h3><pre><code class="line-numbers language-c">func contains(s []string, ele string) bool &#123;
-    for _, v := range s &#123;
-        if v == ele &#123;
-            return true
-        &#125;
-    &#125;
-    return false
-&#125;
-
-func uniqSlice(s []string) []string &#123;
-    var res []string
-    for _, v := range s &#123;
-        if contains(res, v) == false &#123;
-            res = append(res, v)
-        &#125;
-    &#125;
-    return res
-&#125;
-</code></pre>
-<h3 id="切片转字符串"><a href="#切片转字符串" class="headerlink" title="切片转字符串"></a>切片转字符串</h3><pre><code class="line-numbers language-c">sliceData := []string&#123;&quot;Mon&quot;, &quot;Wed&quot;, &quot;Fri&quot;&#125;
-fmt.Println(reflect.TypeOf(sliceData)) //[]string
-stringData1 := strings.Join(sliceData, &quot; &quot;)
-stringData2 := strings.Join(sliceData, &quot;, &quot;)
-fmt.Println(stringData1) //Mon Wed Fri
-fmt.Println(stringData2) //Mon, Wed, Fri
-fmt.Println(reflect.TypeOf(stringData2)) //string
-</code></pre>
-<h3 id="判断两个切片是否相等"><a href="#判断两个切片是否相等" class="headerlink" title="判断两个切片是否相等"></a>判断两个切片是否相等</h3><pre><code class="line-numbers language-c">func equal(a, b []string) bool &#123;
-    if len(a) != len(b) &#123;
-        return false
-    &#125;
-    sort.Strings(a)
-    sort.Strings(b)
-    for i, v := range a &#123;
-        if v != b[i] &#123;
-            return false
-        &#125;
-    &#125;
-    return true
-&#125;
-</code></pre>
-<h3 id="多个切片合并"><a href="#多个切片合并" class="headerlink" title="多个切片合并"></a>多个切片合并</h3><pre><code class="line-numbers language-c">package main
-
-import &quot;fmt&quot;
-
-func main() &#123;
-    s1 := []string&#123;&quot;James&quot;, &quot;Wagner&quot;, &quot;Christene&quot;, &quot;Mike&quot;&#125;
-    s2 := []string&#123;&quot;Paul&quot;, &quot;Haaland&quot;, &quot;Patrick&quot;&#125;
-
-    s3 := append(s1, s2...)
-    fmt.Println(s3) // [James Wagner Christene Mike Paul Haaland Patrick]
 &#125;
 </code></pre>
 

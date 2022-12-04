@@ -2343,15 +2343,6 @@ fmt.Println(strings.ToLower(&quot;Gopher123&quot;))// gopher123
 // 所有字母转换为大写
 fmt.Println(strings.ToUpper(&quot;Gopher&quot;))// GOPHER
 </code></pre>
-<h2 id="变量关键字"><a href="#变量关键字" class="headerlink" title="变量关键字"></a>变量关键字</h2><ul>
-<li>var ：仅仅声明一个变量，不初始化内存地址</li>
-<li>make&#x2F;new相同点：声明变量，又初始化内存地址</li>
-<li>make&#x2F;new不同点<ul>
-<li>make：返回声明变量的本身（slice、map、array）</li>
-<li>new：返回变量的内存地址（指针）（struct）</li>
-</ul>
-</li>
-</ul>
 <h2 id="执行命令"><a href="#执行命令" class="headerlink" title="执行命令"></a>执行命令</h2><pre><code class="line-numbers language-c">func runCmd(cmd string) (res string, err error) &#123;
     e := exec.Command(&quot;/bin/bash&quot;, &quot;-c&quot;, cmd)
     stdout, err := e.Output()

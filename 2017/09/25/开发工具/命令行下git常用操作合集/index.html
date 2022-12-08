@@ -2375,7 +2375,11 @@ autoconf
 ./configure &amp;&amp; make &amp;&amp; make install
 git –-version
 </code></pre>
-<h2 id="操作"><a href="#操作" class="headerlink" title="操作"></a>操作</h2><h3 id="回退到某个历史版本"><a href="#回退到某个历史版本" class="headerlink" title="回退到某个历史版本"></a>回退到某个历史版本</h3><pre><code class="line-numbers language-sh">git log
+<h2 id="常用操作"><a href="#常用操作" class="headerlink" title="常用操作"></a>常用操作</h2><h3 id="撤销分支合并"><a href="#撤销分支合并" class="headerlink" title="撤销分支合并"></a>撤销分支合并</h3><pre><code class="line-numbers language-sh">git checkout 【被合并的分支】
+git log  # 合并之前的commit id
+git reset --hard a5900272eddc48e87d309d93e56cc0c8cb26de19
+</code></pre>
+<h3 id="回退到某个历史版本"><a href="#回退到某个历史版本" class="headerlink" title="回退到某个历史版本"></a>回退到某个历史版本</h3><pre><code class="line-numbers language-sh">git log
 git checkout develop
 git reset --hard a5900272eddc48e87d309d93e56cc0c8cb26de19
 git push -f origin develop

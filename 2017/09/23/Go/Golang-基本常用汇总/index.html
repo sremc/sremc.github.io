@@ -2257,6 +2257,17 @@ var _hmt = _hmt || [];
 									
 							<ul>
 								<li class="file">
+									<a href="/2022/12/11/%E9%9A%8F%E7%AC%94/%E4%B8%89%E5%B9%B4%E4%BA%86/">
+                     
+										    三年了
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
 									<a href="/2022/09/11/%E9%9A%8F%E7%AC%94/%E4%B8%AD%E7%A7%8B%E8%8A%82%E5%BF%AB%E4%B9%90/">
                      
 										    中秋节快乐
@@ -2364,6 +2375,10 @@ fmt.Println(strings.ToLower(&quot;Gopher123&quot;))// gopher123
 
 // 所有字母转换为大写
 fmt.Println(strings.ToUpper(&quot;Gopher&quot;))// GOPHER
+</code></pre>
+<h2 id="随机整数"><a href="#随机整数" class="headerlink" title="随机整数"></a>随机整数</h2><pre><code>import &quot;math/rand&quot;
+rand.Seed(time.Now().UnixNano())
+rdm := rand.Intn(100)
 </code></pre>
 <h2 id="执行命令"><a href="#执行命令" class="headerlink" title="执行命令"></a>执行命令</h2><pre><code class="line-numbers language-c">func runCmd(cmd string) (res string, err error) &#123;
     e := exec.Command(&quot;/bin/bash&quot;, &quot;-c&quot;, cmd)
@@ -2707,7 +2722,7 @@ UTC
 2017-10-19 16:56:16
 */
 </code></pre>
-<h2 id="error"><a href="#error" class="headerlink" title="error"></a>error</h2><pre><code class="line-numbers language-c">package main
+<h2 id="异常处理"><a href="#异常处理" class="headerlink" title="异常处理"></a>异常处理</h2><h3 id="可预见错误：error"><a href="#可预见错误：error" class="headerlink" title="可预见错误：error"></a>可预见错误：error</h3><pre><code class="line-numbers language-c">package main
 import &quot;fmt&quot;
 import &quot;errors&quot;
 import &quot;math&quot;
@@ -2728,7 +2743,7 @@ func main() &#123;
     fmt.Printf(&quot;res: %v, err: %v\n&quot;, res1, err1) //res: 4, err: &lt;nil&gt;
 &#125;
 </code></pre>
-<h2 id="panic"><a href="#panic" class="headerlink" title="panic"></a>panic</h2><p>Go中引入的Exception处理：defer, panic, recover。</p>
+<h3 id="不可预见错误：panic"><a href="#不可预见错误：panic" class="headerlink" title="不可预见错误：panic"></a>不可预见错误：panic</h3><p>Go中引入的Exception处理：defer, panic, recover。</p>
 <pre><code class="line-numbers language-c">package main
 import (
     &quot;log&quot;
@@ -2786,44 +2801,6 @@ in defer cycle 1
 in defer cycle 0
 world
 */
-</code></pre>
-<h2 id="模块相关"><a href="#模块相关" class="headerlink" title="模块相关"></a>模块相关</h2><h3 id="flag-获取命令行参数"><a href="#flag-获取命令行参数" class="headerlink" title="flag 获取命令行参数"></a>flag 获取命令行参数</h3><pre><code class="line-numbers language-java">action := flag.Int(&quot;action&quot;, 200, &quot;输入要操作的类型(503/200)&quot;)	//flag.Int返回的是pointer
-host := flag.String(&quot;host&quot;, &quot;x.x.x.x&quot;, &quot;输入要操作的IP地址&quot;)
-flag.Parse()
-fmt.Println(&quot;your action type: &quot;, *action)
-fmt.Println(&quot;your action host: &quot;, *host)
-
-/*
-参数格式：
--id=1
---id=1
--id 1
---id 1
-*/
-</code></pre>
-<pre><code class="line-numbers language-java">import &quot;net/url&quot;
-
-v := url.Values&#123;&#125;
-v.Set(&quot;name&quot;, &quot;Ava&quot;)
-v.Add(&quot;friend&quot;, &quot;Jess&quot;)
-v.Add(&quot;friend&quot;, &quot;Sarah&quot;)
-v.Add(&quot;friend&quot;, &quot;Zoe&quot;)
-//v.Set(&quot;friend&quot;, &quot;tom&quot;)
-// v.Encode() == &quot;name=Ava&amp;friend=Jess&amp;friend=Sarah&amp;friend=Zoe&quot;
-fmt.Println(v.Encode())
-fmt.Println(v.Get(&quot;name&quot;))
-fmt.Println(v.Get(&quot;friend&quot;))
-fmt.Println(v[&quot;friend&quot;])
-</code></pre>
-<ul>
-<li>body这个变量名被多次使用的报错提示</li>
-</ul>
-<pre><code>cannot assign []byte to body (type *bytes.Buffer) in multiple assignment
-</code></pre>
-<ul>
-<li>函数名大小写错误的提示</li>
-</ul>
-<pre><code>form.encode undefined (type url.Values has no field or method encode, but does have Encode)
 </code></pre>
 <h2 id="http-post-and-get"><a href="#http-post-and-get" class="headerlink" title="http post and get"></a>http post and get</h2><pre><code class="line-numbers language-java">package main
 import &quot;fmt&quot;
@@ -2902,53 +2879,64 @@ mkdir gopath
 <pre><code>export $PATH:$GOPATH/bin
 </code></pre>
 <h2 id="基本和特殊"><a href="#基本和特殊" class="headerlink" title="基本和特殊"></a>基本和特殊</h2><h3 id="下划线"><a href="#下划线" class="headerlink" title="下划线"></a>下划线</h3><p>“_”(下划线)，可以简单理解为赋值但以后不再使用，在golang中使用比较多，使用场合不单一，这里稍作总结，方便理解</p>
-<p>用在import</p>
+<ul>
+<li>用在import</li>
+</ul>
 <pre><code>import  _  &quot;net/http/pprof&quot;
 </code></pre>
-<p>pprof常见用法<br>引入包，会先调用包中的初始化函数，这种使用方式仅让导入的包做初始化，而不使用包中其他功能</p>
-<p>用在返回值</p>
+<blockquote>
+<p>pprof常见用法，引入包，会先调用包中的初始化函数，这种使用方式仅让导入的包做初始化，而不使用包中其他功能</p>
+</blockquote>
+<ul>
+<li>表示忽略某个值</li>
+</ul>
 <pre><code>for _,v := range Slice&#123;&#125;
+_,err := func()
 </code></pre>
-<p>_,err :&#x3D; func()<br>表示忽略某个值。单函数有多个返回值，用来获取某个特定的值</p>
-<p>用在变量</p>
+<ul>
+<li>用在变量</li>
+</ul>
 <pre><code>type T struct&#123;&#125;
 var _ I = T&#123;&#125;
 </code></pre>
-<p>其中 I为interface<br>上面用来判断 type T是否实现了I,用作类型断言，如果T没有实现借口I，则编译错误.</p>
-<p>作者：大漠狼道<br>链接：<a target="_blank" rel="noopener" href="http://www.jianshu.com/p/309f55a152db">http://www.jianshu.com/p/309f55a152db</a><br>來源：简书<br>著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>
-<h3 id="println-VS-printf"><a href="#println-VS-printf" class="headerlink" title="println VS printf"></a>println VS printf</h3><pre><code class="line-numbers language-java">import &quot;fmt&quot;
-import &quot;os&quot;
-import &quot;path/filepath&quot;
-import &quot;flag&quot;
-import &quot;net/http&quot;
+<blockquote>
+<p>其中 I为interface,上面用来判断 type T是否实现了I,用作类型断言，如果T没有实现借口I，则编译错误.</p>
+</blockquote>
+<h3 id="flag-获取命令行参数"><a href="#flag-获取命令行参数" class="headerlink" title="flag 获取命令行参数"></a>flag 获取命令行参数</h3><pre><code class="line-numbers language-go">action := flag.Int(&quot;action&quot;, 200, &quot;输入要操作的类型(503/200)&quot;)	//flag.Int返回的是pointer
+host := flag.String(&quot;host&quot;, &quot;x.x.x.x&quot;, &quot;输入要操作的IP地址&quot;)
+flag.Parse()
+fmt.Println(&quot;your action type: &quot;, *action)
+fmt.Println(&quot;your action host: &quot;, *host)
 
-fmt.Printf(&quot;Usage: go run %s action host\n&quot;, filepath.Base(os.Args[0]))
-os.Exit(1)
-
-Usage: go run go_do_task action host
-exit status 1
-
-
-fmt.Printf(&quot;Usage: go run %s action host\n&quot;, filepath.Base(os.Args[0]))
-os.Exit(1)
-
-Usage: go run %s action host go_do_task
-exit status 1
+/*
+参数格式：
+-id=1
+--id=1
+-id 1
+--id 1
+*/
 </code></pre>
-<hr>
-<pre><code class="line-numbers language-c">// 环境
+<pre><code class="line-numbers language-go">// 环境
 go env -w GOPATH=&quot;/root/.go&quot;                  // 改变module下载位置
 go env -w GOPROXY=&quot;https://goproxy.cn,direct&quot; // 可以使用github了
 go get github.com/yanyiwu/gojieba
 
 // map 用两个返回值判断是否存在key
 res, ok := mapdata[key]
-
-// 随机整数
-import &quot;math/rand&quot;
-rand.Seed(time.Now().UnixNano())
-rdm := rand.Intn(100)
 </code></pre>
+<h2 id="基本特性总结"><a href="#基本特性总结" class="headerlink" title="基本特性总结"></a>基本特性总结</h2><ol>
+<li>高并发：使用方便，Goroutine 轻量级，效率高</li>
+<li>基于消息传递的通信：传统大多数是共享内存的并发模型，需要锁的同步机制，而Go靠消息管道channel通信</li>
+<li>特殊的数据类型：slice、channel、 rune 、uintptr指针，没有class（使用struct + interface + func）</li>
+<li>支持多个返回值</li>
+<li>defer机制：可以延缓执行语句</li>
+<li>支持反射：reflect包</li>
+<li>自带高性能服务器：支持http&#x2F;tcp&#x2F;udp</li>
+<li>工程管理：用目录和包名自动推导，编译无需任何依赖，编译速度快</li>
+<li>编程规范统一：自动格式化</li>
+<li>错误处理：Error内置接口-&gt;可预见错误；Panic-&gt;不可预见错误-&gt;recover</li>
+<li>面向接口的oop：支持面向对象，但没有类继承、注解、泛型，理解代码更容易（duck type：表现得像鸭子，那就是鸭子）</li>
+</ol>
 
 </div>
 

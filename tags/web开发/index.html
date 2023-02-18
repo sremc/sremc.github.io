@@ -275,6 +275,17 @@ var _hmt = _hmt || [];
 			
 							<ul>
 								<li class="file">
+									<a href="/2023/02/18/Go/Golang-%E8%A7%A3%E5%86%B3%E5%8C%85%E5%BE%AA%E7%8E%AF%E5%BC%95%E7%94%A8%E9%97%AE%E9%A2%98/">
+                     
+										    Golang-解决包循环引用问题
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
 									<a href="/2021/09/05/Go/golang-gorm%E6%A1%86%E6%9E%B6/">
                      
 										    golang-gorm框架
@@ -2341,6 +2352,44 @@ var _hmt = _hmt || [];
 	<!-- 引入正文 -->
 	<div id="content">
 		<div id="index">
+	
+		<div class="index-li">
+			<a href="/2023/02/18/Go/Golang-%E8%A7%A3%E5%86%B3%E5%8C%85%E5%BE%AA%E7%8E%AF%E5%BC%95%E7%94%A8%E9%97%AE%E9%A2%98/">
+				<h2 class="index-title">
+					Golang-解决包循环引用问题
+				</h2>
+				<div class="index-brief">
+					业务场景
+A包调用B的函数
+B包调用A的函数
+Golang中不允许相互
+
+思路
+A中定义一个函数类型的type
+A中再定一个注册上面类型的函数Register()
+B在初始化init()的时候就把自己的变量通过上面函数把自己的函数名传递过去
+A就能直接使用啦
+
+代码示例注册package B
+imp
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2023-02-18</span>
+                    
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/开发/">开发</a>
+										
+                                    </span>
+                                
+                            
+                    
+                </div>
+		</div>	
 	
 		<div class="index-li">
 			<a href="/2022/12/04/Go/Golang-Gin%E4%B8%AD%E9%97%B4%E4%BB%B6/">

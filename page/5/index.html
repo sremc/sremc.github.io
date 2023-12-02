@@ -1936,7 +1936,7 @@ var _hmt = _hmt || [];
 			
 							<ul>
 								<li class="file">
-									<a href="/2017/02/23/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E4%B8%89%E5%A4%A7%E7%BB%8F%E6%B5%8E%E5%AD%A6%E6%B4%BE%E5%AF%B9%E6%AF%94/">
+									<a href="/2023/12/02/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E4%B8%89%E5%A4%A7%E7%BB%8F%E6%B5%8E%E5%AD%A6%E6%B4%BE%E5%AF%B9%E6%AF%94/">
                      
 										    三大经济学派对比
                      
@@ -2431,6 +2431,43 @@ var _hmt = _hmt || [];
 		<div id="index">
 	
 		<div class="index-li">
+			<a href="/2020/05/23/DNS/DNSmasq/">
+				<h2 class="index-title">
+					DNSmasq
+				</h2>
+				<div class="index-brief">
+					安装配置yum -y install dnsmasq
+
+$ cat /etc/dnsmasq.d/main.conf
+
+# 不读取/etc/hosts
+no-hosts
+
+# 读取以下的文件作为域名劫持记录
+addn-hosts=/etc/dnsmasq-hosts
+
+# access日志
+log-
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2020-05-23</span>
+                    
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/运维/">运维</a>
+										
+                                    </span>
+                                
+                            
+                    
+                </div>
+		</div>	
+	
+		<div class="index-li">
 			<a href="/2020/05/13/%E7%BC%96%E8%BE%91%E5%99%A8/PyCharm%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/">
 				<h2 class="index-title">
 					PyCharm开发环境
@@ -2688,35 +2725,6 @@ import (
                                     <span>
                                         <i class="fa fa-folder" aria-hidden="true"></i>
                                         <a href="/categories/开发/">开发</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>	
-	
-		<div class="index-li">
-			<a href="/2019/11/30/Nginx/IO%E5%A4%9A%E8%B7%AF%E5%A4%8D%E7%94%A8/">
-				<h2 class="index-title">
-					IO多路复用
-				</h2>
-				<div class="index-brief">
-					多任务处理方式多进程方式为每个请求启动一个进程来处理。由于在操作系统中，生成进程、销毁进程、进程间切换都很消耗CPU和内存，当负载高是，性能会明显降低。
-
-优点： 稳定性！由于采用独立进程处理独立请求，而进程之间是独立的，单个进程问题不会影响其他进程，因此稳定性最好。
-缺点： 资源占用！当请求过大时
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2019-11-30</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/运维/">运维</a>
 										
                                     </span>
                                 

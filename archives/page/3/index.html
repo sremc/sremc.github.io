@@ -1936,7 +1936,7 @@ var _hmt = _hmt || [];
 			
 							<ul>
 								<li class="file">
-									<a href="/2017/02/23/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E4%B8%89%E5%A4%A7%E7%BB%8F%E6%B5%8E%E5%AD%A6%E6%B4%BE%E5%AF%B9%E6%AF%94/">
+									<a href="/2023/12/02/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E4%B8%89%E5%A4%A7%E7%BB%8F%E6%B5%8E%E5%AD%A6%E6%B4%BE%E5%AF%B9%E6%AF%94/">
                      
 										    三大经济学派对比
                      
@@ -2431,6 +2431,40 @@ var _hmt = _hmt || [];
 		<div id="index">
 	
 		<div class="index-li">
+			<a href="/2021/11/10/%E8%BF%90%E7%BB%B4/rsyslog%E5%8F%91%E9%80%81%E6%97%A5%E5%BF%97/">
+				<h2 class="index-title">
+					rsyslog发送日志
+				</h2>
+				<div class="index-brief">
+					rsyslog模板配置根据主机名接收日志到不同的路径
+$ cat  /etc/rsyslog.d/collect.conf
+
+$ModLoad immark
+$ModLoad imudp
+$UDPServerRun 514
+$ModLoad imtcp
+$InputTCPServerRun 514
+
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2021-11-10</span>
+                    
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/运维/">运维</a>
+										
+                                    </span>
+                                
+                            
+                    
+                </div>
+		</div>	
+	
+		<div class="index-li">
 			<a href="/2021/09/07/HTTP/1RBAC-%E5%9F%BA%E4%BA%8E%E8%A7%92%E8%89%B2%E7%9A%84%E6%9D%83%E9%99%90%E8%AE%BF%E9%97%AE%E6%8E%A7%E5%88%B6/">
 				<h2 class="index-title">
 					1RBAC-基于角色的权限访问控制
@@ -2685,33 +2719,6 @@ net.ipv4.con
 			</a>
                 <div class="article-meta">
 				    <span>2021-02-28</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/运维/">运维</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>	
-	
-		<div class="index-li">
-			<a href="/2021/02/08/%E8%BF%90%E7%BB%B4/%E5%85%A8%E5%B1%80limit%E5%8F%82%E6%95%B0%E5%92%8Csystemd%E8%BF%9B%E7%A8%8B%E7%9A%84%E4%B8%8D%E4%B8%80%E8%87%B4/">
-				<h2 class="index-title">
-					全局limit参数和systemd进程的不一致
-				</h2>
-				<div class="index-brief">
-					不过在centos7&#x2F;rhel7的系统中，使用Systemd替代了之前的SysV，因此&#x2F;etc&#x2F;security&#x2F;limits.conf文件的配置作用域缩小了一些。
-limits.conf这里的配置，只适用于通过PAM认证登录用户的资源限制，它对systemd
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2021-02-08</span>
                     
                             
                                 
